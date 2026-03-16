@@ -5,8 +5,8 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-16)
 
-**Active work:** Model Development phase complete; YAML DSL v2 written and committed to GitHub
-**Immediate next action:** Begin Blog Post draft (Phase 3) — open with Klarna/Samsung hook, central argument, Level 1–2 definitions
+**Active work:** YAML DSL v2.1 complete (table analysis pass); project docs updated; HTML artifact added as Phase 5 deliverable
+**Immediate next action:** HTML artifact — product spec and UX planning session, then build
 **Blocking items:** None
 
 ---
@@ -14,6 +14,23 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-16 | YAML DSL v2.1 — table analysis pass; project docs updated; HTML artifact added
+
+- **What:** Final model refinement pass based on "Table Learning to See Business Protocols" (catalog entry 35). Project docs updated to reflect Phase 1–2 completion and add Phase 5 (HTML artifact).
+- **Changes to ai-cmm-v2.yaml:**
+  - Version bumped to 2.1
+  - Model header: added `# Protocol trade pattern` note — protocols trade problems, not eliminate them; today's AI friction signals existing protocols pushed beyond design range
+  - Level 1 description: added "pushed beyond design range" framing — shadow adoption is the signal, not the moral failure
+  - L2→3 transition: added slop management / discovery protocol note — the unsolved protocol problem Level 3 organizations are building toward
+  - Level 5 description: added containerization and printing press as historical precedents for planetary protocol embedding
+  - Level 5 case_anchors: added ISO Containerization (1960s–present) as `historical_analogy` — physical interface protocol → planetary infrastructure → systemic fragility. Maersk attack as canonical early-L5 failure mode example
+- **Source catalog:** Added entry 35 (Table: Learning to See Business Protocols) with full annotation
+- **Project docs updated:**
+  - _PROJECT.md: added HTML artifact as third deliverable; updated last updated date
+  - README.md: updated status; added Model Development section with file map; added HTML artifact to outputs table
+  - _WORKPLAN.md: Phase 1–2 marked complete; Phase 5 (HTML artifact) added; completion tracker updated
+  - _MILESTONES.md: current status updated
 
 ### 2026-03-16 | Model Development Phase Complete — YAML DSL v2, GitHub push
 

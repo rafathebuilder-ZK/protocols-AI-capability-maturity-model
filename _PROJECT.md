@@ -6,12 +6,13 @@
 
 ## What This Project Is
 
-A desk-research project producing two outputs:
+A desk-research project producing three outputs:
 
 1. **Blog post** — published on Protocolized, accessible framing of the maturity model for a practitioner audience
 2. **Litepaper** — 8–12 page downloadable document with the full capability maturity model for AI adoption, targeted at deployment managers and executives
+3. **Interactive HTML artifact** — publicly accessible Claude artifact providing a diagnostic tool: readers can explore the five levels, place their organization, and get a summary of failure modes and progression requirements. Product spec and UX planning to follow.
 
-Both outputs are grounded in fresh desk research. This is a writing and synthesis project — no interviews, no fieldwork, no client engagement.
+All outputs are grounded in fresh desk research. This is a writing and synthesis project — no interviews, no fieldwork, no client engagement.
 
 ---
 
@@ -68,6 +69,13 @@ This project is net new — not a v5. The prior model is a reference point and s
 - Each level: name, what it looks like, the characteristic tension, what to do
 - Tone: Authoritative, specific, practitioner-ready. No academic hedging.
 
+### Interactive HTML artifact (Claude artifact)
+- Format: Single-page HTML, publicly accessible as a Claude artifact
+- Function: Diagnostic tool — user steps through the five levels and places their organization; receives a summary of failure modes and progression requirements for their level
+- Source: Rendered from ai-cmm-v2.yaml content; the YAML is the source of truth
+- UX spec and product planning: separate planning session required before build
+- Target: complements the blog post as a shareable, interactive entry point to the model
+
 ---
 
 ## Scope Boundaries
@@ -121,4 +129,4 @@ AI Capability Maturity Model/
 
 ---
 
-*Last updated: 2026-03-15*
+*Last updated: 2026-03-16*

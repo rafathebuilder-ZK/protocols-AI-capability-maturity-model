@@ -1,8 +1,8 @@
 # AI Capability Maturity Model — Project Portal
 
-**Project:** Desk research, blog post, and litepaper on a capability maturity model for organizational AI adoption
+**Project:** Desk research, blog post, litepaper, and interactive diagnostic tool on a capability maturity model for organizational AI adoption
 **Practice:** Protocolized — Protocols for Business Practice
-**Status:** Research phase
+**Status:** Model Development complete — Blog post, Litepaper, and HTML artifact in queue
 
 ---
 
@@ -19,15 +19,29 @@
 |--------|--------|----------|--------|
 | [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | Not started |
 | [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
+| Interactive HTML artifact | Claude artifact (public URL) | All audiences | Spec pending |
 
 ---
 
-## Research
+## Model Development (complete)
 
 | Document | Purpose |
 |----------|---------|
-| [Source catalog](Research/source-catalog.md) | Annotated bibliography of desk research |
-| [Literature notes](Research/literature-notes.md) | Running notes as research progresses |
+| [ai-cmm-v2.yaml](Model-Development/ai-cmm-v2.yaml) | YAML DSL — current model definition (v2.1) |
+| [ai-cmm-v1.yaml](Model-Development/ai-cmm-v1.yaml) | YAML DSL — prior version for diff reference |
+| [evaluation-criteria.md](Model-Development/evaluation-criteria.md) | Pass/fail criteria for YAML DSL quality |
+| [model-critique.md](Model-Development/model-critique.md) | Full critique of v4 and working hypothesis |
+| [resource-critique-v2.md](Model-Development/resource-critique-v2.md) | Category-by-category critique of v1 against all 34 sources |
+| [thesis-extraction.md](Model-Development/thesis-extraction.md) | Load-bearing claims, structural assumptions, weaknesses |
+| [recomposition-plan.md](Model-Development/recomposition-plan.md) | Task plan and resource map for YAML recomposition |
+
+## Research (complete)
+
+| Document | Purpose |
+|----------|---------|
+| [Source catalog](Research/source-catalog.md) | Annotated bibliography — 35 entries across 7 categories |
+| [Case studies overview](Research/case-studies-overview.md) | Confirmed-facts-only summary of 9+ case studies |
+| [Literature notes](Research/literature-notes.md) | Running research notes |
 
 ---
 

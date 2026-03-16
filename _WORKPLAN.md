@@ -7,37 +7,43 @@ Living task list. Update status as work progresses.
 
 ## Phase 1 — Research
 
-### Status: NOT STARTED
+### Status: COMPLETE (2026-03-16)
 
 ### Tasks
-- [ ] Survey existing AI maturity models (Gartner, Microsoft, Google, McKinsey, CMMI Institute)
-- [ ] Identify what each model measures and where it falls short for generative AI specifically
-- [ ] Gather empirical data: adoption surveys, breach reports, productivity studies (2024–2026)
-- [ ] Identify 3–5 case studies — organizations at different maturity levels, what worked and what didn't
-- [ ] Synthesize: what does protocol thinking add that existing models miss?
-- [ ] Draft source catalog with annotated entries
-- [ ] Write literature notes capturing key findings and quotes
+- [x] Survey existing AI maturity models (BCG, Microsoft RAI, Accenture, OpenAI, Menlo Ventures, McKinsey)
+- [x] Identify what each model measures and where it falls short for generative AI specifically
+- [x] Gather empirical data: adoption surveys, breach reports, productivity studies (2024–2026)
+- [x] Identify case studies — 9 documented (Samsung, legal profession, healthcare, Klarna, Shopify, Duolingo, Uber, Boom Supersonic, Rao/Dixon pipeline)
+- [x] Synthesize: what does protocol thinking add that existing models miss?
+- [x] Source catalog complete — 35 annotated entries across 7 categories
+- [x] Case studies overview document written — confirmed facts only
 
 ### Definition of Done
-Source catalog complete with 15–20 annotated entries; literature notes capture the key findings and tensions; research questions answered with evidence.
+Source catalog complete with 35 annotated entries; case studies overview confirmed; research questions answered with evidence.
 
 ---
 
 ## Phase 2 — Model Development
 
-### Status: NOT STARTED
+### Status: COMPLETE (2026-03-16)
 
 ### Tasks
-- [ ] Define the 5 levels — names, descriptions, characteristic state
-- [ ] For each level: define the characteristic tension (what's pulling the organization in two directions)
-- [ ] For each level: define the failure modes if the organization stays stuck
-- [ ] For each level: define what progression looks like
-- [ ] Test model against case studies — does it fit?
-- [ ] Write model overview (1-page summary table)
-- [ ] Get feedback on model from Practice Advisor before drafting outputs
+- [x] Thesis and logic flow extracted (thesis-extraction.md)
+- [x] Full critique of v4 and working hypothesis (model-critique.md)
+- [x] Test and evaluation criteria written (evaluation-criteria.md)
+- [x] YAML DSL v1 written (ai-cmm-v1.yaml)
+- [x] Resource critique — all 34 sources evaluated against v1 (resource-critique-v2.md)
+- [x] YAML DSL v2 written with consolidated changes (ai-cmm-v2.yaml)
+- [x] Table analysis pass — protocol trade pattern, containerization analogue, Level 1/2→3 framing (v2.1)
+
+### Deliverables
+- `ai-cmm-v2.yaml` (v2.1) — current authoritative model definition
+- 5 levels: Shadow / Sanctioned / Designed / Infrastructural / Planetary
+- 6 protocol dimensions; bottleneck heterogeneity stance
+- Case anchors with catalog citations; Level 4–5 marked `projected` or `historical_analogy`
 
 ### Definition of Done
-5-level model defined with names, tensions, failure modes, and progression criteria; validated against at least 3 case studies; Practice Advisor has reviewed.
+YAML DSL v2.1 passing evaluation-criteria.md requirements; all case anchors cited; protocol trade framing integrated; containerization historical analogue added to Level 5.
 
 ---
 
@@ -88,15 +94,36 @@ Litepaper released as downloadable PDF alongside or after blog post.
 
 ---
 
+## Phase 5 — Interactive HTML Artifact
+
+### Status: NOT STARTED (spec pending)
+
+### Purpose
+A publicly accessible Claude artifact providing a diagnostic tool: users explore the five levels, place their organization, and receive a level-specific summary of failure modes and progression requirements.
+
+### Tasks
+- [ ] Product spec and UX planning session
+- [ ] Define interaction model (step-through vs. self-select vs. quiz)
+- [ ] Build HTML artifact in Claude
+- [ ] Test against evaluation criteria (C1: diagnostic use — can readers place themselves?)
+- [ ] Publish as public Claude artifact
+- [ ] Add artifact URL to README, blog post, and litepaper
+
+### Definition of Done
+Public Claude artifact URL exists; artifact renders the five levels accurately from YAML content; artifact is linked from published blog post.
+
+---
+
 ## Completion Tracker
 
 | Phase | Planning | Execution | Review | Done |
 |-------|----------|-----------|--------|------|
-| 1 — Research | [x] | [ ] | [ ] | [ ] |
-| 2 — Model Development | [x] | [ ] | [ ] | [ ] |
+| 1 — Research | [x] | [x] | [x] | [x] |
+| 2 — Model Development | [x] | [x] | [x] | [x] |
 | 3 — Blog Post | [x] | [ ] | [ ] | [ ] |
 | 4 — Litepaper | [x] | [ ] | [ ] | [ ] |
+| 5 — HTML Artifact | [ ] | [ ] | [ ] | [ ] |
 
 ---
 
-*Last updated: 2026-03-15*
+*Last updated: 2026-03-16*

@@ -43,6 +43,7 @@
 | 32 | Shopify: AI non-optional memo | CNBC / Digital Commerce 360 | 2025 | Case study — Level 2 (Sanctioned) | News reports |
 | 33 | Duolingo: AI-first contractor replacement | TechCrunch / Fortune | 2024–2025 | Case study — Level 2 (Sanctioned) | News reports |
 | 34 | Shadow AI prevalence data roundup | Gartner / Reco.ai / Cyberhaven / IBM | 2024–2025 | Empirical adoption data | Survey reports |
+| 35 | Table: Learning to See Business Protocols | Protocolized | 2026 | Protocol theory — applied / historical pattern | PDF appendix |
 
 ---
 
@@ -718,6 +719,35 @@
 
 ---
 
+---
+
+### 35. Table: Learning to See Business Protocols
+
+**Author:** Protocolized
+**Published:** 2026
+**Format:** PDF appendix (2 pages)
+**File:** `../Resources/Table Learning to See Business Protocols.pdf`
+
+**What this document covers.** A diagnostic table mapping persistent operational problems to the disruption events that made them intolerable, the dominant protocol solution that emerged, and the new persistent problem that solution created. Eight historical rows (containerization, EDI, email, Git, cloud, blockchain, blog/social media, RBAC/IAM) plus one speculative row for generative AI. Framed as a diagnostic aid for operational managers.
+
+**Central framing (two claims):**
+1. Protocols do not eliminate problems — they trade one class of persistent problem for a new one
+2. Today's persistent problems, especially under AI adoption, signal that existing protocols are being pushed beyond their design range
+
+**Key rows for the CMM:**
+
+- **Containerization (ISO):** Unreliable cargo handling → post-war global trade expansion overwhelmed bespoke handling → ISO containerization standards (physical interface protocol) → systemic supply-chain fragility. The Level 5 historical analogue. The Maersk ransomware attack (2017) is the canonical early-L5 failure: containerization and internet protocols converged into a single attack surface with no governance framework adequate to the combined system.
+
+- **Git (distributed version control):** Risky, infrequent software releases → software distribution at internet scale → Git (software management protocol) → coordination overhead (merge conflicts, review load, repository sprawl). Direct analogue to FM3-1 (temporal divergence): solving the production bottleneck surfaces the coordination bottleneck. The Uber case is the AI-era instance of this pattern.
+
+- **RBAC/IAM:** Slow security review cycles → cloud + continuous deployment → RBAC/IAM systems (management protocol) → policy sprawl. Analogue to FM3-3 (governance brittleness under versioning): permissions designed for one deployment model become hard to reason about when the environment changes.
+
+- **Slop management (speculative):** Knowledge work and digital content can be produced faster than it can be synthesized → generative AI in knowledge work → discovery protocols (still forming: enterprise-level ranking and signal rewards) → orientation alignment (navigating multiple possible future paths simultaneously while defining what is remembered). Validates the Slopsunami at Level 2 and points to the unsolved protocol problem the CMM's Level 3 organizations are building toward.
+
+**Relevance to maturity model.** The table provides the pattern-level argument that the CMM is tracking: organizations stuck at each level are stuck because they haven't adopted the protocol response to their current persistent problem. The "protocol trade" framing belongs in the model header. Containerization as a Level 5 historical analogue is the clearest realized precedent for planetary protocol embedding. The slop management / discovery protocol row confirms that the Slopsunami mechanism and the L2→3 transition is pointing at an unsolved problem, not a solved one.
+
+---
+
 ## Remaining categories to populate
 
 1. **Case studies — Level 3 stuck points** — organizations with policies but inconsistent enforcement; governance-without-integration failure modes
@@ -733,4 +763,4 @@
 
 ---
 
-*Last updated: 2026-03-15*
+*Last updated: 2026-03-16*
