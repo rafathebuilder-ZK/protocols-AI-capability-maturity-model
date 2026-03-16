@@ -199,8 +199,7 @@
 
     /* ─── Section 1: Entry ─────────────────────────────────── */
     #entry {
-      text-align: center;
-      padding: 120px 0 80px;
+      padding: 100px 0 80px;
     }
 
     #entry .label { margin-bottom: 20px; }
@@ -213,35 +212,38 @@
 
     #entry h1 span { color: var(--accent); }
 
-    .entry-stats {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      margin: 32px 0;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
+    .entry-title-sub {
       font-family: var(--font-mono);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin: 0 auto 8px;
+      max-width: 640px;
       display: block;
-      line-height: 1;
     }
 
-    .stat-label {
-      font-size: 0.8rem;
+    .entry-descriptor {
+      font-size: 0.85rem;
       color: var(--text-secondary);
-      max-width: 140px;
+      letter-spacing: 0.02em;
+      max-width: 640px;
+      margin: 0 auto 40px;
       display: block;
-      margin: 6px auto 0;
-      line-height: 1.4;
     }
+
+    .entry-intro {
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    .entry-intro p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .entry-intro p:last-child { margin-bottom: 0; }
 
     .entry-sub {
       font-size: 1.05rem;
@@ -254,41 +256,47 @@
       font-size: 0.8rem;
       color: var(--text-secondary);
       margin-top: 16px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* ─── Section 2: Context ───────────────────────────────── */
-    #context .context-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .context-text h2 { margin-bottom: 20px; }
-    .context-text p { color: var(--text-secondary); font-size: 0.95rem; }
-
-    .context-text .source-note {
-      font-size: 0.8rem;
+    #context { text-align: center; }
+    #context > .container > .label { margin-bottom: 12px; }
+    #context > .container > h2 { margin-bottom: 12px; }
+    #context > .container > .context-intro {
+      font-size: 0.95rem;
       color: var(--text-secondary);
-      border-top: 1px solid var(--border);
-      padding-top: 16px;
-      margin-top: 24px;
+      max-width: 560px;
+      margin: 0 auto 40px;
     }
 
-    /* Five-level arc */
-    .level-arc { display: flex; flex-direction: column; gap: 8px; }
-
-    .arc-item {
+    /* Level cards */
+    .level-cards {
+      max-width: 680px;
+      margin: 0 auto 64px;
       display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 14px 16px;
-      background: var(--surface);
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .level-card {
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: 10px;
+      padding: 20px 24px;
     }
 
-    .arc-item.projected { opacity: 0.45; }
+    .level-card.projected { opacity: 0.55; }
+
+    .level-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
 
     .arc-num {
       font-family: var(--font-mono);
@@ -303,23 +311,20 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
     }
 
-    .arc-content { flex: 1; }
-
-    .arc-name {
+    .level-card-name {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 2px;
     }
 
-    .arc-tagline {
-      font-size: 0.78rem;
+    .level-card-desc {
+      font-size: 0.875rem;
       color: var(--text-secondary);
-      line-height: 1.4;
+      line-height: 1.65;
+      padding-left: 42px;
     }
 
     .projected-badge {
@@ -331,6 +336,135 @@
       border-radius: 4px;
       margin-left: 8px;
       vertical-align: middle;
+    }
+
+    /* Model rationale */
+    .model-rationale {
+      max-width: 640px;
+      margin: 0 auto;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .model-rationale h2 { margin-bottom: 20px; }
+    .model-rationale p { color: var(--text-secondary); font-size: 0.95rem; }
+
+    .source-note {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: 24px;
+    }
+
+    /* Level card dimension expand */
+    .level-dim-toggle {
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0;
+      margin-top: 14px;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-align: left;
+    }
+
+    .level-dim-toggle:hover { color: var(--accent-dark); }
+
+    .level-card-tagline {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      padding-left: 42px;
+      margin-bottom: 10px;
+    }
+
+    .level-historical {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      margin: 12px 0 0 42px;
+    }
+
+    .level-historical-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .level-historical-tech {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .level-historical-desc {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-top: 3px;
+      display: block;
+    }
+
+    .level-dims {
+      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .level-dims.open { display: block; }
+
+    .dim-item {
+      display: grid;
+      grid-template-columns: 130px 100px 1fr;
+      gap: 0 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .dim-item:last-child { border-bottom: none; }
+
+    .dim-name {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: 2px;
+    }
+
+    .dim-value-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: var(--accent-light);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .dim-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .dim-item { grid-template-columns: 1fr; gap: 4px; }
     }
 
     /* ─── Section 3: Case Studies ──────────────────────────── */
@@ -857,7 +991,6 @@
 
     @media (max-width: 600px) {
       .nav-links { display: none; }
-      .entry-stats { gap: 20px; }
       .output-level-name { font-size: 1.5rem; }
       .arc-step { font-size: 0.65rem; padding: 5px 10px; }
     }
@@ -900,7 +1033,7 @@
   <div class="nav-inner">
     <a href="#entry" class="wordmark">
       Protocolized
-      <span class="wordmark-sub">The Magazine of Strange Rules</span>
+      <span class="wordmark-sub">Protocol Research and Development</span>
     </a>
     <ul class="nav-links">
       <li><a href="#context">The Model</a></li>
@@ -914,95 +1047,170 @@
 <!-- ─── Section 1: Entry ─────────────────────────────────── -->
 <section id="entry">
   <div class="container">
-    <div class="label">Protocols for Business · AI Capability Maturity Model</div>
-    <h1>Most organizations are already at Level 1.<br><span>They just don't know it yet.</span></h1>
+    <h1>A Capability Maturity Model<br>for Generative AI Adoption</h1>
+    <p class="entry-title-sub">Building Operational Confidence for a Probabilistic Stack</p>
+    <p class="entry-descriptor">A Practical Guide for Deployment Managers</p>
 
-    <div class="entry-stats">
-      <div class="stat">
-        <span class="stat-number">71%</span>
-        <span class="stat-label">of enterprise employees use unauthorized AI tools</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">400+</span>
-        <span class="stat-label">days until the average organization discovers this</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">39%</span>
-        <span class="stat-label">of CEOs report adequate AI governance in place</span>
-      </div>
+    <div class="entry-intro">
+      <p>You are deploying AI whether you planned to or not. Your employees are already using ChatGPT on their phones, Claude in their browsers, and GitHub Copilot in their IDEs. The question is how to transform that chaotic shadow adoption into a strategic capability that compounds over time.</p>
+
+      <p>This Capability Maturity Model maps that path. Five levels: from shadow adoption (Level 1: Shadow) through broadly sanctioned but ungoverned deployment (Level 2: Sanctioned), deliberately designed AI-native workflows (Level 3: Designed), AI as sector infrastructure (Level 4: Infrastructural), to the emerging state where AI becomes invisible civilizational coordination infrastructure (Level 5: Planetary).</p>
+
+      <p>The goal is to build capability systematically, learning from each level's characteristic challenges before taking on the next. Each transition requires a different kind of governance. The failure modes at each level are predictable in advance.</p>
+
+      <p>Most organizations are at Level 1 or early Level 2 — the default starting point for any organization navigating this transition. The assessment below identifies where your organization sits, which failure modes you are most exposed to, and what the next move looks like.</p>
     </div>
 
-    <p class="entry-sub">This tool places your organization on the five-level AI capability maturity model and tells you what to do next. No signup required. Takes about 10 minutes.</p>
+    <a href="#assessment" class="btn btn-primary" style="display:block;width:fit-content;margin:0 auto">Take the assessment →</a>
 
-    <a href="#assessment" class="btn btn-primary">Find out where you are →</a>
-
-    <p class="entry-meta">Used by deployment managers and operations executives. Based on desk research across 35 sources including Klarna, Samsung, Uber, Boom Supersonic, and McKinsey.</p>
+    <p class="entry-meta">Based on desk research across 35 sources including Klarna, Samsung, Uber, Boom Supersonic, and McKinsey. Takes about 10 minutes. No signup required.</p>
   </div>
 </section>
 
 <!-- ─── Section 2: Context ───────────────────────────────── -->
 <section id="context" class="section">
   <div class="container">
-    <div class="context-grid">
-      <div class="context-text">
-        <div class="label" style="margin-bottom:14px">Why this model exists</div>
-        <h2>AI adoption fails as a protocol problem, not a tool problem.</h2>
 
-        <br>
+    <div class="label" style="margin-bottom:12px">The five levels</div>
+    <h2 style="margin-bottom:12px">From shadow adoption to planetary infrastructure</h2>
+    <p class="context-intro">Each level describes an organizational state with characteristic governance challenges and failure modes. Levels 1–3 are actionable today. Levels 4–5 are projected.</p>
 
-        <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
+    <div class="level-cards">
 
-        <p>The unit of maturity in this model is not process compliance. It is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
-
-        <p>Levels 1–3 describe organizational states most deployment teams can act on directly. Levels 4–5 describe what happens when AI governance shifts from the organizational to the industry and civilizational scale. Most organizations are at Level 1 or 2. A small number have reached Level 3. Levels 4 and 5 are emerging or projected.</p>
-
-        <div class="source-note">
-          Based on desk research across 35 sources. Theoretical framework draws on Venkatesh Rao's protocol theory. Case evidence from Klarna, Samsung, Uber, Boom Supersonic, Menlo Ventures, McKinsey, and others.
+      <div class="level-card">
+        <div class="level-card-header">
+          <div class="arc-num">1</div>
+          <div class="level-card-name">Shadow</div>
+        </div>
+        <div class="level-card-tagline">AI is in use. The organization doesn't know how, by whom, or with what data.</div>
+        <div class="level-card-desc">AI tools are in active use through employee initiative, without organizational authorization or oversight. Individual workers use personal accounts for work tasks. No policy governs what data can be submitted to which services. Exposure is invisible until a data leak, regulatory inquiry, or quality failure makes it visible — typically 400+ days after the initial incident. The characteristic tension is between individual productivity gains and organizational risk that accumulates silently.</div>
+        <div class="level-historical">
+          <span class="level-historical-label">Historical parallel</span>
+          <span class="level-historical-tech">Spreadsheets in accounting — Lotus 1-2-3, mid-1980s</span>
+          <span class="level-historical-desc">Finance departments adopted spreadsheets through individual initiative before IT or management had any policy. Individual productivity gains were real; organizational risk from formula errors and uncontrolled data was invisible until it wasn't.</span>
+        </div>
+        <button class="level-dim-toggle" onclick="toggleLevelDims(this)">Show dimensions ↓</button>
+        <div class="level-dims">
+          <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">absent</span><span class="dim-desc">No governance exists. No policies, no oversight, no organizational awareness of AI use patterns.</span></div>
+          <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">personal</span><span class="dim-desc">Employees use personal accounts (ChatGPT, Claude, Copilot) for work tasks. No enterprise licensing, access controls, or data handling review.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">ignored</span><span class="dim-desc">AI outputs are used without review or verification. No distinction exists between AI-generated and human-generated work.</span></div>
+          <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">ad hoc</span><span class="dim-desc">Each employee makes independent decisions about which tools to use and how. No shared standard or organizational visibility.</span></div>
+          <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">none</span><span class="dim-desc">No mechanism exists to detect, record, or learn from AI errors. Failures disappear into the flow of work.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">none</span><span class="dim-desc">AI outputs are not verified before use in consequential contexts. No review step exists at any point in the workflow.</span></div>
         </div>
       </div>
 
-      <div>
-        <div class="label" style="margin-bottom:14px">The five levels</div>
-        <div class="level-arc">
-          <div class="arc-item">
-            <div class="arc-num">1</div>
-            <div class="arc-content">
-              <div class="arc-name">Shadow</div>
-              <div class="arc-tagline">AI is in use. The organization doesn't know how, by whom, or with what data.</div>
-            </div>
-          </div>
-          <div class="arc-item">
-            <div class="arc-num">2</div>
-            <div class="arc-content">
-              <div class="arc-name">Sanctioned</div>
-              <div class="arc-tagline">Access granted. No governing protocol has been designed.</div>
-            </div>
-          </div>
-          <div class="arc-item">
-            <div class="arc-num">3</div>
-            <div class="arc-content">
-              <div class="arc-name">Designed</div>
-              <div class="arc-tagline">Workflows built around AI. The business model depends on them.</div>
-            </div>
-          </div>
-          <div class="arc-item projected">
-            <div class="arc-num">4</div>
-            <div class="arc-content">
-              <div class="arc-name">Infrastructural <span class="projected-badge">Projected</span></div>
-              <div class="arc-tagline">AI is sector infrastructure. Governance is now a collective problem.</div>
-            </div>
-          </div>
-          <div class="arc-item projected">
-            <div class="arc-num">5</div>
-            <div class="arc-content">
-              <div class="arc-name">Planetary <span class="projected-badge">Projected</span></div>
-              <div class="arc-tagline">AI governs civilizational coordination. The challenge is legibility, not adoption.</div>
-            </div>
-          </div>
+      <div class="level-card">
+        <div class="level-card-header">
+          <div class="arc-num">2</div>
+          <div class="level-card-name">Sanctioned</div>
         </div>
-        <p style="font-size:0.75rem;color:var(--text-secondary);margin-top:12px">Levels 4–5 shown for reference. Assessment covers Levels 1–3.</p>
+        <div class="level-card-tagline">The organization has granted AI access. It hasn't designed what to do with it.</div>
+        <div class="level-card-desc">The organization has granted broad AI access and signaled strategic intent. Enterprise licenses are deployed; adoption rates climb. What is missing is the governing protocol: which tasks, with what review process, what quality standard, what escalation path when AI fails. High adoption rates and early productivity gains accumulate alongside governance failures that surface when they become external-facing — in customer complaints, court decisions, or regulatory findings. The characteristic tension is between maximizing adoption speed and building the review infrastructure that makes adoption durable.</div>
+        <div class="level-historical">
+          <span class="level-historical-label">Historical parallel</span>
+          <span class="level-historical-tech">Corporate email — Microsoft Exchange / Lotus Notes, early 1990s</span>
+          <span class="level-historical-desc">Email was mandated broadly before organizations had designed how to use it. The mandate produced adoption. The absence of workflow design produced attention overload, inbox as default coordination mechanism, and meeting culture as the override.</span>
+        </div>
+        <button class="level-dim-toggle" onclick="toggleLevelDims(this)">Show dimensions ↓</button>
+        <div class="level-dims">
+          <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">reactive</span><span class="dim-desc">Governance responds to incidents. Policies exist but are triggered by failures, not designed around AI's probabilistic properties.</span></div>
+          <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">sanctioned</span><span class="dim-desc">Enterprise AI licenses are in place and personal account use is discouraged. Tool selection has been reviewed, but workflows have not been redesigned around the tools.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">absorbed</span><span class="dim-desc">Errors are noticed and corrected informally when they surface. No systematic process exists for detecting AI failures before they reach end users.</span></div>
+          <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">mandated</span><span class="dim-desc">AI use is mandated or encouraged organization-wide, but teams coordinate AI use independently with no shared workflow standard.</span></div>
+          <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">reactive</span><span class="dim-desc">Failures trigger individual corrections but no systematic tracking, aggregate learning, or trend analysis across workflows.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">informal</span><span class="dim-desc">Some outputs are reviewed before use, but informally and inconsistently. No defined criteria, no named reviewer, no record of what was checked.</span></div>
+        </div>
+      </div>
+
+      <div class="level-card">
+        <div class="level-card-header">
+          <div class="arc-num">3</div>
+          <div class="level-card-name">Designed</div>
+        </div>
+        <div class="level-card-tagline">AI workflows are designed, not improvised. The business model depends on them.</div>
+        <div class="level-card-desc">At least one core workflow has been deliberately designed around AI — with a named owner, quality metrics, and a defined escalation path for failures. Removing AI from that workflow would require rebuilding it. The governance question has shifted from controlling use to designing protocols that handle failure, versioning, and external dependencies without losing the speed advantage AI provides. Domain expertise is the limiting constraint: the knowledge required to specify what good AI output looks like in a specific context. The characteristic tension is between AI-accelerated internal velocity and external dependencies — regulatory timelines, supplier lead times, partner cycles — that move at human pace.</div>
+        <div class="level-historical">
+          <span class="level-historical-label">Historical parallel</span>
+          <span class="level-historical-tech">Git and CI/CD — 2008–2015</span>
+          <span class="level-historical-desc">Competitive position in software development came to depend on how well the deployment workflow was designed. Teams that designed CI/CD protocols well shipped faster and with fewer regressions. Domain expertise — knowing what to test and when — was the limiting constraint, not tool access.</span>
+        </div>
+        <button class="level-dim-toggle" onclick="toggleLevelDims(this)">Show dimensions ↓</button>
+        <div class="level-dims">
+          <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">designed</span><span class="dim-desc">At least one workflow has a designed governance protocol: specific review criteria, named ownership, defined escalation paths. Governance is workflow-specific, not organization-wide.</span></div>
+          <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">purpose-built</span><span class="dim-desc">The organization has built or customized AI tooling for its specific domain context — beyond off-the-shelf configuration. Internal tooling reflects the specific verification and coordination requirements of the workflows.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">governed</span><span class="dim-desc">AI outputs in governed workflows are reviewed against defined criteria by named reviewers. Outside governed workflows, handling remains informal.</span></div>
+          <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">designed</span><span class="dim-desc">Coordination protocols are explicitly designed for AI-native workflows — handoffs, review cadences, and escalation paths are structured to handle the speed differential between AI production and human review.</span></div>
+          <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">systematic</span><span class="dim-desc">Quality metrics track workflow performance on a defined cadence. Failures trigger protocol reviews, not just individual corrections.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">procedural</span><span class="dim-desc">Verification follows documented procedures in at least one workflow. Reviewers know what they're checking, why they're checking it, and what constitutes a failure.</span></div>
+        </div>
+      </div>
+
+      <div class="level-card projected">
+        <div class="level-card-header">
+          <div class="arc-num">4</div>
+          <div class="level-card-name">Infrastructural <span class="projected-badge">Projected</span></div>
+        </div>
+        <div class="level-card-tagline">AI is sector infrastructure. The question is no longer whether to use it but how to govern it collectively.</div>
+        <div class="level-card-desc">AI capability has become a baseline expectation across the sector. Individual organizational advantage has been competed away; the governance challenge is now collective. The questions are market-structural: how does the industry coordinate AI use, handle shared risks, establish interoperability standards, and prevent concentration of AI capability that produces anti-competitive outcomes. Individual organizational maturity is necessary but not sufficient at this level. The characteristic tension is between industry standardization — which enables coordination — and organizational differentiation through proprietary AI capability.</div>
+        <div class="level-historical">
+          <span class="level-historical-label">Historical parallel</span>
+          <span class="level-historical-tech">EDI in retail and manufacturing — late 1980s–1990s</span>
+          <span class="level-historical-desc">Walmart mandated Electronic Data Interchange for all suppliers. Early adopters had competitive advantage. Then every major retailer adopted it. Individual advantage disappeared; the floor for the whole sector rose. Not adopting EDI meant not participating in the market.</span>
+        </div>
+        <button class="level-dim-toggle" onclick="toggleLevelDims(this)">Show dimensions ↓</button>
+        <div class="level-dims">
+          <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">systematized</span><span class="dim-desc">Governance protocols are systematized across the organization and aligned with sector-wide standards. The organization contributes to or formally complies with industry AI governance frameworks.</span></div>
+          <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">native</span><span class="dim-desc">AI is native to the organization's core infrastructure — not deployed as a layer on top of existing systems but embedded in the systems themselves.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">systematized</span><span class="dim-desc">Cross-workflow quality standards exist and are tracked at the organizational level. Handling is consistent and measurable across all critical workflows.</span></div>
+          <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">automated</span><span class="dim-desc">Coordination between AI workflows is automated where possible. Handoffs between workflows are governed by protocol without requiring manual intervention at each step.</span></div>
+          <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">predictive</span><span class="dim-desc">Performance data from AI workflows predicts failure modes before they occur. Quality instrumentation is forward-looking, not just reactive.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">metriced</span><span class="dim-desc">Verification is tracked with quantitative metrics across all critical AI workflows. Error rates, correction rates, and escalation rates are monitored and reported on a defined cadence.</span></div>
+        </div>
+      </div>
+
+      <div class="level-card projected">
+        <div class="level-card-header">
+          <div class="arc-num">5</div>
+          <div class="level-card-name">Planetary <span class="projected-badge">Projected</span></div>
+        </div>
+        <div class="level-card-tagline">AI is invisible infrastructure for civilization-scale coordination. The governance challenge is legibility, not adoption.</div>
+        <div class="level-card-desc">AI governs critical civilizational coordination systems — supply chains, financial infrastructure, public health surveillance. The governance challenge is no longer adoption or protocol design but legibility: understanding what the systems are doing well enough to intervene when they fail. Individual organizational governance is a component of a problem no single actor controls. Historical precedent: the 2021 Maersk ransomware attack and the Ever Given Suez blockage as early examples of how infrastructure-level failures propagate across sectors before any actor can respond.</div>
+        <div class="level-historical">
+          <span class="level-historical-label">Historical parallel</span>
+          <span class="level-historical-tech">Internet protocols — TCP/IP, SMTP, BGP, 2000s–present</span>
+          <span class="level-historical-desc">The 2021 Facebook BGP misconfiguration took down Facebook, Instagram, and WhatsApp globally. The failure propagated before any single actor could respond. The internet's routing protocols are invisible until they fail — and when they fail, the failure is everywhere at once.</span>
+        </div>
+        <button class="level-dim-toggle" onclick="toggleLevelDims(this)">Show dimensions ↓</button>
+        <div class="level-dims">
+          <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">infrastructure</span><span class="dim-desc">Governance is itself infrastructure — embedded in protocols operating at civilizational scale. No single organization controls or fully understands the full governance system.</span></div>
+          <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">native</span><span class="dim-desc">AI tooling is indistinguishable from the infrastructure it governs. Tools are not deployed separately — they are the substrate of coordination across systems.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">generative</span><span class="dim-desc">AI protocols generate new coordination mechanisms in response to uncertainty faster than human review can operate. Human oversight functions at system design level, not individual output level.</span></div>
+          <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">infrastructure</span><span class="dim-desc">Coordination between systems happens through AI protocols at machine speed, below the threshold of human attention in normal operation.</span></div>
+          <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">generative</span><span class="dim-desc">The system modifies its own governing protocols in response to observed failures. Human intervention is required only for novel failure modes the self-correction mechanism cannot address.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">self-correcting</span><span class="dim-desc">Verification is self-correcting at the protocol level. Failures trigger automated protocol adjustments. Human oversight is required only for failure modes outside the system's known envelope.</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="model-rationale">
+      <div class="label" style="margin-bottom:14px">Why this model exists</div>
+      <h2>AI adoption fails as a protocol problem, not a tool problem.</h2>
+
+      <br>
+
+      <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
+
+      <p>The unit of maturity in this model is not process compliance. It is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
+
+      <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance shifts from the organizational to the industry and civilizational scale. Levels 4 and 5 are emerging or projected.</p>
+
+      <div class="source-note">
+        Based on desk research across 35 sources. Theoretical framework draws on Venkatesh Rao's protocol theory. Case evidence from Klarna, Samsung, Uber, Boom Supersonic, Menlo Ventures, McKinsey, and others.
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1031,7 +1239,7 @@
         </div>
         <button class="drill-toggle" onclick="toggleDrill(this)">What happened next ↓</button>
         <div class="drill-content">
-          Samsung banned all external AI tools, built an internal LLM (Samsung Gauss), then selectively re-admitted external tools under a governed protocol over two years. The arc — incident → ban → internal alternative → governed re-admission — is the most documented Level 1 exit path available. Most organizations skip directly to re-admission without building the governing protocol in the middle. The ban without a governed alternative is as common a failure mode as the original leak.
+          Samsung banned all external AI tools, built an internal LLM (Samsung Gauss), then selectively re-admitted external tools under a governed protocol over two years. The arc — incident → ban → internal alternative → governed re-admission — is the most documented Level 1 exit path available. The Samsung incident was not unusual in scale: contemporaneous Cyberhaven research found that in a 100,000-person company, confidential data was being shared with AI services hundreds of times per week. (Cyberhaven, Q1 2024.) Most organizations skip directly to re-admission without building the governing protocol in the middle. The ban without a governed alternative is as common a failure mode as the original leak.
         </div>
       </div>
 
@@ -1051,7 +1259,7 @@
         </div>
         <button class="drill-toggle" onclick="toggleDrill(this)">What happened next ↓</button>
         <div class="drill-content">
-          Klarna's IPO completed September 2025 at $17–19B. The quality reversal and the financial success happened simultaneously — which is precisely the condition the maturity model is designed to diagnose before the reversal, not after. Strong financial metrics are a lagging indicator at Level 2. Governance failures accumulate faster than they appear in output volume numbers.
+          Klarna's IPO completed September 2025 at $17–19B. The quality reversal and the financial success happened simultaneously — this is the condition the model is designed to catch early. Strong financial metrics are a lagging indicator at Level 2. Governance failures accumulate faster than they appear in output volume numbers.
         </div>
       </div>
 
@@ -1217,7 +1425,7 @@
       <!-- Rendered by JS -->
     </div>
     <div class="print-footer">
-      Protocolized · The Magazine of Strange Rules · protocolized.summerofprotocols.com · AI Capability Maturity Model v2.2 · 2026
+      Protocolized · Protocol Research and Development · protocolized.summerofprotocols.com · AI Capability Maturity Model v2.2 · 2026
     </div>
   </div>
 </section>
@@ -1248,7 +1456,7 @@
 <!-- ─── Footer ────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
-    <p>Protocolized · The Magazine of Strange Rules · <a href="https://protocolized.summerofprotocols.com/" target="_blank">protocolized.summerofprotocols.com</a></p>
+    <p>Protocolized · Protocol Research and Development · <a href="https://protocolized.summerofprotocols.com/" target="_blank">protocolized.summerofprotocols.com</a></p>
     <p style="margin-top:6px">AI Capability Maturity Model v2.2 · Source: <a href="https://github.com/rafathebuilder-ZK/protocols-AI-capability-maturity-model" target="_blank">github.com/rafathebuilder-ZK/protocols-AI-capability-maturity-model</a></p>
   </div>
 </footer>
@@ -1266,9 +1474,9 @@ const RESULTS = {
     levelNum: 1,
     levelName: 'Shadow',
     tagline: 'AI is in use. The organization doesn\'t know how, by whom, or with what data.',
-    description: `Your organization is at the default starting position — not a failure, but a baseline every organization passes through. AI tools are in active use through employee initiative, not organizational decision. Individual workers use personal accounts for work tasks. No policy governs this, no tooling controls it, and no one has a complete picture of what organizational data is being submitted to which systems.
+    description: `Your organization is at the default starting position — not a failure, but a baseline every organization passes through. AI tools are in active use through employee initiative. No organizational decision has authorized them. Individual workers use personal accounts for work tasks. No policy governs this, no tooling controls it, and no one has a complete picture of what organizational data is being submitted to which systems.
 
-The absence of a governance protocol is itself invisible: organizations don't feel like they're at Level 1 because nothing has gone wrong yet. The typical organization is at Level 1 for 400+ days before a shadow AI incident surfaces. Shadow adoption is the observable signal that existing work protocols have been pushed beyond their design range. The protocol response — sanctioned access, data boundaries, reviewed terms — has not yet been adopted.`,
+The absence of a governance protocol is itself invisible: organizations don't feel like they're at Level 1 because nothing has gone wrong yet. The typical organization is at Level 1 for 400+ days before a shadow AI incident surfaces. Shadow adoption is the observable signal that existing work protocols have been pushed beyond their design range. The protocol response (sanctioned access, data boundaries, reviewed terms) has not yet been adopted.`,
     failureModes: [
       {
         name: 'Data leakage to third-party AI services',
@@ -1276,13 +1484,13 @@ The absence of a governance protocol is itself invisible: organizations don't fe
       },
       {
         name: 'Regulatory exposure without awareness',
-        description: 'Data submitted to external AI services creates HIPAA, GDPR, attorney-client privilege, or trade secret exposure that the organization cannot detect or quantify. Discovery typically occurs 400+ days after initial exposure — long after the data has been processed. Healthcare sector: 86% of organizations have shadow AI incidents; only 35% can track their own AI usage.'
+        description: 'Data submitted to external AI services creates HIPAA, GDPR, attorney-client privilege, or trade secret exposure that the organization cannot detect or quantify. Discovery typically occurs 400+ days after initial exposure — long after the data has been processed. Healthcare sector: 86% of organizations have reported shadow AI incidents; only 35% can track their own AI usage. (symplr, 2025)'
       }
     ],
     actions: [
       {
         name: 'Conduct an AI tool inventory',
-        description: 'Identify which AI tools are in use, by which teams, on which account types (personal vs. enterprise). This does not require banning anything — it requires visibility.',
+        description: 'Identify which AI tools are in use, by which teams, on which account types (personal vs. enterprise). Visibility is the goal: which tools, which teams, which account types.',
         doneWhen: 'IT can name all AI tools in active use and the account type for each.'
       },
       {
@@ -1316,13 +1524,13 @@ The absence of a governance protocol is itself invisible: organizations don't fe
     levelNum: 2,
     levelName: 'Sanctioned',
     tagline: 'The organization has granted AI access. It hasn\'t designed what to do with it.',
-    description: `Your organization has done the right thing: granted broad AI access and signaled strategic commitment. The failure mode at this level is not the mandate — it is executing a mandate without designing the governing protocol. Which tasks, with what review process, what quality standard, what escalation path when AI fails.
+    description: `Your organization has done the right thing: granted broad AI access and signaled strategic commitment. The failure mode at this level is executing the mandate without designing the governing protocol — which tasks, with what review process, what quality standard, what escalation path when AI fails.
 
 Two dynamics characterize Level 2. First, the Time to Mediocrity effect: AI produces functional output quickly in most domains, creating genuine early productivity gains while concealing the absence of expertise. Second, the financial indicator lag: strong financial metrics accumulate at the same time as governance failures, making the governance gap invisible until failures become external-facing. Level 2 organizations typically achieve high adoption rates and real early gains — then encounter a quality floor that the absent governance layer cannot address.`,
     failureModes: [
       {
         name: 'Quality floor collapse',
-        description: 'AI replaces a human step that was simultaneously a production step and a quality-check step. Production volume increases; the quality check disappears. The gap is invisible in output volume metrics and visible in product quality or customer satisfaction. Failures surface when external parties — customers, courts, regulators — raise them, not internal monitoring. Klarna reversed course after financial results were already strong.'
+        description: 'AI replaces a human step that was simultaneously a production step and a quality-check step. Production volume increases; the quality check disappears. The gap is invisible in output volume metrics and visible in product quality or customer satisfaction. Failures surface when external parties (customers, courts, regulators) raise them — internal monitoring does not catch them first. Klarna reversed course after financial results were already strong.'
       },
       {
         name: 'Mandate without criteria',
@@ -1350,7 +1558,7 @@ Two dynamics characterize Level 2. First, the Time to Mediocrity effect: AI prod
       },
       {
         name: 'Build a minimum output review protocol',
-        description: 'For AI-generated outputs that go to external parties or govern consequential decisions: specify who reviews, what they check, and what constitutes an acceptable output. This is not an AI literacy course — it is workflow-specific guidance.',
+        description: 'For AI-generated outputs that go to external parties or govern consequential decisions: specify who reviews, what they check, and what constitutes an acceptable output. This is workflow-specific guidance — what to check and who is responsible.',
         doneWhen: 'Reviewers in at least one workflow can state what they\'re checking and why.'
       }
     ],
@@ -1374,7 +1582,7 @@ Two dynamics characterize Level 2. First, the Time to Mediocrity effect: AI prod
     levelNum: '2–3',
     levelName: 'Sanctioned → Designed',
     tagline: 'You have the foundations of Level 3. Consistency and measurement are missing.',
-    description: `Your organization is at the transition between Level 2 and Level 3. At least one workflow is designed — you have demonstrated that AI-native workflow design is possible in your context. What's missing is consistency across workflows and a quality measurement system that makes the governance protocol durable, not just present in one team.
+    description: `Your organization is at the transition between Level 2 and Level 3. At least one workflow is designed — you have demonstrated that AI-native workflow design is possible in your context. What's missing is consistency across workflows and a quality measurement system that makes the governance protocol durable and repeatable across the organization.
 
 This is a common and productive stuck point. The risk is that the designed workflows become isolated examples while the rest of the organization continues operating at Level 2. The Level 2 failure modes — quality floor collapse, mandate without criteria — remain live risks in the undesigned workflows.`,
     failureModes: [
@@ -1388,7 +1596,7 @@ This is a common and productive stuck point. The risk is that the designed workf
       },
       {
         name: 'Custom implementation accumulation',
-        description: 'Early designed workflows become custom solutions that never abstract into reusable patterns. The organization has the costs and complexity of Level 3 with Level 2 leverage: each new workflow requires a new custom build, and standardization becomes politically difficult because every team owns its own implementation.'
+        description: 'Early designed workflows become custom solutions that never abstract into reusable patterns. The organization carries Level 3 complexity without Level 3 scope: each new workflow requires a new custom build, and standardization becomes politically difficult because every team owns its own implementation.'
       }
     ],
     actions: [
@@ -1423,13 +1631,13 @@ This is a common and productive stuck point. The risk is that the designed workf
     levelNum: 3,
     levelName: 'Designed',
     tagline: 'AI workflows are designed, not improvised. The business model depends on them.',
-    description: `Your organization has crossed the line from AI adoption to AI dependency — your competitive position relies on designed workflows, not ad hoc use. AI is embedded in the core competitive position, not just support functions. Workflows are built around AI rather than retrofitted to include it.
+    description: `Your organization has crossed from AI adoption into AI dependency: your competitive position relies on designed AI workflows. AI governs core operations. Workflows are built around AI rather than retrofitted to include it.
 
-The governance question has shifted: you are no longer trying to control AI use, you are designing protocols that handle failure, versioning, and external dependencies without losing the speed advantage AI provides. The limiting constraint is no longer AI capability — it is domain expertise: the knowledge required to specify what good output looks like in your specific context. Two non-technical operators can run sophisticated AI production pipelines if they can articulate the coordination protocol clearly.`,
+The governance question has shifted: you are designing protocols that handle failure, versioning, and external dependencies without losing the speed advantage AI provides. Domain expertise is the limiting constraint — the knowledge required to specify what good output looks like in your specific context. Two operators with domain knowledge can run sophisticated AI production pipelines if they can articulate the coordination protocol clearly.`,
     failureModes: [
       {
         name: 'Temporal divergence breakdown',
-        description: 'AI accelerates internal production faster than external dependencies can absorb. Review queues fill faster than reviewers can process them. The bottleneck has moved from production to coordination. Slacker Index: measure total lead time divided by actual AI working time. A ratio above 5:1 means the bottleneck is downstream coordination, not the AI workflow. Uber: 11% of pull requests opened by agents; code review became the primary bottleneck, requiring purpose-built tooling.'
+        description: 'AI accelerates internal production faster than external dependencies can absorb. Review queues fill faster than reviewers can process them. The bottleneck has moved from production to coordination. Slacker Index: measure total lead time divided by actual AI working time. A ratio above 5:1 identifies downstream coordination as the bottleneck. Uber: 11% of pull requests opened by agents; code review became the primary bottleneck, requiring purpose-built tooling. (Venkatesh Rao / Protocolized, 2026)'
       },
       {
         name: 'Ontological drift',
@@ -1441,13 +1649,13 @@ The governance question has shifted: you are no longer trying to control AI use,
       },
       {
         name: 'Custom implementation accumulation',
-        description: 'Internal AI capability builds custom solutions that solve specific problems but never abstract into reusable platform features. The organization has the costs and complexity of Level 3 with Level 2 leverage: each new use case requires a new custom build, and standardization becomes politically impossible because every team owns its own implementation.'
+        description: 'Internal AI capability builds custom solutions that solve specific problems but never abstract into reusable platform features. The organization carries Level 3 complexity without the organizational platform to support it: each new use case requires a new custom build, and standardization becomes politically impossible because every team owns its own implementation.'
       }
     ],
     actions: [
       {
         name: 'Measure and address temporal divergence',
-        description: 'Calculate the Slacker Index for your primary AI workflow: total lead time ÷ AI working time. Where the ratio exceeds 5:1, identify the downstream coordination bottleneck — review queue, approval chain, handoff delay — and redesign the coordination protocol, not the AI step.',
+        description: 'Calculate the Slacker Index for your primary AI workflow: total lead time ÷ AI working time. Where the ratio exceeds 5:1, identify the downstream coordination bottleneck (review queue, approval chain, handoff delay) and redesign the coordination protocol.',
         doneWhen: 'Slacker Index below 5:1 for primary workflow; bottleneck owner named.'
       },
       {
@@ -1483,7 +1691,7 @@ The governance question has shifted: you are no longer trying to control AI use,
     tagline: 'Your organization is at the leading edge. The next challenge is sector-level, not organizational.',
     description: `Your organization is at the boundary between Level 3 and Level 4. Multiple core AI workflows are designed, governed, and versioned. Your practices are mature enough that industry peers reference them as a benchmark. The organizational-level governance challenges are substantially addressed.
 
-The transition to Level 4 is not driven by any single organization's maturity decision — it is driven by the aggregate of Level 3 organizations reaching density sufficient to recalibrate the sector's productivity baseline. The governance questions you will encounter next are market-structural: how does the industry coordinate AI use, handle shared risks, establish standards, and prevent concentration of AI capability in ways that produce anti-competitive outcomes. Individual organizational maturity is necessary but not sufficient at Level 4.`,
+Level 4 emerges when the aggregate of Level 3 organizations reaches density sufficient to recalibrate the sector's productivity baseline. No single organization drives this transition. The governance questions at Level 4 are market-structural: how does the industry coordinate AI use, handle shared risks, establish standards, and prevent concentration of AI capability in ways that produce anti-competitive outcomes. Individual organizational maturity is necessary but not sufficient at Level 4.`,
     failureModes: [
       {
         name: 'AI capability concentration',
@@ -1495,7 +1703,7 @@ The transition to Level 4 is not driven by any single organization's maturity de
       },
       {
         name: 'Custom implementation accumulation',
-        description: 'Internal AI capability has built custom solutions that solve specific problems but have not abstracted into reusable platform features. At the boundary of Level 4, this creates a liability: the organization cannot contribute to or benefit from sector-wide standards because its implementations are too proprietary.'
+        description: 'Internal AI has built custom solutions that solve specific problems but have not abstracted into reusable platform features. At the boundary of Level 4, this becomes a liability: the organization cannot contribute to or benefit from sector-wide standards because its implementations are too proprietary.'
       }
     ],
     actions: [
@@ -1686,7 +1894,7 @@ function renderOutput(placement) {
 }
 
 function buildEmailBody(r) {
-  let body = `AI CAPABILITY MATURITY MODEL — Your Assessment Result\nProtocolized · The Magazine of Strange Rules\n\n`;
+  let body = `AI CAPABILITY MATURITY MODEL — Your Assessment Result\nProtocolized · Protocol Research and Development\n\n`;
   body += `LEVEL ${r.levelNum}: ${r.levelName.toUpperCase()}\n`;
   body += `${r.tagline}\n\n`;
   body += `WHERE YOU ARE\n${r.description}\n\n`;
@@ -1703,6 +1911,13 @@ function buildEmailBody(r) {
 }
 
 /* ─── Utility ────────────────────────────────────────────── */
+function toggleLevelDims(btn) {
+  const dims = btn.nextElementSibling;
+  const isOpen = dims.classList.contains('open');
+  dims.classList.toggle('open');
+  btn.textContent = isOpen ? 'Show dimensions ↓' : 'Hide dimensions ↑';
+}
+
 function toggleDrill(btn) {
   const content = btn.nextElementSibling;
   content.classList.toggle('open');
