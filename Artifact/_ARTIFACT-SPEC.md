@@ -26,30 +26,43 @@ A standalone diagnostic tool for senior operations and deployment executives. Th
 **Reference:** `../Resources/1771868260061.jpeg` — Protocolized Substack aesthetic.
 
 ### Color palette
+Source: Protocolized substack (https://protocolized.summerofprotocols.com/)
 ```
-Background:       #FFFFFF (white)
-Surface:          #F7F7F8 (light gray cards)
+Background:       #FAFAFA (off-white — substack background)
+Surface:          #F0F0F2 (light gray cards)
 Border:           #E5E5E7 (subtle card borders)
 Text primary:     #1A1A2E (near-black, deep navy)
 Text secondary:   #6B6B7B (gray for labels and secondary copy)
-Accent:           #5B4FE9 (purple-indigo — level names, key terms, CTAs)
-Accent light:     #EEF0FF (accent background for highlighted elements)
-Danger/warning:   #D94F3D (failure mode indicators)
-Success:          #2E7D5E (progression indicators)
+Accent:           #A888BF (lavender-purple — substack primary accent)
+Accent light:     #F3EEF7 (accent background for highlighted elements)
+Accent dark:      #7D5A96 (hover states, strong emphasis)
+Danger/warning:   #C0392B (failure mode indicators)
+Success:          #27AE60 (progression indicators)
 ```
 
 ### Typography
+Source: Protocolized substack uses Roboto Mono for headings
 ```
-Font stack: "Inter", system-ui, -apple-system, sans-serif
-  — Inter is widely available; if not loaded, falls back to system sans-serif
-  — Load from Google Fonts inline (single weight: 400, 500, 600, 700)
+Heading font:  "Roboto Mono", monospace — 700 weight
+               Load from Google Fonts
+Body font:     "Inter", system-ui, -apple-system, sans-serif
+               Load from Google Fonts (400, 500, 600)
 
-Heading XL:  700, 2.5rem, line-height 1.2  — Hero headline
-Heading L:   700, 1.75rem, line-height 1.3 — Section titles
-Heading M:   600, 1.25rem, line-height 1.4 — Card titles, level names
-Body:        400, 1rem, line-height 1.65   — Body copy
-Small:       400, 0.875rem, line-height 1.5 — Labels, metadata
-Label:       600, 0.75rem, uppercase, 0.08em letter-spacing — Category labels
+Heading XL:  Roboto Mono 700, 2.5rem, line-height 1.2  — Hero headline
+Heading L:   Roboto Mono 700, 1.75rem, line-height 1.3 — Section titles
+Heading M:   Roboto Mono 600, 1.25rem, line-height 1.4 — Card titles, level names
+Body:        Inter 400, 1rem, line-height 1.65          — Body copy
+Small:       Inter 400, 0.875rem, line-height 1.5       — Labels, metadata
+Label:       Inter 600, 0.75rem, uppercase, 0.08em LS   — Category labels
+```
+
+### Wordmark
+```
+Text:     "Protocolized"
+Tagline:  "The Magazine of Strange Rules"
+Font:     Roboto Mono 700
+Color:    #1A1A2E on light backgrounds
+Treatment: typographic only — no separate icon or logomark
 ```
 
 ### Component conventions
@@ -805,14 +818,14 @@ The following are out of scope for v1 but should be documented in the code as `<
 
 ---
 
-## 10. Open decisions (requires confirmation before build)
+## 10. Open decisions — resolved 2026-03-16
 
-| # | Decision | Default if not resolved |
-|---|----------|------------------------|
-| 1 | Contact button: show "coming soon" label or hide it entirely until backend is ready? | Show with mailto: and dev-mode warning comment |
-| 2 | Should the five-level arc in Section 2 be interactive (hover for tagline) or purely visual? | Purely visual |
-| 3 | Should the output card show all failure modes on the fast path, or primary failure mode only? | Primary only (others in drill-down) |
-| 4 | Wordmark/logo treatment: text only ("Protocolized") or use an asset from Resources? | Text only until confirmed asset provided |
+| # | Decision | Resolution |
+|---|----------|------------|
+| 1 | Contact button | Links to Protocolized subscribe URL (same as subscribe CTA): https://protocolized.summerofprotocols.com/ |
+| 2 | Five-level arc | Purely visual — no hover interaction |
+| 3 | Failure modes on output card | Show all applicable failure modes per level (L1: 2, L2: 4, L3: 4) — up to 5 max |
+| 4 | Wordmark | "Protocolized" in Roboto Mono 700, text-only — extracted from substack |
 
 ---
 
