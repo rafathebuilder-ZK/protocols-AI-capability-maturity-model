@@ -96,16 +96,16 @@ Litepaper released as downloadable PDF alongside or after blog post.
 
 ## Phase 5 — Interactive HTML Artifact
 
-### Status: NOT STARTED (spec pending)
+### Status: IN PROGRESS (v1 built — pending publication)
 
 ### Purpose
 A publicly accessible Claude artifact providing a diagnostic tool: users explore the five levels, place their organization, and receive a level-specific summary of failure modes and progression requirements.
 
 ### Tasks
-- [ ] Product spec and UX planning session
-- [ ] Define interaction model (step-through vs. self-select vs. quiz)
-- [ ] Build HTML artifact in Claude
-- [ ] Test against evaluation criteria (C1: diagnostic use — can readers place themselves?)
+- [x] Product spec and UX planning session (_ARTIFACT-BRIEF.md written)
+- [x] Define interaction model (funnel: step 1 recognition → step 2 scenario → level placement)
+- [x] Build HTML artifact (Artifact/drafts/v1.html — ~1,900 lines, pushed to GitHub)
+- [x] Test against evaluation criteria (_ARTIFACT-QC.md — 22 criteria, 22/22 passing)
 - [ ] Publish as public Claude artifact
 - [ ] Add artifact URL to README, blog post, and litepaper
 
@@ -122,7 +122,7 @@ Public Claude artifact URL exists; artifact renders the five levels accurately f
 | 2 — Model Development | [x] | [x] | [x] | [x] |
 | 3 — Blog Post | [x] | [ ] | [ ] | [ ] |
 | 4 — Litepaper | [x] | [ ] | [ ] | [ ] |
-| 5 — HTML Artifact | [ ] | [ ] | [ ] | [ ] |
+| 5 — HTML Artifact | [x] | [x] | [x] | [ ] |
 
 ---
 

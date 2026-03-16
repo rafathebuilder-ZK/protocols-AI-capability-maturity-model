@@ -71,10 +71,10 @@ This project is net new — not a v5. The prior model is a reference point and s
 
 ### Interactive HTML artifact (Claude artifact)
 - Format: Single-page HTML, publicly accessible as a Claude artifact
-- Function: Diagnostic tool — user steps through the five levels and places their organization; receives a summary of failure modes and progression requirements for their level
-- Source: Rendered from ai-cmm-v2.yaml content; the YAML is the source of truth
-- UX spec and product planning: separate planning session required before build
-- Target: complements the blog post as a shareable, interactive entry point to the model
+- Function: Diagnostic tool — user steps through the five levels and places their organization; receives a level-specific diagnosis with failure mode and next action
+- Source: Content drawn from ai-cmm-v2.yaml; YAML is the source of truth
+- Status: v1 built (`Artifact/drafts/v1.html`); pending publication as public Claude artifact
+- UX spec: `Artifact/_ARTIFACT-BRIEF.md`; QC framework: `Artifact/_ARTIFACT-QC.md`
 
 ---
 
@@ -101,6 +101,12 @@ AI Capability Maturity Model/
 ├── _PROJECT.md                    ← You are here
 ├── _MILESTONES.md                 ← Current status, decisions
 ├── _WORKPLAN.md                   ← Task list
+│
+├── Artifact/
+│   ├── _ARTIFACT-BRIEF.md         ← Product spec and UX design brief
+│   ├── _ARTIFACT-QC.md            ← 22-criterion evaluation framework
+│   └── drafts/
+│       └── v1.html                ← Interactive diagnostic artifact (v1, ~1,900 lines)
 │
 ├── Research/
 │   ├── source-catalog.md          ← Annotated sources

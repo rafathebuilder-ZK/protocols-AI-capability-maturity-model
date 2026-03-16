@@ -2,7 +2,7 @@
 
 **Project:** Desk research, blog post, litepaper, and interactive diagnostic tool on a capability maturity model for organizational AI adoption
 **Practice:** Protocolized — Protocols for Business Practice
-**Status:** Model Development complete — Blog post, Litepaper, and HTML artifact in queue
+**Status:** HTML artifact v1 built and on GitHub — Blog post and Litepaper next
 
 ---
 
@@ -19,15 +19,23 @@
 |--------|--------|----------|--------|
 | [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | Not started |
 | [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
-| Interactive HTML artifact | Claude artifact (public URL) | All audiences | Spec pending |
+| [Interactive HTML artifact](Artifact/drafts/v1.html) | Claude artifact (public URL) | All audiences | v1 built — pending Claude artifact publication |
 
 ---
+
+## HTML Artifact (v1 complete — publication pending)
+
+| Document | Purpose |
+|----------|---------|
+| [v1.html](Artifact/drafts/v1.html) | Interactive diagnostic artifact — five levels, self-assessment, output cards |
+| [_ARTIFACT-BRIEF.md](Artifact/_ARTIFACT-BRIEF.md) | Product spec and UX design brief |
+| [_ARTIFACT-QC.md](Artifact/_ARTIFACT-QC.md) | 22-criterion evaluation framework; pre/post scoring |
 
 ## Model Development (complete)
 
 | Document | Purpose |
 |----------|---------|
-| [ai-cmm-v2.yaml](Model-Development/ai-cmm-v2.yaml) | YAML DSL — current model definition (v2.1) |
+| [ai-cmm-v2.yaml](Model-Development/ai-cmm-v2.yaml) | YAML DSL — current model definition (v2.2) |
 | [ai-cmm-v1.yaml](Model-Development/ai-cmm-v1.yaml) | YAML DSL — prior version for diff reference |
 | [evaluation-criteria.md](Model-Development/evaluation-criteria.md) | Pass/fail criteria for YAML DSL quality |
 | [model-critique.md](Model-Development/model-critique.md) | Full critique of v4 and working hypothesis |

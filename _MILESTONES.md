@@ -5,8 +5,8 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-16)
 
-**Active work:** YAML DSL v2.2 complete; Artifact brief written; HTML artifact build next
-**Immediate next action:** Build HTML artifact (Artifact/drafts/v1.html) per _ARTIFACT-BRIEF.md
+**Active work:** HTML artifact v1 built, polished, and pushed to GitHub
+**Immediate next action:** Publish artifact as public Claude artifact; then begin blog post (Phase 3) or litepaper (Phase 4)
 **Blocking items:** None
 
 ---
@@ -14,6 +14,19 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-16 | HTML Artifact v1 — built, polished, pushed to GitHub
+
+- **What:** Interactive diagnostic artifact built from scratch and iteratively polished in one session. Pushed to GitHub (commit 4824dcb).
+- **File:** `Artifact/drafts/v1.html` (~1,900 lines, single-file, no external CDN)
+- **Structure:** Five sections — Entry, Context (five level cards), Case Studies (Samsung/Klarna/Boom), Self-Assessment (two-step funnel), Output card (level-specific diagnosis)
+- **Assessment logic:** Step 1 recognition (options A/B/C → provisional level) → Step 2 scenario (3 options each → 9 paths) → 5 possible placements (L1, L2, L2-3, L3, L3-4)
+- **Level cards:** Each has number + name, 1-sentence tagline, description paragraph, historical parallel callout, expandable dimension panel (6 dimensions with value badges and descriptions)
+- **Output cards:** Level placement, tagline, 2-sentence description (second person), failure mode (3 sentences), single next action (done-when condition), five-level arc visual with current level highlighted
+- **Style guide compliance:** Style review pass complete — negative parallelism reduced, em-dash pairs eliminated, assertion adverbs removed, managerial filler replaced. Source citations added to all statistics.
+- **QC:** `_ARTIFACT-QC.md` created — 22 criteria across 5 categories (Audience Fit, Content Accuracy, Style Guide, Assessment UX, Technical); 22/22 passing
+- **Key design decisions:** Document-title hero (not fear-based); context section leads with five level cards (not intro text); historical parallels as accent callouts; no score — diagnosis only; print stylesheet for output card
+- **Historical parallels per level:** L1: Lotus 1-2-3 spreadsheets (mid-1980s) · L2: Corporate email/Exchange (early 1990s) · L3: Git + CI/CD (2008–2015) · L4: EDI in retail (late 1980s–90s) · L5: Internet protocols/BGP (2000s–present)
 
 ### 2026-03-16 | YAML DSL v2.2 — historical analogues per level; containerization throughline
 
