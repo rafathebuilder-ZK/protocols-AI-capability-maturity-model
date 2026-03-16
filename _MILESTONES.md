@@ -5,8 +5,8 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-16)
 
-**Active work:** YAML DSL v2.1 complete (table analysis pass); project docs updated; HTML artifact added as Phase 5 deliverable
-**Immediate next action:** HTML artifact — product spec and UX planning session, then build
+**Active work:** YAML DSL v2.2 complete; Artifact brief written; HTML artifact build next
+**Immediate next action:** Build HTML artifact (Artifact/drafts/v1.html) per _ARTIFACT-BRIEF.md
 **Blocking items:** None
 
 ---
@@ -14,6 +14,22 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-16 | YAML DSL v2.2 — historical analogues per level; containerization throughline
+
+- **What:** Added `historical_parallels` block to all five level definitions. Each level now has a `period_technology` (a historical technology that was at that maturity stage during its own adoption arc) and a `containerization_throughline` (what ISO containerization looked like at that stage, as a single coherent throughline across the model).
+- **Period technologies:**
+  - L1: Spreadsheets in accounting (Lotus 1-2-3, mid-1980s) — shadow use, individual gains, organizational risk invisible
+  - L2: Corporate email (Microsoft Exchange / Lotus Notes, early 1990s) — mandate without workflow design, attention overload as new persistent problem
+  - L3: Git + CI/CD in software (2008–2015) — designed workflow, competitive position depends on it, domain expertise is the constraint
+  - L4: EDI in retail/manufacturing (late 1980s–90s) — license-to-operate requirement, individual advantage commoditized, sector floor raised
+  - L5: Internet protocols (TCP/IP, BGP) — invisible global infrastructure, failure propagates before any actor can respond
+- **Containerization throughline:**
+  - L1: Pre-standard experimentation (1950s–60s) — McLean's first containers, proprietary box sizes, no inter-operability
+  - L2: ISO standardization mandated, infrastructure not yet built (1965–75) — 20ft/40ft standards adopted, ports being rebuilt but rail/trucking lagging
+  - L3: Intermodal system designed end-to-end (1975–90) — Maersk builds competitive moat on logistics precision, vertical integration collapses Slacker Index
+  - L4: Universal adoption as license-to-operate (1990s–2000s) — supply chain becomes mainstream discipline, governance shifts to managing interdependencies
+  - L5: Invisible planetary infrastructure (2000s–present) — Maersk ransomware, Ever Given, COVID port congestion as cross-sector cascading failures
 
 ### 2026-03-16 | YAML DSL v2.1 — table analysis pass; project docs updated; HTML artifact added
 

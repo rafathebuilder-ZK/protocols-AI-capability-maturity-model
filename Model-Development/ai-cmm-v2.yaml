@@ -1,8 +1,11 @@
 # AI Capability Maturity Model — DSL Specification
-# Version: 2.1
+# Version: 2.2
 # Date: 2026-03-16
 # Author: Protocolized (Protocols for Business Group)
-# Prior version: ai-cmm-v2.yaml (v2.0)
+# Prior version: ai-cmm-v2.yaml (v2.1)
+# Changes from v2.1: historical_parallels added to all five levels — one period_technology
+#   analogue per level (spreadsheets, corporate email, git/CI-CD, EDI, internet protocols)
+#   and a containerization_throughline showing the ISO container arc at each maturity stage
 # Changes from v2.0: table analysis pass — protocol trade pattern note, L1 design range
 #   framing, L2→3 discovery protocol note, L5 containerization historical analogue
 # Changes from v1: see resource-critique-v2.md (consolidated change list)
@@ -54,7 +57,7 @@
 
 schema:
   name: "ai-cmm"
-  version: "2.1"
+  version: "2.2"
 
   protocol_dimension_values:
     # Each value set is ordered from least to most mature.
@@ -86,10 +89,10 @@ schema:
 
 model:
   name: "AI Capability Maturity Model"
-  version: "2.1"
+  version: "2.2"
   publisher: "Protocolized / Protocols for Business Group"
   date: "2026-03-16"
-  prior_version: "ai-cmm-v2.yaml (2.0)"
+  prior_version: "ai-cmm-v2.yaml (2.1)"
   evaluation_doc: "evaluation-criteria.md"
   critique_doc: "resource-critique-v2.md"
 
@@ -148,6 +151,27 @@ levels:
     name: "Shadow"
     tagline: "AI is in use. The organization doesn't know how, by whom, or with what data."
     unit_of_analysis: "Individual employee"
+
+    historical_parallels:
+      period_technology:
+        technology: "Spreadsheets in accounting (Lotus 1-2-3, mid-1980s)"
+        description: >
+          Individual accountants and analysts used personal computers and spreadsheets for
+          work that was officially done on mainframes or by hand. IT didn't know; management
+          didn't know; no policy existed. The individual gain was real (hours of calculation
+          in minutes). The organizational risk was invisible: the spreadsheet became the
+          de facto system of record, but version control didn't exist, and one corrupted
+          file could invalidate months of work. Shadow adoption producing individual gains
+          and organizational risk before any governance response — the Level 1 pattern.
+      containerization_throughline:
+        era: "Pre-standard experimentation (1950s–early 1960s)"
+        description: >
+          Malcom McLean shipped the first containers in 1956, but each company used
+          proprietary box sizes. Ports experimented independently; most hadn't started.
+          A longshoreman at a given port didn't know whether arriving vessels' boxes would
+          fit available cranes. Individual companies saw efficiency gains; the system as a
+          whole was ungoverned. The protocol didn't exist yet. The disruption event had
+          arrived; the protocol response had not been adopted.
 
     description: >
       AI tools have entered through employee initiative, not organizational decision.
@@ -292,6 +316,28 @@ levels:
     name: "Sanctioned"
     tagline: "The organization has granted AI access. It hasn't designed what to do with it."
     unit_of_analysis: "Organization"
+
+    historical_parallels:
+      period_technology:
+        technology: "Corporate email (Microsoft Exchange / Lotus Notes, early 1990s)"
+        description: >
+          IT departments mandated email clients and rolled out enterprise mail systems.
+          Access was granted broadly. But no one designed a response protocol: how quickly
+          should people respond? What constitutes a reply-all offense? What goes in email
+          versus voicemail versus memo? The mandate produced adoption; the absence of
+          workflow design produced attention overload and communication chaos. The new
+          persistent problem — inbox volume unmanageable, prioritization a new bottleneck —
+          is the direct consequence of solving the old one (slow, fragile communication).
+      containerization_throughline:
+        era: "ISO standardization and mandate, coordination infrastructure not yet built (1965–1975)"
+        description: >
+          ISO adopted 20ft and 40ft container standards in 1965–1968. Governments and
+          major shipping companies mandated container adoption on key routes. But ports
+          were not redesigned fast enough; rail connections and trucking infrastructure
+          lagged; crane capacity was inadequate. Containers arrived at ports that couldn't
+          efficiently process them. The financial case for containers was strong; the
+          coordination failures were accumulating. The mandate had been issued; the
+          intermodal coordination protocol had not yet been built.
 
     description: >
       Leadership has decided AI adoption is strategically necessary and has granted broad
@@ -499,6 +545,32 @@ levels:
     name: "Designed"
     tagline: "AI workflows are designed, not improvised. The business model depends on them."
     unit_of_analysis: "Business model / competitive position"
+
+    historical_parallels:
+      period_technology:
+        technology: "Git and CI/CD in software development (2008–2015)"
+        description: >
+          Software teams deliberately redesigned their workflows around distributed version
+          control. CI/CD pipelines formalized code review, automated testing, and
+          deployment. A company's competitive output depended on how well its git workflow
+          was designed — removing git from a software team's core workflow would require
+          rebuilding it, not substituting a human. Domain expertise (what a good code
+          review looks like, how to structure a merge and release strategy) became the
+          limiting constraint, not the tool's capabilities. The new persistent problem:
+          coordination overhead — merge conflicts, review load, and repository sprawl.
+          The Uber case is the AI-era instance of exactly this pattern.
+      containerization_throughline:
+        era: "Intermodal system designed end-to-end (1975–1990)"
+        description: >
+          The full intermodal protocol — ship to port to rail to truck — was deliberately
+          designed as an integrated system. EDI systems began automating cargo tracking.
+          Maersk and Sea-Land built competitive moats around containerized logistics;
+          their business models depended on the system working end-to-end. Vertical
+          integration (owning port terminals, rail connections, inland logistics) collapsed
+          the Slacker Index — the bottleneck shifted from the container itself to
+          coordination between modes, and the best operators redesigned those coordination
+          protocols. The competitive position depended on AI equivalent: the precision
+          logistics protocol, not the container as a standalone tool.
 
     description: >
       AI is embedded in the core competitive position, not just support functions.
@@ -716,6 +788,31 @@ levels:
     tagline: "AI is sector infrastructure. The question is no longer whether to use it but how to govern it collectively."
     unit_of_analysis: "Industry / market"
 
+    historical_parallels:
+      period_technology:
+        technology: "EDI (Electronic Data Interchange) in retail and manufacturing (late 1980s–1990s)"
+        description: >
+          Walmart forced EDI compliance on all suppliers beginning in the late 1980s:
+          you could not sell to Walmart without machine-readable transactions. EDI became
+          a license-to-operate requirement across retail and manufacturing supply chains.
+          Individual competitive advantage from early EDI adoption disappeared; the
+          competitive floor rose for the whole sector. The governance question shifted
+          from "should we adopt EDI" to "how do we manage integration rigidity — changes
+          are costly, interoperability requires constant maintenance." New entrants had
+          to meet the EDI standard from day one.
+      containerization_throughline:
+        era: "Universal adoption as license-to-operate for global trade (1990s–2000s)"
+        description: >
+          A new shipping company in the 1990s could not enter global trade without
+          containers — it was not optional. Supply chain management became a mainstream
+          business discipline. The governance question was no longer whether to use
+          containers but how to manage the interdependencies: port congestion protocols,
+          customs data standards, carrier interchange agreements, labor contracts at
+          loading facilities. Standards bodies governed container specs. The frontier gap:
+          firms with early containerization capability had accumulated logistics data,
+          port relationships, and operational knowledge that late movers could not close
+          by simply purchasing containers.
+
     description: >
       AI has crossed from organizational competitive advantage to industry infrastructure.
       Most organizations in the sector depend on AI for core operations. The sector's
@@ -856,6 +953,33 @@ levels:
     name: "Planetary"
     tagline: "AI is invisible infrastructure for civilization-scale coordination. The governance challenge is legibility, not adoption."
     unit_of_analysis: "Civilization / planetary systems"
+
+    historical_parallels:
+      period_technology:
+        technology: "Internet protocols (TCP/IP, SMTP, BGP) as global infrastructure (2000s–present)"
+        description: >
+          The protocols governing global information exchange are not legible to any
+          single organization or regulator. When BGP route hijacking occurs — as with
+          the Facebook global outage (October 2021), caused by a misconfigured BGP
+          withdrawal that severed all of Facebook's routes from the internet — the
+          failure propagates globally before any single actor can respond. The Facebook
+          outage took six hours to resolve because the engineers who knew how to fix it
+          couldn't reach the physical infrastructure to implement the fix. No organization
+          had the authority to intervene across the full system. The literacy required to
+          diagnose the failure did not reside in any publicly accessible registry.
+      containerization_throughline:
+        era: "Invisible planetary infrastructure (2000s–present)"
+        description: >
+          Containerization is no longer an organizational or sector decision — it is the
+          condition within which all global trade decisions occur. When it fails at scale,
+          cascading effects cross sectors simultaneously: Maersk ransomware attack (2017)
+          disrupted operations at 76 ports across 130 countries; Ever Given blocking
+          the Suez Canal (2021) delayed approximately $9.6B in trade per day; COVID port
+          congestion (2021–22) produced shortages across manufacturing, retail,
+          healthcare, and automotive with no single actor able to clear the system.
+          The failure modes are civilizational, not local. The literacy required to
+          govern the system — who designed which protocol, why each handoff point is
+          structured as it is — does not reside in any single organization or regulator.
 
     description: >
       AI protocols have been metabolized into the infrastructure governing coordination
