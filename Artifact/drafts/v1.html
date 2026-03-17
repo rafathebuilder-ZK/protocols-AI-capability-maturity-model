@@ -217,6 +217,7 @@
     #entry h1 {
       margin: 0 0 24px;
       letter-spacing: -0.03em;
+      text-align: center;
     }
 
     #entry h1 span { color: var(--accent); }
@@ -228,6 +229,7 @@
       color: var(--text-secondary);
       margin: 0 0 8px;
       display: block;
+      text-align: center;
     }
 
     .entry-descriptor {
@@ -236,6 +238,7 @@
       letter-spacing: 0.02em;
       margin: 0 0 40px;
       display: block;
+      text-align: center;
     }
 
     .entry-intro {
@@ -1108,9 +1111,7 @@
       <p>Most organizations are at Level 1 or early Level 2 — the default starting point for any organization navigating this transition. The assessment below identifies where your organization sits, which failure modes you are most exposed to, and what the next move looks like.</p>
     </div>
 
-    <a href="#assessment" class="btn btn-primary">Take the assessment →</a>
-
-    <p class="entry-meta">Based on desk research across 35 sources including Klarna, Samsung, Uber, Boom Supersonic, and McKinsey. Takes about 10 minutes. No signup required.</p>
+    <a href="#assessment" class="btn btn-primary" style="display:block;width:fit-content;margin:0 auto">Take the assessment →</a>
   </div>
 </section>
 
@@ -1243,7 +1244,7 @@
 
     <div class="model-rationale">
       <div class="label" style="margin-bottom:14px">Why this model exists</div>
-      <h2>AI adoption fails as a protocol problem, not a tool problem.</h2>
+      <h2>Protocols are the key to AI adoption success.</h2>
 
       <br>
 
@@ -1253,9 +1254,6 @@
 
       <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance shifts from the organizational to the industry and civilizational scale. Levels 4 and 5 are emerging or projected.</p>
 
-      <div class="source-note">
-        Based on desk research across 35 sources. Theoretical framework draws on Venkatesh Rao's protocol theory. Case evidence from Klarna, Samsung, Uber, Boom Supersonic, Menlo Ventures, McKinsey, and others.
-      </div>
     </div>
 
   </div>
@@ -1265,8 +1263,8 @@
 <section id="cases" class="section">
   <div class="container">
     <div class="label" style="margin-bottom:8px">Evidence base</div>
-    <h2 style="margin-bottom:8px">Each failure was predictable. Most weren't predicted.</h2>
-    <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:36px">Three organizations, three levels. Read the diagnostic question at the bottom of each card — one of these patterns is probably yours.</p>
+    <h2 style="margin-bottom:8px">Explore three case studies</h2>
+    <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:36px">Read the diagnostic question at the bottom of each card — one of these patterns is probably yours.</p>
 
     <div class="cases-grid">
 
@@ -1339,12 +1337,10 @@
   <div class="container">
     <div class="label" style="margin-bottom:8px">Self-assessment</div>
     <h2 style="margin-bottom:8px">Where is your organization?</h2>
-    <p class="section-sub">Two steps. Answer based on where your organization actually is today — not where you'd like it to be, or where it was six months ago.</p>
+    <p class="section-sub">Answer based on where your organization actually is today — not where you'd like it to be, or where it was six months ago.</p>
 
     <!-- Step 1: Recognition -->
     <div id="step1" class="step active">
-      <div class="step-indicator">Step <span>1</span> of 2 — Recognition</div>
-      <p class="step-instruction">Read the three descriptions. Select the one that most closely matches your organization.</p>
 
       <div class="option-cards">
         <div class="option-card" onclick="selectOption(this, 'A')">
@@ -1370,8 +1366,6 @@
 
     <!-- Step 2A: Scenario for Option A -->
     <div id="step2A" class="step">
-      <div class="step-indicator">Step <span>2</span> of 2 — Scenario</div>
-      <p class="step-instruction">One scenario to confirm your placement.</p>
 
       <div class="scenario-label">The situation</div>
       <div class="scenario-text">
@@ -1401,8 +1395,6 @@
 
     <!-- Step 2B: Scenario for Option B -->
     <div id="step2B" class="step">
-      <div class="step-indicator">Step <span>2</span> of 2 — Scenario</div>
-      <p class="step-instruction">One scenario to confirm your placement.</p>
 
       <div class="scenario-label">The situation</div>
       <div class="scenario-text">
@@ -1432,8 +1424,6 @@
 
     <!-- Step 2C: Scenario for Option C -->
     <div id="step2C" class="step">
-      <div class="step-indicator">Step <span>2</span> of 2 — Scenario</div>
-      <p class="step-instruction">One scenario to confirm your placement.</p>
 
       <div class="scenario-label">The situation</div>
       <div class="scenario-text">
@@ -1483,7 +1473,7 @@
     <div class="exit-grid">
       <div class="card">
         <div class="label" style="margin-bottom:10px">Go deeper</div>
-        <h3>Protocol thinking for AI deployment</h3>
+        <h3>Learn more about Protocols</h3>
         <p>The Protocolized newsletter covers AI adoption, organizational governance, and protocol design — written for practitioners, not vendors.</p>
         <a href="https://protocolized.summerofprotocols.com/" target="_blank" class="btn btn-primary">Subscribe to Protocolized ↗</a>
       </div>
