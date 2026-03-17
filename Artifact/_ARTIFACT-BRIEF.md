@@ -250,7 +250,28 @@ The artifact fails if:
 
 ---
 
-## 8. Build sequence
+## 8. Version control
+
+**v1.html is locked. Do not edit it.**
+
+`Artifact/drafts/v1.html` is the deployed baseline (v1.0, deployed 2026-03-17). It is the reference for all future versions and must not be modified.
+
+**To start a new version:**
+1. Copy `v1.html` → `v1.1.html` (or `v2.html` for major redesigns)
+2. Work from the copy — all changes go there
+3. When the new version is ready to deploy, update the public artifact URL in README.md and planning docs
+4. The old file stays; it is never overwritten
+
+**Versioning convention:**
+- Incremental changes (copy, layout, UX polish): `v1.1.html`, `v1.2.html`, etc.
+- Major redesigns or model updates (new YAML, restructured flow): `v2.html`
+- Each new version gets its own QC pass against `_ARTIFACT-QC.md`
+
+**This brief governs all versions.** Update it before building if requirements change — not after.
+
+---
+
+## 9. Build sequence
 
 1. Read this document fully
 2. Read `../Model-Development/ai-cmm-v2.yaml` for all content (Levels 1–3 are the primary output; 4–5 appear in the arc visual only)
@@ -261,4 +282,4 @@ The artifact fails if:
 
 ---
 
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-17*

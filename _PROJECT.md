@@ -76,6 +76,7 @@ This project is net new — not a v5. The prior model is a reference point and s
 - Status: **v1.0 deployed** (2026-03-17) — `Artifact/drafts/v1.html`
 - UX spec: `Artifact/_ARTIFACT-BRIEF.md`; QC: `Artifact/_ARTIFACT-QC.md`; Layout tests: `Artifact/drafts/layout-test.py`
 - Versioning: incremental changes → v1.1, v1.2 (new files); major redesigns → v2.0
+- **v1.html is locked** — never edit it; all future work copies it first
 
 ---
 

@@ -111,8 +111,8 @@ A publicly accessible Claude artifact providing a diagnostic tool: users explore
 - [ ] Add public artifact URL to README, blog post, and litepaper once URL confirmed
 
 ### Versioning convention
-- Deployed version: **v1.0** (Artifact/drafts/v1.html)
-- Incremental changes (copy, layout, polish): v1.1, v1.2, etc. — saved as new files
+- Deployed version: **v1.0** (Artifact/drafts/v1.html) — **locked, do not edit**
+- Incremental changes (copy, layout, polish): v1.1, v1.2, etc. — copy v1.html, work from the copy
 - Major redesigns or model updates: v2.0
 - The deployed artifact URL should be updated when a new version is promoted
 
