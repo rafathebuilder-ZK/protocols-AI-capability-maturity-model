@@ -209,11 +209,36 @@
 
     /* ─── Section 1: Entry ─────────────────────────────────── */
     #entry {
+      position: relative;
+      overflow: hidden;
       padding: 120px 0 90px;
-      background:
-        linear-gradient(rgba(10, 8, 28, 0.68), rgba(10, 8, 28, 0.68)),
-        url('https://substack-post-media.s3.amazonaws.com/public/images/5655c5e3-650d-43fe-9ff1-b6d850bb9b43_896x1120.png') center 15% / cover no-repeat;
       background-color: #0a081c;
+    }
+
+    /* blurred background image — extends beyond edges to hide blur fringe */
+    #entry::before {
+      content: '';
+      position: absolute;
+      inset: -24px;
+      background:
+        url('https://substack-post-media.s3.amazonaws.com/public/images/5655c5e3-650d-43fe-9ff1-b6d850bb9b43_896x1120.png') center 15% / cover no-repeat;
+      filter: blur(14px);
+      z-index: 0;
+    }
+
+    /* dark overlay on top of blurred image */
+    #entry::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 8, 28, 0.52);
+      z-index: 1;
+    }
+
+    /* content above both pseudo-elements */
+    #entry .container {
+      position: relative;
+      z-index: 2;
     }
 
     #entry .label { margin-bottom: 20px; }
