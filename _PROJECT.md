@@ -73,8 +73,9 @@ This project is net new — not a v5. The prior model is a reference point and s
 - Format: Single-page HTML, publicly accessible as a Claude artifact
 - Function: Diagnostic tool — user steps through the five levels and places their organization; receives a level-specific diagnosis with failure mode and next action
 - Source: Content drawn from ai-cmm-v2.yaml; YAML is the source of truth
-- Status: v1 built (`Artifact/drafts/v1.html`); pending publication as public Claude artifact
-- UX spec: `Artifact/_ARTIFACT-BRIEF.md`; QC framework: `Artifact/_ARTIFACT-QC.md`
+- Status: **v1.0 deployed** (2026-03-17) — `Artifact/drafts/v1.html`
+- UX spec: `Artifact/_ARTIFACT-BRIEF.md`; QC: `Artifact/_ARTIFACT-QC.md`; Layout tests: `Artifact/drafts/layout-test.py`
+- Versioning: incremental changes → v1.1, v1.2 (new files); major redesigns → v2.0
 
 ---
 
@@ -135,4 +136,4 @@ AI Capability Maturity Model/
 
 ---
 
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-17*

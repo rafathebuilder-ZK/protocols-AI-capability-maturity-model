@@ -3,17 +3,25 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ---
 
-## Current Status (as of 2026-03-16)
+## Current Status (as of 2026-03-17)
 
-**Active work:** HTML artifact v1 built, polished, and pushed to GitHub
-**Immediate next action:** Publish artifact as public Claude artifact; then begin blog post (Phase 3) or litepaper (Phase 4)
+**Active work:** Artifact v1.0 deployed. Phase 5 complete.
+**Immediate next action:** Add public artifact URL to README and planning docs once confirmed. Begin blog post (Phase 3) or litepaper (Phase 4).
 **Blocking items:** None
+**Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
 ---
 
 ---
 
 ## Milestone Log
+
+### 2026-03-17 | Artifact v1.0 — deployed as public Claude artifact
+
+- **What:** v1.0 promoted from draft to public deployment. Phase 5 complete.
+- **Final polish applied before deployment:** mono font consistency across `.context-intro` elements; exit card buttons equalized and centered; hero title block centered; competing column widths resolved (single 920px column); mobile hamburger nav; case study source links; footer icons (Substack + GitHub) and disclaimer; historical parallel callouts on all five level cards; expandable dimension panels; layout test suite (21/21 passing).
+- **Versioning established:** v1.0 is the deployed baseline. Incremental changes → v1.1, v1.2. Major model updates → v2.0.
+- **Remaining:** Add public artifact URL to README and planning docs once confirmed.
 
 ### 2026-03-16 | HTML Artifact v1 — built, polished, pushed to GitHub
 

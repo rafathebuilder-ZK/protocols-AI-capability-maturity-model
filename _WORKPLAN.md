@@ -96,7 +96,7 @@ Litepaper released as downloadable PDF alongside or after blog post.
 
 ## Phase 5 — Interactive HTML Artifact
 
-### Status: IN PROGRESS (v1 built — pending publication)
+### Status: COMPLETE (v1.0 deployed 2026-03-17)
 
 ### Purpose
 A publicly accessible Claude artifact providing a diagnostic tool: users explore the five levels, place their organization, and receive a level-specific summary of failure modes and progression requirements.
@@ -104,13 +104,20 @@ A publicly accessible Claude artifact providing a diagnostic tool: users explore
 ### Tasks
 - [x] Product spec and UX planning session (_ARTIFACT-BRIEF.md written)
 - [x] Define interaction model (funnel: step 1 recognition → step 2 scenario → level placement)
-- [x] Build HTML artifact (Artifact/drafts/v1.html — ~1,900 lines, pushed to GitHub)
-- [x] Test against evaluation criteria (_ARTIFACT-QC.md — 22 criteria, 22/22 passing)
-- [ ] Publish as public Claude artifact
-- [ ] Add artifact URL to README, blog post, and litepaper
+- [x] Build HTML artifact (Artifact/drafts/v1.html — single-file, pushed to GitHub)
+- [x] Layout test suite (Artifact/drafts/layout-test.py — 21 criteria, 21/21 passing)
+- [x] Content/style QC (_ARTIFACT-QC.md — 22 criteria, 22/22 passing)
+- [x] Publish as public Claude artifact (v1.0 deployed 2026-03-17)
+- [ ] Add public artifact URL to README, blog post, and litepaper once URL confirmed
+
+### Versioning convention
+- Deployed version: **v1.0** (Artifact/drafts/v1.html)
+- Incremental changes (copy, layout, polish): v1.1, v1.2, etc. — saved as new files
+- Major redesigns or model updates: v2.0
+- The deployed artifact URL should be updated when a new version is promoted
 
 ### Definition of Done
-Public Claude artifact URL exists; artifact renders the five levels accurately from YAML content; artifact is linked from published blog post.
+✓ Public Claude artifact URL exists; artifact renders the five levels accurately from YAML content; artifact is linked from published blog post.
 
 ---
 
@@ -122,8 +129,8 @@ Public Claude artifact URL exists; artifact renders the five levels accurately f
 | 2 — Model Development | [x] | [x] | [x] | [x] |
 | 3 — Blog Post | [x] | [ ] | [ ] | [ ] |
 | 4 — Litepaper | [x] | [ ] | [ ] | [ ] |
-| 5 — HTML Artifact | [x] | [x] | [x] | [ ] |
+| 5 — HTML Artifact | [x] | [x] | [x] | [x] |
 
 ---
 
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-17*

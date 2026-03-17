@@ -2,7 +2,7 @@
 
 **Project:** Desk research, blog post, litepaper, and interactive diagnostic tool on a capability maturity model for organizational AI adoption
 **Practice:** Protocolized — Protocols for Business Practice
-**Status:** HTML artifact v1 built and on GitHub — Blog post and Litepaper next
+**Status:** Artifact v1.0 deployed as public Claude artifact — Blog post and Litepaper next
 
 ---
 
@@ -19,17 +19,18 @@
 |--------|--------|----------|--------|
 | [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | Not started |
 | [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
-| [Interactive HTML artifact](Artifact/drafts/v1.html) | Claude artifact (public URL) | All audiences | v1 built — pending Claude artifact publication |
+| [Interactive HTML artifact](Artifact/drafts/v1.html) | Claude artifact (public URL) | All audiences | **v1.0 deployed** — add public URL when available |
 
 ---
 
-## HTML Artifact (v1 complete — publication pending)
+## HTML Artifact (v1.0 deployed 2026-03-17)
 
 | Document | Purpose |
 |----------|---------|
-| [v1.html](Artifact/drafts/v1.html) | Interactive diagnostic artifact — five levels, self-assessment, output cards |
+| [v1.html](Artifact/drafts/v1.html) | Interactive diagnostic artifact — v1.0 (deployed). Future iterations saved as v1.1.html, v2.html, etc. |
+| [layout-test.py](Artifact/drafts/layout-test.py) | 21-criterion layout test suite — run after any structural change |
 | [_ARTIFACT-BRIEF.md](Artifact/_ARTIFACT-BRIEF.md) | Product spec and UX design brief |
-| [_ARTIFACT-QC.md](Artifact/_ARTIFACT-QC.md) | 22-criterion evaluation framework; pre/post scoring |
+| [_ARTIFACT-QC.md](Artifact/_ARTIFACT-QC.md) | 22-criterion content/style evaluation framework |
 
 ## Model Development (complete)
 
