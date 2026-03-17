@@ -955,8 +955,10 @@
       gap: 24px;
     }
 
+    #exit .card { display: flex; flex-direction: column; }
     #exit .card h3 { margin-bottom: 10px; }
-    #exit .card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; }
+    #exit .card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; flex: 1; }
+    #exit .card .btn { display: block; text-align: center; }
 
     /* ─── Footer ───────────────────────────────────────────── */
     .footer {
@@ -1079,8 +1081,8 @@
       <span class="wordmark-sub">Protocol Research and Development</span>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#context" onclick="closeNav()">The Model</a></li>
-      <li><a href="#cases" onclick="closeNav()">Cases</a></li>
+      <li><a href="#context" onclick="closeNav()">Model</a></li>
+      <li><a href="#cases" onclick="closeNav()">Case Studies</a></li>
       <li><a href="#assessment" onclick="closeNav()">Assessment</a></li>
       <li><a href="https://protocolized.summerofprotocols.com/" target="_blank">Subscribe</a></li>
     </ul>
@@ -1245,14 +1247,15 @@
     <div class="model-rationale">
       <div class="label" style="margin-bottom:14px">Why this model exists</div>
       <h2>Protocols are the key to AI adoption success.</h2>
-
+      <p class="context-intro">Adoption maturity is defined by an organization's ability to govern uncertainty.</p>
+      
       <br>
 
       <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
 
       <p>The unit of maturity in this model is not process compliance. It is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
 
-      <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance shifts from the organizational to the industry and civilizational scale. Levels 4 and 5 are emerging or projected.</p>
+      <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance shifts from the organizational to the industry and civilizational scale.</p>
 
     </div>
 
@@ -1337,7 +1340,7 @@
   <div class="container">
     <div class="label" style="margin-bottom:8px">Self-assessment</div>
     <h2 style="margin-bottom:8px">Where is your organization?</h2>
-    <p class="section-sub">Answer based on where your organization actually is today — not where you'd like it to be, or where it was six months ago.</p>
+    <p class="section-sub">Answer based on where your organization actually is today, not where you think it will be in six months.</p>
 
     <!-- Step 1: Recognition -->
     <div id="step1" class="step active">
@@ -1475,7 +1478,7 @@
         <div class="label" style="margin-bottom:10px">Go deeper</div>
         <h3>Learn more about Protocols</h3>
         <p>The Protocolized newsletter covers AI adoption, organizational governance, and protocol design — written for practitioners, not vendors.</p>
-        <a href="https://protocolized.summerofprotocols.com/" target="_blank" class="btn btn-primary">Subscribe to Protocolized ↗</a>
+        <a href="https://protocolized.summerofprotocols.com/subscribe" target="_blank" class="btn btn-primary">Subscribe to Protocolized ↗</a>
       </div>
 
       <div class="card">
@@ -1484,7 +1487,7 @@
         <p>If you're navigating Level 2 or 3 and want a structured conversation about governance protocol design, we're available for a working session.</p>
         <!-- TODO: Replace with Formspree endpoint or Netlify Forms when backend is ready -->
         <!-- TODO: Optionally write submissions to GitHub-hosted CSV via GitHub Actions workflow_dispatch -->
-        <a href="https://protocolized.summerofprotocols.com/" target="_blank" class="btn btn-secondary">Get in touch ↗</a>
+        <a href="https://discord.com/invite/PGauyYyu6T" target="_blank" class="btn btn-secondary">Get in touch ↗</a>
       </div>
     </div>
   </div>
@@ -1504,7 +1507,7 @@
       </a>
     </div>
     <p>Protocolized · Protocol Research and Development · AI Capability Maturity Model v2.2</p>
-    <p class="footer-disclaimer">Diagnostic tool only — not professional advice. No data collected or stored. Use it to orient, not to replace organizational judgment.</p>
+    <p class="footer-disclaimer">Diagnostic tool only. No data collected or stored. Use it to orient, not to replace organizational judgment.</p>
   </div>
 </footer>
 
