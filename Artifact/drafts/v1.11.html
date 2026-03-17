@@ -376,11 +376,13 @@
       vertical-align: middle;
     }
 
+    /* Sections with surface background */
+    #rationale { background: var(--surface); }
+    #essays    { background: var(--surface); }
+
     /* Model rationale */
     .model-rationale {
       margin: 0;
-      padding-top: 48px;
-      border-top: 1px solid var(--border);
     }
 
     .model-rationale h2 { margin-bottom: 20px; }
@@ -1423,19 +1425,21 @@
 
     </div>
 
-    <div class="model-rationale">
-      <div class="label" style="margin-bottom:14px">Why this model exists</div>
-      <h2>New protocols are the key to AI adoption success.</h2>
-      <p class="context-intro">Adoption maturity is defined by an organization's ability to govern uncertainty.</p>
+  </div>
+</section>
 
-      <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
+<!-- ─── Section 2b: Rationale ───────────────────────────── -->
+<section id="rationale" class="section">
+  <div class="container">
+    <div class="label" style="margin-bottom:14px">Why this model exists</div>
+    <h2>New protocols are the key to AI adoption success.</h2>
+    <p class="context-intro">Adoption maturity is defined by an organization's ability to govern uncertainty.</p>
 
-      <p>The unit of maturity in this model is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
+    <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
 
-      <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance becomes an industry and civilizational challenge, beyond what any single organization controls.</p>
+    <p>The unit of maturity in this model is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
 
-    </div>
-
+    <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance becomes an industry and civilizational challenge, beyond what any single organization controls.</p>
   </div>
 </section>
 
