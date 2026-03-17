@@ -5,8 +5,8 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-17)
 
-**Active work:** Artifact v1.0 deployed. Phase 5 complete.
-**Immediate next action:** Add public artifact URL to README and planning docs once confirmed. Begin blog post (Phase 3) or litepaper (Phase 4).
+**Active work:** Artifact v1.12 live at https://protocolized.dev/ai-maturity-model/. Phase 5 complete.
+**Immediate next action:** Begin blog post (Phase 3) or litepaper (Phase 4).
 **Blocking items:** None
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -15,6 +15,14 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-17 | Artifact v1.12 — published to protocolized.dev
+
+- **What:** Artifact published as permanent static site at https://protocolized.dev/ai-maturity-model/ via here.now hosting.
+- **Domain setup:** protocolized.dev registered with here.now; ALIAS + TXT records added in Porkbun; SSL active. Root domain redirects to protocolized.summerofprotocols.com.
+- **Subscribe link fix:** Top nav Subscribe updated from summerofprotocols.com homepage to /subscribe.
+- **Deploy workflow:** `Artifact/publish/index.html` is the canonical deploy source (copy of current draft). Update draft → copy to publish/ → republish with `--slug thorny-basin-5xkf`.
+- **here.now slug:** `thorny-basin-5xkf` (authenticated, permanent).
 
 ### 2026-03-17 | Artifact v1.0 — deployed as public Claude artifact
 

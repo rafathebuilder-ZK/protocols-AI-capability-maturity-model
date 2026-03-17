@@ -19,15 +19,18 @@
 |--------|--------|----------|--------|
 | [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | Not started |
 | [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
-| [Interactive HTML artifact](Artifact/drafts/v1.html) | Claude artifact (public URL) | All audiences | **v1.0 deployed** — add public URL when available |
+| [Interactive HTML artifact](Artifact/publish/index.html) | Public web artifact | All audiences | **v1.12 live** — [protocolized.dev/ai-maturity-model](https://protocolized.dev/ai-maturity-model/) |
 
 ---
 
-## HTML Artifact (v1.0 deployed 2026-03-17)
+## HTML Artifact (v1.12 live — 2026-03-17)
+
+**Live URL:** https://protocolized.dev/ai-maturity-model/
 
 | Document | Purpose |
 |----------|---------|
-| [v1.html](Artifact/drafts/v1.html) | Interactive diagnostic artifact — v1.0 (deployed). Future iterations saved as v1.1.html, v2.html, etc. |
+| [v1.12.html](Artifact/drafts/v1.12.html) | Interactive diagnostic artifact — current version (deployed). |
+| [publish/index.html](Artifact/publish/index.html) | Canonical deploy source — copy of current draft, published to protocolized.dev. |
 | [layout-test.py](Artifact/drafts/layout-test.py) | 21-criterion layout test suite — run after any structural change |
 | [_ARTIFACT-BRIEF.md](Artifact/_ARTIFACT-BRIEF.md) | Product spec and UX design brief |
 | [_ARTIFACT-QC.md](Artifact/_ARTIFACT-QC.md) | 22-criterion content/style evaluation framework |

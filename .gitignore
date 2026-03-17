@@ -5,3 +5,4 @@ Resources/*.jpg
 Resources/*.png
 .DS_Store
 **/.DS_Store
+.herenow/

@@ -194,12 +194,6 @@ If content genuinely won't fit, restructure first:
 | YAML DSL | model definition, source document |
 | bottleneck heterogeneity | the weakest function sets the level |
 | stuck pattern guidance | what to do if you're not advancing |
-| protocol dimensions | governance dimensions, capability dimensions |
-| case anchors | case studies, examples |
-| shadow adoption | unsanctioned AI use, untracked AI use |
-| probabilistic stack | AI systems, AI tools (define once, then use directly) |
-| planetary / infrastructural level | use with definition; don't assume familiarity |
-| governance of uncertainty | define on first use; don't assume the frame is shared |
 
 ---
 
