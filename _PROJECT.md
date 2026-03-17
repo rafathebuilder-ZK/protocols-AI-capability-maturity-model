@@ -103,6 +103,7 @@ AI Capability Maturity Model/
 ├── _PROJECT.md                    ← You are here
 ├── _MILESTONES.md                 ← Current status, decisions
 ├── _WORKPLAN.md                   ← Task list
+├── _REPORT-STYLE.md               ← Writing style guide for all outputs
 │
 ├── Artifact/
 │   ├── _ARTIFACT-BRIEF.md         ← Product spec and UX design brief
