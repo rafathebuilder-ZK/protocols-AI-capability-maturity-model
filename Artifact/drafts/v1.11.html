@@ -209,7 +209,11 @@
 
     /* ─── Section 1: Entry ─────────────────────────────────── */
     #entry {
-      padding: 72px 0 60px;
+      padding: 120px 0 90px;
+      background:
+        linear-gradient(rgba(10, 8, 28, 0.68), rgba(10, 8, 28, 0.68)),
+        url('https://substack-post-media.s3.amazonaws.com/public/images/5655c5e3-650d-43fe-9ff1-b6d850bb9b43_896x1120.png') center 15% / cover no-repeat;
+      background-color: #0a081c;
     }
 
     #entry .label { margin-bottom: 20px; }
@@ -218,6 +222,8 @@
       margin: 0 0 24px;
       letter-spacing: -0.03em;
       text-align: center;
+      color: #ffffff;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.45);
     }
 
     #entry h1 span { color: var(--accent); }
@@ -226,6 +232,7 @@
       font-family: var(--font-mono);
       font-size: 1rem;
       font-weight: 400;
+      color: rgba(255,255,255,0.82) !important;
       color: var(--text-secondary);
       margin: 0 0 8px;
       display: block;
@@ -234,20 +241,24 @@
 
     .entry-descriptor {
       font-size: 0.85rem;
-      color: var(--text-secondary);
-      letter-spacing: 0.02em;
-      margin: 0 0 40px;
+      color: rgba(255,255,255,0.58);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 48px;
       display: block;
       text-align: center;
     }
 
     .entry-intro {
       margin: 0 0 36px;
+      background: rgba(10, 8, 28, 0.42);
+      border-left: 3px solid rgba(168,136,191,0.6);
+      padding: 20px 24px;
     }
 
     .entry-intro p {
       font-size: 0.95rem;
-      color: var(--text-secondary);
+      color: rgba(255,255,255,0.82);
       line-height: 1.7;
       margin-bottom: 1rem;
     }
@@ -1007,7 +1018,7 @@
       h1 { font-size: 1.9rem; }
       h2 { font-size: 1.4rem; }
       .section { padding: 40px 0; }
-      #entry { padding: 48px 0 40px; }
+      #entry { padding: 72px 0 60px; }
 
       #context .context-grid { grid-template-columns: 1fr; gap: 36px; }
       #cases .cases-grid { grid-template-columns: 1fr; }
