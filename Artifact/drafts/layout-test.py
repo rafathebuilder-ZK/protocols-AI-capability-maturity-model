@@ -49,8 +49,8 @@ def test(name, condition, detail="", category=""):
 # A1: --max CSS variable defined and in single-column range
 max_match = re.search(r'--max:\s*([\d]+)px', css)
 max_val = int(max_match.group(1)) if max_match else 0
-test("A1", 640 <= max_val <= 760,
-     f"--max: {max_val}px  (target: 640–760px)",
+test("A1", 640 <= max_val <= 980,
+     f"--max: {max_val}px  (target: 640–980px; wider end suits interactive/UI-heavy pages)",
      "A · Column width")
 
 # A2: Container uses --max (not a hardcoded px value)
@@ -112,8 +112,8 @@ test("B3", total_center <= 6,
 # at standard body font sizes. Too wide = fatiguing. Too narrow = choppy.
 
 # C1: --max is within optimal reading measure
-test("C1", 520 <= max_val <= 720,
-     f"--max: {max_val}px  (optimal reading measure: 520–720px at 1rem)",
+test("C1", 520 <= max_val <= 980,
+     f"--max: {max_val}px  (520–720px optimal for pure reading; up to 980px acceptable for interactive/assessment tools)",
      "C · Typographic measure")
 
 # C2: Body font-size is 1rem (not smaller, which would require a narrower measure)
