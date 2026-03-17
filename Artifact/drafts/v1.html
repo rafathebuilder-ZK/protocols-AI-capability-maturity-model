@@ -1078,14 +1078,14 @@
 <!-- ─── Nav ──────────────────────────────────────────────── -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#entry" class="wordmark">
+    <a href="javascript:void(0)" onclick="navTo('entry')" class="wordmark">
       Protocolized
       <span class="wordmark-sub">Protocol Research and Development</span>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#context" onclick="closeNav()">Model</a></li>
-      <li><a href="#cases" onclick="closeNav()">Case Studies</a></li>
-      <li><a href="#assessment" onclick="closeNav()">Assessment</a></li>
+      <li><a href="javascript:void(0)" onclick="navTo('context')">Model</a></li>
+      <li><a href="javascript:void(0)" onclick="navTo('cases')">Case Studies</a></li>
+      <li><a href="javascript:void(0)" onclick="navTo('assessment')">Assessment</a></li>
       <li><a href="https://protocolized.summerofprotocols.com/" target="_blank">Subscribe</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu" id="nav-hamburger">
@@ -1115,7 +1115,7 @@
       <p>Most organizations are at Level 1 or early Level 2 — the default starting point for any organization navigating this transition. The assessment below identifies where your organization sits, which failure modes you are most exposed to, and what the next move looks like.</p>
     </div>
 
-    <a href="#assessment" class="btn btn-primary" style="display:block;width:fit-content;margin:0 auto">Take the assessment →</a>
+    <a href="javascript:void(0)" onclick="navTo('assessment')" class="btn btn-primary" style="display:block;width:fit-content;margin:0 auto">Take the assessment →</a>
   </div>
 </section>
 
@@ -1519,6 +1519,11 @@ function toggleNav() {
 }
 function closeNav() {
   document.getElementById('nav-links').classList.remove('open');
+}
+function navTo(id) {
+  closeNav();
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
 /* ─── State ─────────────────────────────────────────────── */
