@@ -44,6 +44,7 @@
 | 33 | Duolingo: AI-first contractor replacement | TechCrunch / Fortune | 2024–2025 | Case study — Level 2 (Sanctioned) | News reports |
 | 34 | Shadow AI prevalence data roundup | Gartner / Reco.ai / Cyberhaven / IBM | 2024–2025 | Empirical adoption data | Survey reports |
 | 35 | Table: Learning to See Business Protocols | Protocolized | 2026 | Protocol theory — applied / historical pattern | PDF appendix |
+| 36 | AI Doesn't Reduce Work—It Intensifies It | Aruna Ranganathan, Xingqi Maggie Ye (HBR) | 2026 | Empirical research — workforce impact | Academic article |
 
 ---
 
@@ -748,6 +749,30 @@
 
 ---
 
+## Category: Empirical research — workforce impact
+
+*Academic and practitioner research on how AI adoption affects workers' experience, cognitive load, and work organization. Distinct from adoption surveys (which measure adoption rates) and case studies (which document specific incidents): these sources study the qualitative and behavioral dynamics of AI at work.*
+
+### 36. AI Doesn't Reduce Work—It Intensifies It
+
+**Authors:** Aruna Ranganathan, Xingqi Maggie Ye
+**Published:** February 9, 2026
+**Publication:** Harvard Business Review
+**Format:** Academic article
+**URL:** https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it
+
+**Project-tuned summary:** An eight-month longitudinal study of a 200-person technology firm documenting how AI adoption intensified — rather than reduced — employee workload. The core finding: intensification was self-generated, not management-mandated. Workers independently embraced AI because it made "doing more" feel rewarding and accessible. Three specific mechanisms identified: (1) **Task expansion** — workers crossed traditional role boundaries (designers coded, researchers engineered) because AI made unfamiliar domains feel tractable, absorbing adjacent roles while widening personal scope; (2) **Blurred work-life boundaries** — AI's conversational interface made work infiltrate pauses that previously served as recovery time; the low perceived friction of "typing a line to an AI system" erased the cognitive signal that marks the start of work; (3) **Increased multitasking** — workers managed parallel AI threads simultaneously, creating continuous attention-switching and compounding cognitive load despite a feeling of momentum. The result is a self-reinforcing cycle: AI-enabled speed raises baseline expectations, expanded scope increases work density, and the absence of natural stopping signals makes the cycle invisible until burnout arrives. The authors' proposed solution — "AI practice": intentional pauses, sequenced batching, and protected human-collaboration time — is framed as an organizational design intervention to restore cognitive boundaries AI dissolved.
+
+**Key data points:**
+- Study design: eight-month ethnographic study, 200-person technology firm
+- Three mechanisms of intensification: task expansion, boundary dissolution, multitasking load
+- Key quote: "Without intention, AI makes it easier to do more — but harder to stop."
+- Proposed remedy: "AI practice" — intentional pauses, sequencing, human grounding — not speed control
+
+**Relevance to maturity model:** This paper is the empirical grounding for the protocol gap argument at Levels 1–2. The intensification the article documents is a direct consequence of individual-level Level 3 behavior occurring within an organization that has no Level 2 governance — workers are designing their own AI workflows (task expansion, F2F collaboration) while the organization lacks the protocol infrastructure to absorb or coordinate that activity. The authors' diagnosis is accurate (intensification is real and unsustainable) but their proposed solution — designed pauses — addresses the symptom, not the cause. The cause is missing protocol: without defined handoff points, scope boundaries, and quality standards, the individual's AI-expanded capacity has no organizational structure to attach to, so it spreads laterally and temporally until it fills all available space. The article's "AI practice" framework is a Level 2 individual coping strategy; the maturity model's answer is Level 3 protocol design that removes the need for individual restraint by structuring the environment itself.
+
+---
+
 ## Remaining categories to populate
 
 1. **Case studies — Level 3 stuck points** — organizations with policies but inconsistent enforcement; governance-without-integration failure modes
@@ -763,4 +788,4 @@
 
 ---
 
-*Last updated: 2026-03-16*
+*Last updated: 2026-03-17*
