@@ -1,4 +1,4 @@
-# The Missing Protocol Layer: Why AI Feels Like Deployment for Individuals and Shadow Adoption for Enterprises
+# The Missing Protocol Layer: Understanding How Organizations Should Rethink AI Adoption
 
 A recent HBR article on AI adoption at work identifies that AI has intensified work for employees. This intensification, the article notes, takes the form of expanding tasks, more multitasking, and working beyond normal hours, all intrinsically motivated — though I'd argue there is an element of fear of being automated away among all corporate employees these days. All of this should make employers happy, but the article warns that such intensification is not sustainable and will lead to eventual burnout. The authors then go on to conclude that the solution to this is to slow things down by adding human-designed pauses in the workflow, which to me feels like advising that a Formula One car be driven within speed limits. It's not something organizations are likely to do, especially as they try to be ahead in the adoption of AI.
 
