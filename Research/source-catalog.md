@@ -45,6 +45,10 @@
 | 34 | Shadow AI prevalence data roundup | Gartner / Reco.ai / Cyberhaven / IBM | 2024–2025 | Empirical adoption data | Survey reports |
 | 35 | Table: Learning to See Business Protocols | Protocolized | 2026 | Protocol theory — applied / historical pattern | PDF appendix |
 | 36 | AI Doesn't Reduce Work—It Intensifies It | Aruna Ranganathan, Xingqi Maggie Ye (HBR) | 2026 | Empirical research — workforce impact | Academic article |
+| 37 | Moffatt v. Air Canada (chatbot liability) | BC Civil Resolution Tribunal | 2024 | Case study — Level 2 (governance failure / liability) | Legal decision |
+| 38 | Managing the Software Process | Watts S. Humphrey (SEI / CMU) | 1989 | CMM historical context — software process maturity | Book |
+| 39 | NIST AI Risk Management Framework (AI RMF 1.0) | National Institute of Standards and Technology | 2023 | Governance framework — AI risk | Government report (free PDF) |
+| 40 | EU AI Act (Regulation 2024/1689) | European Parliament and Council | 2024 | Regulatory landscape — AI compliance | EU regulation (EUR-Lex) |
 
 ---
 
@@ -773,6 +777,117 @@
 
 ---
 
+---
+
+## Category: Case studies — Level 2 governance failure and liability
+
+### 37. Moffatt v. Air Canada — chatbot liability
+
+**Tribunal:** British Columbia Civil Resolution Tribunal
+**Decision date:** February 14, 2024
+**Case number:** 2024 BCCRT 149 (File: SC-2023-005609)
+**Member:** Christopher C. Rivers
+**URL:** https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html
+
+**What happened.** Jake Moffatt purchased a full-price bereavement fare after Air Canada's chatbot told him he could apply for a bereavement rate discount retroactively within 90 days of travel. This was incorrect — Air Canada's actual policy required booking the discounted fare before travel. Moffatt submitted the retroactive request, Air Canada denied it, and he brought a claim to the BC Civil Resolution Tribunal. Air Canada's defense argued the chatbot was a "separate legal entity" for whose representations the company bore no responsibility.
+
+**The ruling.** The Tribunal rejected Air Canada's defense entirely. The chatbot was part of Air Canada's website; Air Canada was responsible for all information provided through it, regardless of the mechanism of delivery. The Tribunal found Air Canada liable for negligent misrepresentation and awarded Moffatt $812.02 (covering the fare difference, pre-judgment interest, and tribunal fees).
+
+**Why this matters.** The case establishes a clean precedent: corporations cannot disclaim liability for AI-generated statements made through company-operated systems. The "separate entity" defense — which maps precisely to the Level 2 governance posture (AI is deployed but its outputs are treated as separate from company accountability) — was rejected. The failure mode here is not data leakage (Level 1) but accountability gap: the AI was deployed in a customer-facing role without a governed escalation path for cases where its information was incorrect or ambiguous.
+
+**Key data point:** Damages were modest ($812.02); the significance is the precedent, not the fine. The case is widely cited in AI liability and enterprise risk management discourse as the first clear ruling on corporate accountability for chatbot misrepresentation.
+
+**Relevance to maturity model.** The Air Canada case is the canonical Level 2 governance failure in a customer-facing context. The deployment pattern — chatbot deployed to handle customer service queries, no clear protocol governing what it could assert on behalf of the company, no escalation path when queries exceeded reliable scope — is the Level 2 characteristic posture. The court's rejection of the "separate entity" defense is a regulatory forcing function: it means Level 2 organizations cannot shelter behind technical disclaimers. The accountability structure must be built into the deployment protocol, not bolted on after litigation. Should be cited in Section 3 (Level 2 description) and Section 1 (why governance is not optional).
+
+---
+
+## Category: CMM historical context and regulatory frameworks
+
+*Sources providing the intellectual lineage of capability maturity models and the regulatory landscape that shapes enterprise AI governance requirements.*
+
+### 38. Managing the Software Process
+
+**Author:** Watts S. Humphrey
+**Published:** 1989
+**Publisher:** Addison-Wesley Longman Publishing Co., Reading, MA
+**ISBN:** 0-201-18095-2
+
+**What this covers.** Humphrey developed the Capability Maturity Model at the Software Engineering Institute (SEI), Carnegie Mellon University, beginning in 1986. This book is the primary published articulation of the CMM framework: five maturity levels for software development process, each defined by what an organization can reliably do and what its characteristic failure modes are. The framework was commissioned by the US Department of Defense to evaluate software contractor capability.
+
+**The five levels (original CMM):**
+1. Initial — processes are ad hoc; success depends on individual heroics
+2. Repeatable — basic project management; some processes can be repeated on similar projects
+3. Defined — processes are documented, standardized, and integrated
+4. Managed — processes are measured; quality and performance are quantitative
+5. Optimizing — continuous process improvement based on quantitative feedback
+
+**Key facts:**
+- The CMM framework originated in Phil Crosby's quality management work (1979); Humphrey adapted it for software process assessment
+- The full SEI CMM specification with defined process areas was formalized in 1991 (CMM v1.0); version 1.1 published July 1993
+- CMMI (Capability Maturity Model Integration) superseded the original CMM in 2002, merging multiple CMM frameworks
+- As of March 2026, CMMI is maintained by the CMMI Institute (acquired by ISACA in 2016)
+
+**Relevance to maturity model.** The intellectual lineage: when the litepaper deploys the term "capability maturity model," it is invoking a 35-year-old framework that has been applied to software engineering, systems engineering, services, and product development. The AI CMM inherits the CMM's core structure (levels, characteristic behavior, forward and backward transitions) while replacing "process compliance" with "protocol governance" as the unit of measurement. The SEI CMM's Level 1 failure mode ("success depends on individual heroics") is directly analogous to Level 1 Shadow in the AI CMM: individual-level optimization without organizational protocol. Should be cited in the litepaper's opening section to establish the intellectual lineage and justify the maturity model framing.
+
+---
+
+### 39. Artificial Intelligence Risk Management Framework (AI RMF 1.0)
+
+**Author/Organization:** National Institute of Standards and Technology (NIST)
+**Published:** January 26, 2023
+**Identifier:** NIST AI 100-1
+**DOI:** https://doi.org/10.6028/NIST.AI.100-1
+**PDF:** https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf
+
+**What this covers.** A voluntary, non-sector-specific framework for organizations designing, developing, deploying, or using AI systems. Developed through a consensus-driven process with private and public sector input. Structured around four core functions: Govern, Map, Measure, Manage (the AI RMF Core).
+
+**Key concepts:**
+- **Govern** — establish organizational structures, accountability, and oversight for AI risk
+- **Map** — identify and document AI system scope, stakeholders, and risk context
+- **Measure** — assess and monitor AI system performance and risk
+- **Manage** — respond to and recover from AI risks; implement mitigation and controls
+- The framework explicitly treats trustworthiness as multi-dimensional: accuracy, reliability, explainability, privacy, security, fairness, accountability
+- Voluntary in the US; referenced in proposed federal regulations and some sector guidance (OCC, HHS)
+
+**Key data points:**
+- Released January 26, 2023 — the primary US government guidance on AI risk as of March 2026
+- Does not mandate specific tools or technologies; designed to be adapted to sector context
+- Companion resources: AI RMF Playbook (mapping functions to practices); Generative AI profile (NIST AI 600-1, released 2024)
+
+**Relevance to maturity model.** The NIST AI RMF provides the regulatory context for Level 3+ organizations. A Level 3 (Designed) organization has governance policies; the question is whether those policies satisfy an externally defensible governance standard. The NIST framework is the most widely adopted reference point in the US enterprise context. The Govern function maps directly to the protocol layer argument: governance is not just about setting policies but about building the organizational structure that can sustain them. Should be cited in Section 5 (How to use / regulatory context) and in the Level 3 description. The Generative AI profile (NIST AI 600-1) is also a gap-filling candidate for the litepaper's treatment of GenAI-specific risks.
+
+---
+
+### 40. Regulation (EU) 2024/1689 — the EU AI Act
+
+**Full title:** Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)
+**Published in Official Journal:** July 12, 2024
+**EUR-Lex URL:** https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+**Entry into force:** August 1, 2024
+
+**What this covers.** The EU AI Act is the world's first comprehensive AI regulation. It establishes a risk-tiered compliance framework: organizations deploying AI systems in the EU (or affecting EU residents) must classify their systems and comply with tier-specific requirements.
+
+**Risk tiers:**
+- **Unacceptable risk** — prohibited (e.g., real-time biometric surveillance in public, social scoring, emotion recognition in workplaces and schools)
+- **High risk** — subject to pre-market assessment, documentation, human oversight requirements (e.g., AI in hiring, credit scoring, critical infrastructure, medical devices, law enforcement)
+- **Limited risk** — transparency requirements only (e.g., chatbots must disclose they are AI)
+- **Minimal risk** — no specific requirements (e.g., spam filters, AI in video games)
+
+**Compliance timeline:**
+- August 1, 2024 — entered into force
+- February 2, 2025 — prohibitions on unacceptable-risk AI enforceable
+- August 2, 2026 — most compliance obligations apply (high-risk systems, general purpose AI models)
+- August 2, 2027 — obligations for high-risk AI embedded in products
+
+**Key facts:**
+- Fines for non-compliance: up to €35M or 7% of global annual turnover (prohibited practices); €15M or 3% for other violations
+- "General purpose AI models" (including large language models) are subject to transparency and technical documentation requirements from August 2025
+- Any organization deploying AI toward EU-based customers or employees is potentially in scope, regardless of where the organization is headquartered
+
+**Relevance to maturity model.** Level 3+ organizations need to know whether their governance policies satisfy regulatory requirements — not just internal quality standards. The EU AI Act creates a compliance forcing function for the Level 2→3 transition, particularly for organizations with EU employees or customers. The high-risk category (hiring, credit, HR management systems) is directly relevant to enterprise AI deployments. The requirement for human oversight of high-risk AI maps to the Level 3 protocol design argument: human review workflows must be designed and documented, not ad hoc. Should be cited in Section 5 (regulatory context) and as a Level 3–4 forcing function. Note: as of March 2026, US federal-level AI regulation is sector-specific (OCC guidance for banks, HHS/OCR for healthcare) — no equivalent omnibus US regulation has passed, making EU AI Act the primary global compliance reference.
+
+---
+
 ## Remaining categories to populate
 
 1. **Case studies — Level 3 stuck points** — organizations with policies but inconsistent enforcement; governance-without-integration failure modes
@@ -788,4 +903,4 @@
 
 ---
 
-*Last updated: 2026-03-17*
+*Last updated: 2026-03-18*

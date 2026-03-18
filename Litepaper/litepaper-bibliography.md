@@ -1,6 +1,6 @@
 # Litepaper — Bibliography, Quotes, and Resource Gaps
 
-**Version:** 0.1 (pre-draft)
+**Version:** 0.2 (gap-filling pass 1)
 **Date:** 2026-03-18
 **Purpose:** Curated resource list for litepaper drafting. Includes section mapping, citable claims, Chicago-style bibliography, and gap analysis.
 
@@ -14,6 +14,7 @@
 
 | # | Source | What it contributes |
 |---|--------|-------------------|
+| 38 | Humphrey — Managing the Software Process | SEI CMM intellectual lineage: five levels, "initial" = individual heroics, maturity = reliable process — establishes the framework this model builds on |
 | 14 | Microsoft RAI Maturity Model | What the best existing model measures — and the gap it leaves (responsible AI, not uncertainty governance) |
 | 15 | Accenture Art of AI Maturity | 63% of organizations are AI Experimenters; the Foundation/Differentiation axis; CEO sponsorship finding |
 | 13 | BCG AI Maturity Matrix | National-level frame — useful contrast to show why organizational model is needed |
@@ -50,6 +51,7 @@
 | 31 | Klarna | 90% daily adoption → "generic, repetitive, insufficiently nuanced" → rehiring; the L2 failure arc |
 | 32 | Shopify | Lütke's "non-optional" memo — mandate without workflow design |
 | 33 | Duolingo | Contractor replacement → user backlash → DAU growth at "lower end of projections" |
+| 37 | Moffatt v. Air Canada | Chatbot deployed without accountability protocol; "separate entity" defense rejected — corporate liability for AI output |
 | 4  | Armstrong — The Hottest Job in Tech | L2→3 transition requires embedded workflow design; FDE as the transition enabler |
 
 **Level 3 — Designed**
@@ -87,7 +89,7 @@
 | 15 | Accenture | Foundation/Differentiation axes as diagnostic dimensions |
 | 14 | Microsoft | Warning against averaging scores — dimensions are interdependent, not additive |
 
-### Section 5: Where organizations are now
+### Section 5: Where organizations are now + regulatory context
 
 | # | Source | What it contributes |
 |---|--------|-------------------|
@@ -97,6 +99,8 @@
 | 16 | OpenAI | Widening capability gap: frontier orgs vs. median |
 | 34 | Shadow AI roundup | Shadow AI prevalence — 86% healthcare, 3.1% enterprise ChatGPT users submitting confidential data |
 | 36 | HBR | AI adoption intensifies work without organizational absorption — empirical evidence for stuck pattern |
+| 39 | NIST AI RMF 1.0 | US enterprise governance reference: Govern / Map / Measure / Manage — maps to L3+ protocol design requirements |
+| 40 | EU AI Act 2024/1689 | Global compliance forcing function: high-risk AI (hiring, HR) requires documented human oversight from August 2026 |
 
 ---
 
@@ -236,6 +240,32 @@
 - [PARAPHRASE — extract central finding on intensification: expanding tasks, multitasking, working beyond normal hours]
 - [PARAPHRASE — extract the intrinsic motivation finding — workers do this to themselves]
 
+### Entry 37 — Moffatt v. Air Canada, 2024 BCCRT 149
+- Tribunal held Air Canada liable for negligent misrepresentation based on chatbot output ✓
+- Air Canada's "separate entity" defense (chatbot bears no relationship to the company) was rejected entirely ✓
+- Damages: $812.02 (fare difference, pre-judgment interest, tribunal fees) ✓
+- Decision date: February 14, 2024 ✓
+
+### Entry 38 — Humphrey — Managing the Software Process (SEI CMM)
+- Five levels: Initial (ad hoc), Repeatable (some repeatability), Defined (documented), Managed (measured), Optimizing (continuous improvement) ✓
+- Level 1 characteristic: success depends on individual heroics, not replicable process ✓
+- CMM originated at SEI, Carnegie Mellon University, commissioned by US Department of Defense (1986) ✓
+- CMMI (2002) superseded the original CMM, integrating multiple frameworks; currently maintained by ISACA ✓
+
+### Entry 39 — NIST AI RMF 1.0
+- Released January 26, 2023 — primary US government AI risk guidance as of March 2026 ✓
+- Four core functions: Govern, Map, Measure, Manage ✓
+- Voluntary and non-sector-specific; referenced in proposed federal regulations and OCC/HHS sector guidance ✓
+- Free PDF: https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf ✓
+- Generative AI profile (NIST AI 600-1) released 2024 — GenAI-specific supplement ✓
+
+### Entry 40 — EU AI Act (Regulation 2024/1689)
+- Published in Official Journal of the EU: July 12, 2024; entered into force August 1, 2024 ✓
+- Compliance timeline: prohibitions enforceable February 2, 2025; most obligations apply August 2, 2026 ✓
+- High-risk AI categories include: hiring/HR management systems, credit scoring, critical infrastructure, medical devices ✓
+- Fines: up to €35M or 7% of global turnover for prohibited practices; €15M or 3% for other violations ✓
+- General purpose AI models (including LLMs) subject to transparency and documentation requirements from August 2025 ✓
+
 ---
 
 ## Part 3 — Chicago Bibliography (17th Edition, Notes-Bibliography Style)
@@ -298,6 +328,14 @@ Otter, Thomas. "WTF Is a Forward-Deployed Engineer?" *Work in Progress*, April 2
 
 Protocolized. "Table: Learning to See Business Protocols." *Protocolized*, 2026.
 
+European Parliament and Council of the European Union. "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)." *Official Journal of the European Union*, July 12, 2024. https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
+
+Humphrey, Watts S. *Managing the Software Process*. Reading, MA: Addison-Wesley Longman, 1989.
+
+*Moffatt v. Air Canada*, 2024 BCCRT 149 (British Columbia Civil Resolution Tribunal, February 14, 2024). https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html.
+
+National Institute of Standards and Technology. *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. Gaithersburg, MD: National Institute of Standards and Technology, January 26, 2023. https://doi.org/10.6028/NIST.AI.100-1.
+
 **Case study sources (cited by incident, not as standalone works):**
 
 Gizmodo / Bloomberg / Cybersecurity Dive. Samsung ChatGPT data leak reporting. April–May 2023.
@@ -318,45 +356,37 @@ Gartner; Cyberhaven; Reco.ai; IBM. Shadow AI prevalence data roundup, 2024–202
 
 ## Part 4 — Resource Gaps
 
-### Critical gaps (must fill before drafting)
+### Critical gaps
 
-**Gap 1: No CMM historical context**
-The litepaper opens by situating the AI CMM against prior maturity models. No source in the catalog covers the original SEI CMM (1986) or CMMI (2002) — the intellectual lineage that "capability maturity model" invokes. Without this, the framing floats.
-- **What's needed:** A brief primary or secondary source on SEI CMM / CMMI history and what it measured.
+**Gap 1: No CMM historical context** — ✅ FILLED (Entry 38: Humphrey, *Managing the Software Process*, 1989)
 
-**Gap 2: McKinsey full report not directly accessed**
-Entry 18 is based on web summaries only. Several figures (33% → 65% adoption) are widely cited secondhand but the original methodology and caveats are not verified.
-- **What's needed:** Download the full McKinsey State of AI 2025 report from mckinsey.com (requires registration, publicly free).
+**Gap 2: McKinsey full report not directly accessed** — OPEN
+Entry 18 is based on web summaries only. Figures (33% → 65% adoption) are widely cited secondhand but methodology and caveats are not verified.
+- **Action:** Download the full McKinsey State of AI 2025 report from mckinsey.com (requires free registration). Verify the 33%→65% figure and the three characteristics of high performers before citing.
 
-**Gap 3: No peer-reviewed empirical source on AI governance failure rates in production**
-The litepaper needs at least one peer-reviewed or independently validated source on what percentage of AI-assisted workflows fail at the output review stage, or what error rates look like in deployed enterprise AI. The current catalog has case studies (Samsung, legal, healthcare) but no systematic measurement.
-- **What's needed:** Academic or auditor-quality study on AI output error rates in enterprise contexts. Candidates: NIST AI Risk Management Framework (2023), EU AI Act impact assessments, sector-specific regulatory reports.
+**Gap 3: No peer-reviewed empirical source on AI governance failure rates** — PARTIALLY ADDRESSED
+NIST AI RMF (Entry 39) and the legal/healthcare case studies (Entries 29, 30) provide regulatory and documented failure context. No academic error-rate study is in the catalog; the case studies and survey data (IBM breach costs, symplr healthcare data) serve as the empirical grounding.
+- **Status:** Acceptable for v1 draft using current case study and survey evidence. Flag if a peer-reviewed error rate study is located.
 
-**Gap 4: No source on the EU AI Act or US AI governance regulation**
-The litepaper's audience includes executives who are asking about compliance. No source addresses the regulatory landscape. Relevant for Level 3+ framing (designed workflows need to satisfy regulatory requirements, not just internal governance).
-- **What's needed:** Summary source on EU AI Act (August 2024), US Executive Order on AI (October 2023), or relevant sector guidance (OCC AI guidance for banks, HHS AI policy for healthcare).
+**Gap 4: No source on the EU AI Act or US AI governance regulation** — ✅ FILLED (Entry 40: EU AI Act 2024/1689; Entry 39: NIST AI RMF 1.0)
 
-**Gap 5: No source on AI workflow ROI measurement**
-Level 3–4 transitions require measurement — but the catalog has no source that addresses how organizations actually measure AI workflow performance, what metrics matter, and what benchmarks exist.
-- **What's needed:** A practitioner-quality source on AI ROI measurement or productivity measurement methodology.
+**Gap 5: No source on AI workflow ROI measurement** — OPEN
+The catalog has no source addressing how organizations measure AI workflow performance or what benchmarks exist.
+- **Action:** Low priority for v1 draft; the OpenAI (Entry 16) and Accenture (Entry 15) data provide proxy productivity figures. Flag if Forrester or Gartner source is located.
 
-**Gap 6: No source engaging the Air Canada chatbot liability case**
-The Air Canada case is in the case studies overview but absent from the source catalog. It's a clean, legally-settled example of L2 governance failure (AI acting as agent without governed escalation path) and could strengthen Section 3, Level 2.
-- **What's needed:** Add BC Civil Resolution Tribunal decision (February 2024) to source catalog as entry 37.
+**Gap 6: No source engaging the Air Canada chatbot liability case** — ✅ FILLED (Entry 37: *Moffatt v. Air Canada*, 2024 BCCRT 149)
 
-### Secondary gaps (useful if available, not blocking)
+### Secondary gaps
 
-**Gap 7: Gartner shadow AI figure needs primary source**
-Entry 34 references a Gartner figure (41% of employees acquire technology outside IT visibility) that was not directly cited in the catalog annotation. Gartner reports require subscription; the figure may be from a 2023 or 2024 Gartner Hype Cycle report.
-- **What's needed:** Confirm original Gartner source and date before citing in the litepaper.
+**Gap 7: Gartner shadow AI figure needs primary source** — OPEN
+Entry 34 references a Gartner figure (41% of employees acquiring technology outside IT visibility) without a direct primary citation. Gartner reports require subscription.
+- **Status:** Cite with explicit "Gartner, as cited in [secondary source]" attribution until primary source is verified. Do not present as directly verified.
 
-**Gap 8: No source on the history of the "shadow IT" concept**
-The litepaper introduces Level 1 as "Shadow AI" — a term that borrows directly from "shadow IT." No source grounds this etymology or explains why the parallel is exact rather than metaphorical.
-- **What's needed:** Brief secondary source on shadow IT history (optional — can be handled in footnote).
+**Gap 8: No source on the history of the "shadow IT" concept** — LOW PRIORITY
+Can be handled in footnote without separate source. Defer.
 
-**Gap 9: No academic source on organizational change and technology adoption curves**
-The litepaper would benefit from a peer-reviewed grounding for why enterprises plateau at Level 2 — the organizational inertia argument. Rogers' *Diffusion of Innovations* or Christensen's disruption work would serve, but neither is in the catalog.
-- **What's needed:** One strong secondary source on technology adoption organizational dynamics (optional, strengthens credibility with academic readers).
+**Gap 9: No academic source on technology adoption organizational dynamics** — LOW PRIORITY
+Optional. Defer to post-v1.
 
 ---
 
@@ -364,21 +394,22 @@ The litepaper would benefit from a peer-reviewed grounding for why enterprises p
 
 ### Immediate (do before first draft)
 
-| Action | Source | Method | Priority |
-|--------|--------|--------|---------|
-| Download McKinsey State of AI 2025 | mckinsey.com | Free registration | Critical |
-| Add Air Canada case to source catalog as entry 37 | BC Civil Resolution Tribunal decision, February 2024 | Web — publicly available | Critical |
-| Find SEI CMM / CMMI history source | Wikipedia CMM article → primary SEI publication | Web | Critical |
-| Download NIST AI RMF (2023) | nist.gov | Free PDF | Critical |
+| Action | Status | Notes |
+|--------|--------|-------|
+| Add Air Canada case to source catalog as entry 37 | ✅ DONE | Entry 37: *Moffatt v. Air Canada*, 2024 BCCRT 149 |
+| Find SEI CMM / CMMI history source | ✅ DONE | Entry 38: Humphrey, *Managing the Software Process* (1989) |
+| Add NIST AI RMF (2023) to catalog | ✅ DONE | Entry 39: NIST AI 100-1, doi.org/10.6028/NIST.AI.100-1 |
+| Add EU AI Act to catalog | ✅ DONE | Entry 40: Regulation (EU) 2024/1689, EUR-Lex |
+| Download McKinsey State of AI 2025 full PDF | OPEN | Requires free registration at mckinsey.com; verify 33%→65% figure before first draft |
 
 ### Before final draft
 
-| Action | Source | Method | Priority |
-|--------|--------|--------|---------|
-| Locate EU AI Act summary suitable for citation | EUR-Lex / OECD AI Policy Observatory | Web | High |
-| Confirm Gartner 41% figure — primary source and date | Gartner Hype Cycle for IT (2023 or 2024) | Requires Gartner subscription or secondhand citation | High |
-| Locate AI ROI / productivity measurement source | Forrester, Gartner, or peer-reviewed work | Web / library | Medium |
-| Extract verbatim quotes from all [PARAPHRASE] entries | Local resource PDFs | Read source files directly | High |
+| Action | Priority |
+|--------|---------|
+| Verify McKinsey 33%→65% figures from full PDF | High |
+| Confirm Gartner 41% figure — cite as "[Gartner, as cited in X]" until primary is verified | High |
+| Extract verbatim quotes from all [PARAPHRASE] entries (see list below) | High |
+| Locate AI ROI / productivity measurement source | Medium |
 
 ### Quote extraction (local PDFs — do in one pass before drafting)
 
