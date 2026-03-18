@@ -15,7 +15,7 @@ Living task list. Update status as work progresses.
 - [x] Gather empirical data: adoption surveys, breach reports, productivity studies (2024–2026)
 - [x] Identify case studies — 9 documented (Samsung, legal profession, healthcare, Klarna, Shopify, Duolingo, Uber, Boom Supersonic, Rao/Dixon pipeline)
 - [x] Synthesize: what does protocol thinking add that existing models miss?
-- [x] Source catalog complete — 35 annotated entries across 7 categories
+- [x] Source catalog complete — 40 annotated entries across 9 categories (gap-filling added entries 37–40: Air Canada, SEI CMM, NIST AI RMF, EU AI Act)
 - [x] Case studies overview document written — confirmed facts only
 
 ### Definition of Done
@@ -74,10 +74,16 @@ Published on Protocolized. ✓ Live at protocolized.dev/blog-the-missing-layer/ 
 
 ## Phase 4 — Litepaper
 
-### Status: NOT STARTED
+### Status: IN PROGRESS
 
 ### Tasks
-- [ ] Write litepaper brief (Litepaper/README.md)
+- [x] Pre-draft research: bibliography v0.1 (36 sources, Chicago citations, gap analysis)
+- [x] Gap-filling pass 1: entries 37–40 added (Air Canada, SEI CMM, NIST AI RMF, EU AI Act)
+- [x] McKinsey PDF verified — figures corrected (the-state-of-ai-in-2025-vf.pdf)
+- [x] Bibliography v0.2 — all critical gaps filled, verified citable claims
+- [x] Litepaper outline v0.1 — YAML DSL (thesis, 10 critique rounds, ontological definitions, 6 sections, 5 levels with full structure, emerging protocols map)
+- [x] Write litepaper brief (Litepaper/README.md) — captured in outline YAML
+- [ ] Quote extraction pass — verbatim quotes from 12 local PDFs (see bibliography Part 5)
 - [ ] Draft v1 (8–12 pages)
 - [ ] Self-review against style guide
 - [ ] Practice Advisor review
@@ -130,9 +136,9 @@ A publicly accessible Claude artifact providing a diagnostic tool: users explore
 | 1 — Research | [x] | [x] | [x] | [x] |
 | 2 — Model Development | [x] | [x] | [x] | [x] |
 | 3 — Blog Post | [x] | [x] | [x] | [x] |
-| 4 — Litepaper | [x] | [ ] | [ ] | [ ] |
+| 4 — Litepaper | [x] | [~] | [ ] | [ ] |
 | 5 — HTML Artifact | [x] | [x] | [x] | [x] |
 
 ---
 
-*Last updated: 2026-03-18*
+*Last updated: 2026-03-18 (session 2)*

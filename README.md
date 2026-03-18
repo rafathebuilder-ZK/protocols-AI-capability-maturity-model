@@ -18,7 +18,7 @@
 | Output | Format | Audience | Status |
 |--------|--------|----------|--------|
 | [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | **v1.1 live** — [protocolized.dev/blog-the-missing-layer](https://protocolized.dev/blog-the-missing-layer/) |
-| [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
+| [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Pre-draft in progress — outline + bibliography complete |
 | [Interactive HTML artifact](Artifact/publish/index.html) | Public web artifact | All audiences | **v1.12 live** — [protocolized.dev/ai-maturity-model](https://protocolized.dev/ai-maturity-model/) |
 
 ---
@@ -59,11 +59,20 @@
 | [thesis-extraction.md](Model-Development/thesis-extraction.md) | Load-bearing claims, structural assumptions, weaknesses |
 | [recomposition-plan.md](Model-Development/recomposition-plan.md) | Task plan and resource map for YAML recomposition |
 
+## Litepaper (pre-draft in progress)
+
+| Document | Purpose |
+|----------|---------|
+| [litepaper-outline-v0.1.yaml](Litepaper/litepaper-outline-v0.1.yaml) | YAML DSL outline — argument structure, 5 levels, case anchors, emerging protocols, section map |
+| [litepaper-bibliography.md](Litepaper/litepaper-bibliography.md) | Bibliography v0.2 — 40 sources, Chicago citations, citable claims, gap analysis (all critical gaps filled) |
+
+---
+
 ## Research (complete)
 
 | Document | Purpose |
 |----------|---------|
-| [Source catalog](Research/source-catalog.md) | Annotated bibliography — 36 entries across 8 categories |
+| [Source catalog](Research/source-catalog.md) | Annotated bibliography — 40 entries across 9 categories |
 | [Case studies overview](Research/case-studies-overview.md) | Confirmed-facts-only summary of 9+ case studies |
 | [Literature notes](Research/literature-notes.md) | Running research notes |
 

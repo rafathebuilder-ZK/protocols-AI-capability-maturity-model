@@ -5,9 +5,8 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-18)
 
-**Active work:** Artifact v1.12 live at https://protocolized.dev/ai-maturity-model/. Blog post v1.1 live at https://protocolized.dev/blog-the-missing-layer/. protocolized.dev domain fully configured.
-**Immediate next action:** Begin litepaper (Phase 4).
-**Blocking items:** None
+**Active work:** Litepaper Phase 4 in progress. Outline (v0.1 YAML) and bibliography (v0.2) complete. Next action: quote extraction pass from local PDFs, then first draft.
+**Blocking items:** None. All critical bibliography gaps filled. McKinsey PDF verified.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
 ---
@@ -15,6 +14,15 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-18 | Litepaper pre-draft complete — outline, bibliography, gap-filling
+
+- **Litepaper outline v0.1** (`Litepaper/litepaper-outline-v0.1.yaml`): YAML DSL with full argument structure. Thesis → 10 critique rounds → 5 ontological definitions → 6 sections → 5 levels (each with governing protocol, blind spot, failure mode, case anchors, emerging protocol, historical parallel, transition requirement) → emerging protocols map → open questions (all resolved).
+- **Bibliography v0.2** (`Litepaper/litepaper-bibliography.md`): 40 sources mapped to sections, citable claims, Chicago 17th ed. citations. All critical gaps filled.
+- **Gap-filling**: Source catalog expanded from 36 to 40 entries. New entries: Air Canada chatbot liability (entry 37), SEI CMM/Humphrey (entry 38), NIST AI RMF 1.0 (entry 39), EU AI Act 2024/1689 (entry 40).
+- **McKinsey PDF verified**: `the-state-of-ai-in-2025-vf.pdf` added to Resources. Prior annotation error corrected: "33%→65%" was a misattribution. Correct figures: 88% adoption, 39% EBIT impact, ~6% high performers, 65% vs. 23% gap on human-in-the-loop validation.
+- **Artifact updated**: Boom Supersonic case study link updated to Blake Scholl's Substack (primary source). Deployed to protocolized.dev/ai-maturity-model/.
+- **Remaining before first draft**: verbatim quote extraction from 12 local PDFs (listed in bibliography Part 5).
 
 ### 2026-03-18 | Blog post v1.1 — published to protocolized.dev/blog-the-missing-layer
 
