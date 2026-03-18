@@ -395,22 +395,37 @@
 
 ---
 
-### 18. The State of AI 2025
+### 18. The State of AI in 2025: Agents, Innovation, and Transformation
 
-**Authors:** McKinsey & Company
-**Published:** 2025
-**Format:** Web report (PDF download blocked; entry based on published summary data)
+**Authors:** Alex Singla, Alexander Sukharevsky, Bryce Hall, Laraina Yee, Michael Chui, Tara Balakrishnan (McKinsey & Company)
+**Published:** November 2025
+**Format:** PDF report — `../Resources/the-state-of-ai-in-2025-vf.pdf`
+**Survey date:** June 25–July 29, 2025
+**Sample:** 1,993 respondents across 105 nations, weighted by GDP contribution; 38% from organizations with >$1B annual revenues
 
-**Project-tuned summary:** McKinsey's annual AI adoption survey, the longest-running series of its kind (started 2017). The 2025 edition documents that AI adoption has crossed the mainstream threshold: GenAI adoption rose from ~33% in 2023 to ~65% in 2024, roughly doubling year-over-year. The report distinguishes between adoption (having AI tools deployed) and value capture (seeing measurable business impact): the gap between these remains wide. Organizations seeing the highest returns share three characteristics — they have changed workflows, not just added tools; they have retrained workers rather than just provided access; and they have governance structures that handle AI-generated errors systematically. Cost savings remain the primary reported benefit, but revenue gains are emerging as a secondary metric among high performers. The report also documents that AI-related workforce anxiety has risen alongside adoption, and that organizations that address it explicitly perform better than those that don't.
+**Note on prior annotation:** The earlier catalog annotation (pre-PDF access) cited "~33% in 2023 → ~65% in 2024" for GenAI adoption. These figures misattribute data from the historical time series in the report. The correct figures from the verified PDF are below. Do not cite the 33%→65% framing.
 
-**Key data points:**
-- GenAI adoption: ~33% (2023) → ~65% (2024) — roughly doubled in one year
-- High performers distinguish from average adopters on: workflow redesign, worker retraining, systematic error governance
-- Cost savings remain primary reported benefit; revenue gains emerging among high performers
+**Project-tuned summary:** McKinsey's annual AI adoption survey, running since 2017. The 2025 edition documents AI adoption reaching 88% of organizations in at least one function — up from 78% the year prior. The historical adoption time series (Exhibit 1) shows: 20% (2017) → 47% → 58% → 50% → 56% → 58% → 65% (2022) → 71% → 78% (2024) → 88% (2025). The central finding: adoption is nearly universal, but value capture is rare. Only 39% of respondents report any EBIT impact from AI; only ~6% qualify as high performers (>5% EBIT attribution + "significant value"). Two-thirds of organizations have not yet begun scaling AI across the enterprise — they are still in pilot or experimentation phases. The differentiators between high performers and others are structural, not technical: workflow redesign, senior leadership ownership, and human-in-the-loop validation processes.
 
-**Note on sourcing:** McKinsey's PDF download was blocked by server-side protection during research. The above summary is drawn from publicly available McKinsey.com summaries and widely cited statistics from the report. Verify specific figures before citing in the litepaper; the full report is accessible via McKinsey.com with registration.
+**Key data points (all verified from PDF):**
+- 88% of respondents' organizations use AI in at least one business function (2025); 78% a year prior
+- Only 39% report any EBIT impact from AI; ~6% are high performers (>5% EBIT, "significant value")
+- Only 22% report scaling agentic AI; no more than 10% scaling agents in any single function
+- 66% have not yet begun scaling AI across the enterprise (still piloting or experimenting)
+- High performers vs. others on governance practices:
+  - Human-in-the-loop validation processes: 65% vs. 23%
+  - Fundamental workflow redesign: 2.8x more likely
+  - Senior leadership ownership: 3.0x more likely (48% vs. 16%)
+  - Defined AI roadmaps: 60% vs. 31%
+  - Transformed business processes: 58% vs. 20%
 
-**Relevance to maturity model:** The 65% adoption figure vs. 16% true-agent figure (Menlo Ventures, entry 17) is the most telling gap in the adoption data: two-thirds of organizations have AI deployed, but fewer than one-fifth have moved beyond basic workflows. This is the empirical case for why the maturity model's middle levels (2–3) are the most crowded — organizations are not failing to adopt AI, they are failing to govern it well enough to move to integration. The workflow-redesign finding reinforces the protocol framing directly: the differentiator between high and low performers is not the AI itself, but the coordination protocol around it.
+**Direct quotes (verbatim):**
+- "Meaningful enterprise-wide bottom-line impact from the use of AI continues to be rare."
+- "High performers are nearly three times as likely as others are to say their organizations have fundamentally redesigned individual workflows in their deployment of AI."
+- "High performers are more than three times more likely than others are to say their organization intends to use AI to bring about transformative change to their businesses."
+- "Nearly two-thirds of respondents say their organizations have not yet begun scaling AI across the enterprise."
+
+**Relevance to maturity model:** The most powerful single data point: 88% adoption vs. 39% EBIT impact vs. 6% high performers. This is the empirical shape of the maturity distribution — nearly universal Level 1–2 adoption, with a small cohort at Level 3+. The governance practice gap is direct evidence for the protocol framing: the differentiator between high and low performers is not the AI tools but the coordination layer around them (human-in-the-loop validation, workflow redesign, defined processes). The 65% vs. 23% gap on human-in-the-loop validation alone is the strongest empirical support in the catalog for why Level 2→3 protocol design is the pivotal transition.
 
 ---
 

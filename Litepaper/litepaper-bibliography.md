@@ -179,9 +179,19 @@
 - Build vs. buy shift: 47% build / 53% buy (2024) → 24% build / 76% buy (2025) ✓
 - 50% of developers use AI coding tools daily; teams report 15%+ velocity gains ✓
 
-### Entry 18 — McKinsey State of AI 2025
-- GenAI adoption: ~33% (2023) → ~65% (2024) ✓ [VERIFY — full PDF not directly accessed; confirm via mckinsey.com]
-- High performers share three characteristics: changed workflows, retrained workers, systematic error governance ✓ [VERIFY]
+### Entry 18 — McKinsey State of AI in 2025 (verified from PDF)
+- **CORRECTION:** Prior annotation cited "~33% (2023) → ~65% (2024)" — this figure is a misattribution from the historical time series. Do not use.
+- 88% of organizations use AI in at least one function (2025 survey); 78% a year prior ✓
+- Only 39% report any EBIT impact from AI; only ~6% qualify as high performers (>5% EBIT + "significant value") ✓
+- 66% have not yet begun scaling AI across the enterprise ✓
+- "Meaningful enterprise-wide bottom-line impact from the use of AI continues to be rare." ✓ (verbatim)
+- Human-in-the-loop validation: 65% of high performers have it vs. 23% of others ✓
+- Workflow redesign: high performers 2.8x more likely to have fundamentally redesigned workflows ✓
+- "High performers are nearly three times as likely as others are to say their organizations have fundamentally redesigned individual workflows in their deployment of AI." ✓ (verbatim)
+- Senior leadership ownership: high performers 3.0x more likely (48% vs. 16%) ✓
+- Agentic AI: only 22% scaling agents anywhere; no more than 10% in any single function ✓
+- Survey: 1,993 respondents, 105 nations, June 25–July 29, 2025 ✓
+- Source file: `../Resources/the-state-of-ai-in-2025-vf.pdf` ✓
 
 ### Entry 20 — Rao — Introduction to the Protocol Reader
 - [PARAPHRASE — extract foundational definition of protocol as coordination mechanism]
@@ -280,7 +290,7 @@ Chada, Anshu, and Ty Smith. "Uber: Leading Engineering through an Agentic Shift.
 
 Boston Consulting Group. "BCG AI Maturity Matrix." November 2024. https://web-assets.bcg.com/95/38/a3ada1a74c6a813f7fe10ac432e9/bcg-ai-maturity-matrix-2024.pdf.
 
-McKinsey & Company. "The State of AI 2025." 2025. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai.
+Singla, Alex, Alexander Sukharevsky, Bryce Hall, Laraina Yee, Michael Chui, and Tara Balakrishnan. "The State of AI in 2025: Agents, Innovation, and Transformation." McKinsey & Company, November 2025. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai.
 
 Menlo Ventures. "2025 State of Generative AI in the Enterprise." November 2025. https://menlovc.com/2025-the-state-of-generative-ai-in-the-enterprise/.
 
@@ -360,9 +370,10 @@ Gartner; Cyberhaven; Reco.ai; IBM. Shadow AI prevalence data roundup, 2024–202
 
 **Gap 1: No CMM historical context** — ✅ FILLED (Entry 38: Humphrey, *Managing the Software Process*, 1989)
 
-**Gap 2: McKinsey full report not directly accessed** — OPEN
-Entry 18 is based on web summaries only. Figures (33% → 65% adoption) are widely cited secondhand but methodology and caveats are not verified.
-- **Action:** Download the full McKinsey State of AI 2025 report from mckinsey.com (requires free registration). Verify the 33%→65% figure and the three characteristics of high performers before citing.
+**Gap 2: McKinsey full report not directly accessed** — ✅ FILLED
+PDF added to Resources as `the-state-of-ai-in-2025-vf.pdf`. All figures verified.
+**Correction:** The "33%→65%" figure cited in prior annotation was a misattribution from the historical time series. Do not use.
+Correct verified figures: 88% adoption (2025), 39% EBIT impact, ~6% high performers, 65% vs. 23% gap on human-in-the-loop validation.
 
 **Gap 3: No peer-reviewed empirical source on AI governance failure rates** — PARTIALLY ADDRESSED
 NIST AI RMF (Entry 39) and the legal/healthcare case studies (Entries 29, 30) provide regulatory and documented failure context. No academic error-rate study is in the catalog; the case studies and survey data (IBM breach costs, symplr healthcare data) serve as the empirical grounding.
@@ -400,7 +411,7 @@ Optional. Defer to post-v1.
 | Find SEI CMM / CMMI history source | ✅ DONE | Entry 38: Humphrey, *Managing the Software Process* (1989) |
 | Add NIST AI RMF (2023) to catalog | ✅ DONE | Entry 39: NIST AI 100-1, doi.org/10.6028/NIST.AI.100-1 |
 | Add EU AI Act to catalog | ✅ DONE | Entry 40: Regulation (EU) 2024/1689, EUR-Lex |
-| Download McKinsey State of AI 2025 full PDF | OPEN | Requires free registration at mckinsey.com; verify 33%→65% figure before first draft |
+| Verify McKinsey figures from full PDF | ✅ DONE | PDF in Resources. Correct figures: 88% adoption, 39% EBIT impact, 6% high performers. "33%→65%" figure was a misattribution — do not use. |
 
 ### Before final draft
 

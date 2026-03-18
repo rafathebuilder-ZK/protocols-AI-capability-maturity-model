@@ -102,7 +102,7 @@ sections:
             organizational level where deployment decisions are made.
 
     evidence:
-      - "McKinsey (2025): 65% of organizations have adopted GenAI; value capture still lagging. [Entry 18]"
+      - "McKinsey (2025): 88% of organizations use AI in at least one function; only 39% report any EBIT impact; only ~6% are high performers. [Entry 18]"
       - "IBM CEO Survey (2024): 61% pushing adoption faster than governance readiness; only 39% report adequate governance. [Entry 34]"
       - "Menlo Ventures (2025): only 16% of enterprise deployments qualify as 'true agents.' [Entry 17]"
 
@@ -738,6 +738,7 @@ sections:
     distribution:
       level_1_to_2:
         evidence:
+          - "McKinsey (2025): 88% adoption, but 66% not yet scaling — still piloting or experimenting. Only 39% report any EBIT impact. [Entry 18]"
           - "Reco.ai: 71% of enterprise employees use unauthorized AI tools. Most organizations have shadow AI as a baseline condition. [Entry 34]"
           - "IBM CEO Survey: only 39% of CEOs report adequate AI governance. [Entry 34]"
           - "Menlo Ventures: 63% of enterprise AI deployments are still prompt design, RAG, or fixed workflows — not true agents. [Entry 17]"
@@ -750,14 +751,16 @@ sections:
 
       level_3:
         evidence:
+          - "McKinsey (2025): only ~6% qualify as high performers. High performers are 2.8x more likely to have fundamentally redesigned workflows; 65% have human-in-the-loop validation vs. 23% of others. [Entry 18]"
           - "Accenture: 12% of firms are AI Achievers — measurably ahead. [Entry 15]"
           - "Menlo Ventures: 16% of enterprise deployments are true agents. [Entry 17]"
           - "OpenAI: frontier organizations send 6x more messages than median enterprises; 2x per seat. [Entry 16]"
         interpretation: >
-          A cohort of ~10–15% of organizations has designed AI into specific
-          workflows with explicit governance. These organizations are generating
-          AI value that compounds. The gap between them and the majority is
-          not a tooling gap — it is a protocol design gap.
+          A cohort of ~6–15% of organizations has designed AI into specific
+          workflows with explicit governance. The McKinsey governance practice
+          gap is the clearest empirical evidence: the differentiator between
+          high performers and others is not tooling — it is the protocol design
+          layer (human-in-the-loop validation, workflow redesign, defined processes).
 
       level_4_to_5:
         evidence: "Projected. No confirmed organizational case anchors at Level 4. Uber is the most advanced documented case at late Level 3 / early Level 4."
@@ -988,7 +991,7 @@ production_notes:
     - "Diagnostic question tree: the 'what happens when AI is wrong' decision guide"
 
   verification_required_before_draft:
-    - "McKinsey 33%→65% figure — download full PDF from https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai (free registration required)"
+    - "McKinsey figures VERIFIED from PDF (the-state-of-ai-in-2025-vf.pdf). Correct figures: 88% adoption, 39% EBIT impact, 6% high performers. Do not cite '33%→65%' — that figure is a misattribution from the historical time series."
     - "Gartner 41% shadow figure — confirm primary source and date"
     - "Confirm Rafa's full author name for Entry 26 before publication"
     - "Verbatim quote extraction from all [PARAPHRASE] entries in bibliography"
