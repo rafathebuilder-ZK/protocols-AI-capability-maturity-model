@@ -2,7 +2,7 @@
 
 **Project:** Desk research, blog post, litepaper, and interactive diagnostic tool on a capability maturity model for organizational AI adoption
 **Practice:** Protocolized — Protocols for Business Practice
-**Status:** Artifact v1.0 deployed as public Claude artifact — Blog post and Litepaper next
+**Status:** Artifact v1.12 + Blog post v1.1 live on protocolized.dev — Litepaper next
 
 ---
 
@@ -17,13 +17,25 @@
 
 | Output | Format | Audience | Status |
 |--------|--------|----------|--------|
-| [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | Not started |
+| [Blog post](Blog-Post/README.md) | ~1,500 words, Protocolized publication | Practitioners, managers | **v1.1 live** — [protocolized.dev/blog-the-missing-layer](https://protocolized.dev/blog-the-missing-layer/) |
 | [Litepaper](Litepaper/README.md) | 8–12 pages, downloadable | Deployment managers, executives | Not started |
 | [Interactive HTML artifact](Artifact/publish/index.html) | Public web artifact | All audiences | **v1.12 live** — [protocolized.dev/ai-maturity-model](https://protocolized.dev/ai-maturity-model/) |
 
 ---
 
-## HTML Artifact (v1.12 live — 2026-03-17)
+## Blog Post (v1.1 live — 2026-03-18)
+
+**Live URL:** https://protocolized.dev/blog-the-missing-layer/
+
+| Document | Purpose |
+|----------|---------|
+| [the-missing-protocol-layer-v1.1.md](Blog-Post/SIG-update/the-missing-protocol-layer-v1.1.md) | Current working draft (v1.1) |
+| [the-missing-protocol-layer-v1.0.md](Blog-Post/SIG-update/the-missing-protocol-layer-v1.0.md) | Locked v1.0 — do not edit |
+| [publish/index.html](Blog-Post/SIG-update/publish/index.html) | Canonical deploy source — published to protocolized.dev. here.now slug: `witty-garnet-6k4f` |
+
+---
+
+## HTML Artifact (v1.12 live — 2026-03-18)
 
 **Live URL:** https://protocolized.dev/ai-maturity-model/
 
@@ -51,7 +63,7 @@
 
 | Document | Purpose |
 |----------|---------|
-| [Source catalog](Research/source-catalog.md) | Annotated bibliography — 35 entries across 7 categories |
+| [Source catalog](Research/source-catalog.md) | Annotated bibliography — 36 entries across 8 categories |
 | [Case studies overview](Research/case-studies-overview.md) | Confirmed-facts-only summary of 9+ case studies |
 | [Literature notes](Research/literature-notes.md) | Running research notes |
 

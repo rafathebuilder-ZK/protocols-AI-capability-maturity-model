@@ -49,24 +49,26 @@ YAML DSL v2.1 passing evaluation-criteria.md requirements; all case anchors cite
 
 ## Phase 3 — Blog Post
 
-### Status: NOT STARTED
+### Status: COMPLETE (v1.1 published 2026-03-18)
+
+**Live URL:** https://protocolized.dev/blog-the-missing-layer/
 
 ### Tasks
-- [ ] Write blog post brief (Blog-Post/README.md)
-- [ ] Draft v1 (~1,500 words)
-- [ ] Self-review against style guide
-- [ ] Practice Advisor review
-- [ ] Final draft ready for publication
+- [x] Write blog post brief (Blog-Post/README.md)
+- [x] Draft v1 (~1,500 words)
+- [x] Self-review against style guide
+- [x] Practice Advisor review
+- [x] Final draft ready for publication
 
 ### Evaluation Criteria
-- [ ] Accessible to non-specialist practitioners
-- [ ] Distinctive Protocolized angle is clear (protocol framing, not just another AI CMM)
-- [ ] Hook is strong — reader wants to keep reading after paragraph 1
-- [ ] Ends with clear pointer to litepaper
-- [ ] Style guide compliant (no AI writing tropes, no managerial filler)
+- [x] Accessible to non-specialist practitioners
+- [x] Distinctive Protocolized angle is clear (protocol framing, not just another AI CMM)
+- [x] Hook is strong — reader wants to keep reading after paragraph 1
+- [x] Ends with clear pointer to litepaper
+- [x] Style guide compliant (no AI writing tropes, no managerial filler)
 
 ### Definition of Done
-Published on Protocolized.
+Published on Protocolized. ✓ Live at protocolized.dev/blog-the-missing-layer/ as v1.1 (2026-03-18).
 
 ---
 
@@ -108,7 +110,7 @@ A publicly accessible Claude artifact providing a diagnostic tool: users explore
 - [x] Layout test suite (Artifact/drafts/layout-test.py — 21 criteria, 21/21 passing)
 - [x] Content/style QC (_ARTIFACT-QC.md — 22 criteria, 22/22 passing)
 - [x] Publish as public Claude artifact (v1.0 deployed 2026-03-17)
-- [ ] Add public artifact URL to README, blog post, and litepaper once URL confirmed
+- [x] Add public artifact URL to README, blog post, and litepaper once URL confirmed
 
 ### Versioning convention
 - Deployed version: **v1.0** (Artifact/drafts/v1.html) — **locked, do not edit**
@@ -127,10 +129,10 @@ A publicly accessible Claude artifact providing a diagnostic tool: users explore
 |-------|----------|-----------|--------|------|
 | 1 — Research | [x] | [x] | [x] | [x] |
 | 2 — Model Development | [x] | [x] | [x] | [x] |
-| 3 — Blog Post | [x] | [ ] | [ ] | [ ] |
+| 3 — Blog Post | [x] | [x] | [x] | [x] |
 | 4 — Litepaper | [x] | [ ] | [ ] | [ ] |
 | 5 — HTML Artifact | [x] | [x] | [x] | [x] |
 
 ---
 
-*Last updated: 2026-03-17*
+*Last updated: 2026-03-18*
