@@ -963,25 +963,21 @@ open_questions:
     action: "Download from mckinsey.com before first draft."
 
   - id: "OQ3"
-    question: >
-      Is 'planetary' the right word for Level 5? It is theoretically grounded
-      (Theorizing Protocolization I) but may read as grandiose to an executive
-      audience. Alternative framings: 'systemic,' 'infrastructural-at-scale,'
-      'civilizational.' Decision needed before first draft.
-    options:
-      - "Planetary (current — theoretically precise, potentially grandiose)"
-      - "Systemic (more accessible, less precise)"
-      - "Infrastructural (parallels the existing Level 4 name too closely)"
+    question: "Is 'planetary' the right word for Level 5?"
+    decision: "RESOLVED — keep Planetary. Theoretically precise (Theorizing Protocolization I); the level's forward-looking status makes the ambitious framing appropriate."
 
   - id: "OQ4"
-    question: >
-      The HBR intensification study (Entry 36) is a strong empirical anchor
-      for why Level 2 organizations plateau — workers self-intensify without
-      the organizational protocol structure to absorb that activity. But the
-      authors' proposed solution ('AI practice') is a Level 2 coping mechanism,
-      not a protocol design. How explicitly should the litepaper argue against
-      their conclusion while using their evidence?
-    note: "Decision: use the evidence directly, name the limitation of their diagnosis in a footnote."
+    question: "How explicitly to argue against HBR's 'AI practice' solution while using their evidence?"
+    decision: >
+      RESOLVED — reference and consider; do not argue against.
+      The HBR evidence (intensification is real, self-generated, produces burnout
+      without organizational structure to absorb it) grounds why Level 2
+      organizations plateau. Their solution ('AI practice': intentional pauses,
+      batching, protected human-collaboration time) is not load-bearing to the
+      litepaper's thesis — it is an individual coping response, not a structural
+      design. One sentence in the prose is sufficient: their diagnosis is
+      accurate; protocol design is the structural response their prescription
+      does not reach. Handle in a footnote, not in the body argument.
 
 ---
 
@@ -992,7 +988,7 @@ production_notes:
     - "Diagnostic question tree: the 'what happens when AI is wrong' decision guide"
 
   verification_required_before_draft:
-    - "McKinsey 33%→65% figure — download full PDF"
+    - "McKinsey 33%→65% figure — download full PDF from https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai (free registration required)"
     - "Gartner 41% shadow figure — confirm primary source and date"
     - "Confirm Rafa's full author name for Entry 26 before publication"
     - "Verbatim quote extraction from all [PARAPHRASE] entries in bibliography"
