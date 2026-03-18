@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Missing Protocol Layer — Protocolized</title>
+  <meta name="description" content="Why AI feels like deployment for individuals and shadow adoption for enterprises. An essay by Protocolized.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:             #fafafa;
+      --surface:        #f0f0f2;
+      --border:         #e5e5e7;
+      --text:           #1a1a2e;
+      --text-secondary: #6b6b7b;
+      --accent:         #a888bf;
+      --accent-light:   #f3eef7;
+      --accent-dark:    #7d5a96;
+      --max:            720px;
+      --font-mono:      'Roboto Mono', monospace;
+      --font-sans:      'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 58px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography ───────────────────────────────────────── */
+    h1, h2, h3 { font-family: var(--font-mono); line-height: 1.25; }
+    h1 { font-size: 2.2rem; font-weight: 700; }
+    h2 { font-size: 1.35rem; font-weight: 700; margin: 2.5rem 0 1rem; }
+    p  { margin-bottom: 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+    a  { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    em { font-style: italic; }
+    strong { font-weight: 600; }
+
+    .label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      display: block;
+    }
+
+    /* ─── Layout ───────────────────────────────────────────── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Nav ──────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,250,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .nav-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .wordmark-sub {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--accent-dark); }
+
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    /* ─── Hero ─────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 80px;
+      background-color: #0a081c;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: -24px;
+      background:
+        url('https://raw.githubusercontent.com/rafathebuilder-ZK/protocols-AI-capability-maturity-model/master/Artifact/images/finding-fault-lines.jpg') center 30% / cover no-repeat;
+      filter: blur(14px);
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 8, 28, 0.60);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero .label {
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.70);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      font-family: var(--font-mono);
+    }
+
+    .hero-meta .sep { color: rgba(255,255,255,0.2); }
+
+    /* ─── Article body ─────────────────────────────────────── */
+    .article {
+      padding: 60px 0 80px;
+    }
+
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .article-body h2 {
+      color: var(--text);
+      padding-top: 0.5rem;
+      border-top: 2px solid var(--accent-light);
+      margin-top: 3rem;
+    }
+
+    .article-body h2:first-child { margin-top: 0; }
+
+    /* Level tags inside article */
+    .level-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    /* Level description blocks */
+    .level-block {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+
+    .level-block p { margin-bottom: 0; font-size: 0.975rem; }
+
+    .level-block .level-name {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .level-block .level-hist {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+    }
+
+    /* Callout / pull quote */
+    .callout {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 2rem 0;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--accent-dark);
+      font-style: italic;
+    }
+
+    /* ─── Subscribe CTA ────────────────────────────────────── */
+    .cta-block {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-block .label { margin-bottom: 10px; text-align: center; }
+
+    .cta-block h3 {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-block p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      max-width: 420px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); color: #fff; text-decoration: none; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-dark);
+      border: 1.5px solid var(--accent);
+      margin-left: 10px;
+    }
+    .btn-secondary:hover { background: var(--accent-light); text-decoration: none; }
+
+    /* ─── Footer ───────────────────────────────────────────── */
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .footer p { margin-bottom: 6px; }
+    .footer p:last-child { margin-bottom: 0; }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-icon-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .footer-icon-link:hover { color: var(--accent-dark); text-decoration: none; }
+
+    /* ─── Mobile ───────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      h1 { font-size: 1.65rem; }
+      h2 { font-size: 1.15rem; }
+      .hero { padding: 72px 0 56px; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 8px 24px 16px; z-index: 200; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 12px 0; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { font-size: 1rem; }
+      .nav-inner { position: relative; }
+      .nav-hamburger { display: block; }
+      .article { padding: 40px 0 60px; }
+      .level-block { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Nav ──────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://protocolized.dev" class="wordmark">
+      Protocolized
+      <span class="wordmark-sub">Protocol Research and Development</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="https://protocolized.dev/ai-maturity-model/">Maturity Model</a></li>
+      <li><a href="https://protocolized.summerofprotocols.com/subscribe" target="_blank">Subscribe</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <rect x="2" y="5.5" width="18" height="1.5" rx="0.75" fill="currentColor"/>
+        <rect x="2" y="10.25" width="18" height="1.5" rx="0.75" fill="currentColor"/>
+        <rect x="2" y="15" width="18" height="1.5" rx="0.75" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ─── Hero ─────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="container">
+    <span class="label">Protocols for Business SIG — Essay</span>
+    <h1>The Missing Protocol Layer</h1>
+    <p class="hero-sub">Why AI feels like deployment for individuals and shadow adoption for enterprises</p>
+    <div class="hero-meta">
+      <span>Protocolized</span>
+      <span class="sep">·</span>
+      <span>March 2026</span>
+      <span class="sep">·</span>
+      <span>~1,500 words</span>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Article ───────────────────────────────────────────── -->
+<main class="article">
+  <div class="container">
+    <div class="article-body">
+
+      <p>A recent HBR article on AI adoption at work identifies that AI has intensified work for employees. This intensification, the article notes, takes the form of expanding tasks, more multitasking, and working beyond normal hours, all intrinsically motivated — though I'd argue there is an element of fear of being automated away among all corporate employees these days. All of this should make employers happy, but the article warns that such intensification is not sustainable and will lead to eventual burnout. The authors then go on to conclude that the solution to this is to slow things down by adding human-designed pauses in the workflow, which to me feels like advising that a Formula One car be driven within speed limits. It's not something organizations are likely to do, especially as they try to be ahead in the adoption of AI.</p>
+
+      <p>The article points out the accurate symptoms of early AI adoption in an enterprise but misses what is actually happening: new protocols and ways of working together being discovered at the individual level, while organizational standardization lags behind.</p>
+
+      <p>To understand this, we should first have a map for what AI adoption looks like.</p>
+
+      <h2>The AI Capability Maturity Model</h2>
+
+      <p>Over the last few months, the Protocols for Business Special Interest Group has been working on a Capability Maturity Model for AI adoption to provide legibility for AI adoption at enterprise companies. The model maps what adoption looks like at each level, from shadow adoption to utility that drives other technologies. Here are the five levels at a glance.</p>
+
+      <div class="level-block">
+        <span class="level-name"><span class="level-tag">L1</span> Shadow</span>
+        <p>AI is in use but the organization doesn't know how, by whom, or with what data. Employees use personal accounts for work tasks. No policy governs what data leaves the organization. Exposure is invisible until a data leak, regulatory inquiry, or quality failure surfaces it. In April 2023, three Samsung Semiconductor engineers independently submitted proprietary source code, equipment specifications, and an internal meeting transcript to ChatGPT via personal accounts within a single month. The exposure was discovered only after the fact.</p>
+        <p class="level-hist">Historical parallel: spreadsheets in accounting in the mid-1980s, adopted through individual initiative before IT had any policy.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-name"><span class="level-tag">L2</span> Sanctioned</span>
+        <p>The organization has granted broad AI access and signaled strategic intent. Enterprise licenses are deployed, adoption rates climb. What's missing is the governing protocol: which tasks, what review process, what escalation path when AI fails. High adoption and early productivity gains coexist with governance failures that surface when they become external-facing. Klarna deployed ChatGPT Enterprise company-wide, reached 90% daily adoption, then discovered its customer-service AI was producing replies its CEO described as "generic, repetitive, insufficiently nuanced." The company began rehiring human agents it had cut.</p>
+        <p class="level-hist">Historical parallel: corporate email in the early 1990s, mandated broadly before organizations designed how to use it.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-name"><span class="level-tag">L3</span> Designed</span>
+        <p>At least one core workflow has been deliberately built around AI with a named owner, quality metrics, and a defined escalation path. Removing AI would require rebuilding the workflow. The governance question shifts from controlling use to designing protocols that handle failure, versioning, and external dependencies. Domain expertise is the limiting constraint. Uber's engineering organization illustrates the transition: 65–72% of code is now AI-generated, but the primary operational bottleneck shifted from coding to code review as AI-generated pull requests multiplied faster than reviewers could process them. New internal tooling had to be built specifically to govern the handoff.</p>
+        <p class="level-hist">Historical parallel: Git and CI/CD adoption from 2008–2015, where competitive position depended on how well the deployment workflow was designed.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-name"><span class="level-tag">L4</span> Infrastructural</span>
+        <p>AI capability has become a baseline expectation across the sector. Individual organizational advantage has been competed away. The governance challenge is now collective: how does the industry coordinate AI use, handle shared risks, and establish interoperability standards. Individual maturity is necessary but not sufficient.</p>
+        <p class="level-hist">Historical parallel: EDI in retail and manufacturing in the late 1980s–90s, where Walmart mandated Electronic Data Interchange for all suppliers and not adopting meant not participating in the market.</p>
+      </div>
+
+      <div class="level-block">
+        <span class="level-name"><span class="level-tag">L5</span> Planetary</span>
+        <p>AI governs critical civilization-scale coordination systems: supply chains, financial infrastructure, public health surveillance. The governance challenge is no longer adoption or protocol design but legibility — understanding what the systems are doing well enough to intervene when they fail. No single actor controls the full system.</p>
+        <p class="level-hist">Historical parallel: internet protocols (TCP/IP, BGP) today, where the 2021 Facebook BGP misconfiguration took down multiple platforms globally before anyone could respond.</p>
+      </div>
+
+      <h2>Mismatched Adoption Speeds</h2>
+
+      <p>For the purpose of this post, I want to talk specifically about Level 1 through Level 3 adoption because that is where most enterprises and individuals are at the moment. What we have been noticing at the PfBSIG is that individuals working with each other are often at Level 3, designing workflows for themselves to work on interesting projects and, importantly, share contexts with others. In a pre-AI workflow, collaboration meant passing discrete artifacts between people — documents, specs, pull requests, and the like. The boundaries of your contribution were defined by the artifact. But when someone spins up a prototype with AI and shares it, they're not sharing an artifact. They're sharing a <em>context</em> — a whole decision space, a set of assumptions baked into the prototype, an implicit workflow. The person receiving it now has to engage with that entire context, not just review a document. That's what the HBR researchers observed when engineers found themselves coaching colleagues who were vibe-coding and finishing partially complete pull requests. The artifact boundary that previously contained the scope of interaction has dissolved. The adoption of Claude Code and OpenClaw has shown that people are eager to adopt better ways to share contexts with others. (At the PfBSIG we have a <a href="https://github.com/rafathebuilder-ZK/protocols-AI-capability-maturity-model" target="_blank">GitHub project</a> to manage multiple people working on the CMM, which you can fork or join.)</p>
+
+      <p>In a recent Protocolized essay, Venkatesh Rao described what he calls the F2F pattern ("factory-to-factory," a deliberate overload of "face-to-face"). The idea builds on an earlier editorial arguing that AI is shifting from destination intelligence (you go to ChatGPT) to intelligence media, where intermediate artifacts circulate between people's bespoke setups the way industrial intermediates flow between factories.</p>
+
+      <p>Venkat's case study is his own Claude Code infrastructure: a book manuscript production factory running on his laptop, with a couple of dozen projects in flight derived from two decades of blog and newsletter archives. But building the factory wasn't the interesting part. Connecting it to another factory was.</p>
+
+      <p>His long-time publishing collaborator Jenna Dixon independently set up her own Claude Code factory for producing finished books from manuscripts. Rao's factory takes messy raw materials and produces rough drafts. Dixon's factory takes those drafts and produces finished artifacts ready for Amazon. The handoff between them is a shared Dropbox folder plus a manuscript transmittal server she built for metadata. When Rao submitted a docx file from his factory, Dixon returned revised requirements: styling issues her factory needed resolved before it could begin design. He told his factory to fix them and sent it back. What circulates between them isn't finished work; it's intermediate production states, specifications, and revised requirements. Industrial intermediates, not documents to be read.</p>
+
+      <p>Neither of them writes code. Neither has touched a line of content text. What they bring is domain knowledge. Claude provides commodity technical execution.</p>
+
+      <p>Venkat argues this is the invisible ninety percent of the agentic AI revolution. The public spectacle of autonomous agents draws attention, but the real capability integration happens in high-trust bilateral connections between people who know their domains. The connections look nothing like social media's friends and followers; they're closer to B2B supply chain relationships, with shared specifications, defined handoff points, and mutual understanding of quality standards. And they're emerging entirely outside organizational boundaries, on personal laptops and personal subscriptions, invisible to any enterprise that might claim these individuals as employees.</p>
+
+      <p>Now imagine this happening within an enterprise of hundreds or thousands of employees. More and more people are developing bespoke F2F protocols to work with each other and share high-trust, domain-specific contexts, but this happens away from the legibility of the enterprise. What follows is a proliferation of bespoke protocols without any standardization, leading to what the HBR article pointed out as burnout induced by intensification of work.</p>
+
+      <p>The AI Capability Maturity Model gives us a precise way to describe this tension. The individuals doing F2F work are operating at Level 3: they've built designed workflows around AI, with clear handoff points, domain expertise as the binding constraint, and enough sophistication that removing AI would mean rebuilding their process from scratch. They have, in effect, solved the governance problem for themselves (within the scope of their own bilateral relationships and their own judgment about what "good" looks like). But the enterprise containing them remains at Level 1. It has no visibility into which AI tools are being used, by whom, on what data, or through what interpersonal channels. It cannot distinguish a high-value F2F pipeline producing real output from an unsanctioned data flow creating regulatory exposure. It has no mechanism to detect when an employee's expanding scope (enabled by AI, accelerated by context sharing with trusted colleagues) has crossed from sustainable productivity into the ambient, boundary-dissolving overwork the HBR researchers describe. The organization lacks not just policies but <em>perception</em>: it literally cannot see the most sophisticated AI work its people are doing. From the enterprise's vantage point, Level 3 adoption and reckless shadow use look identical, because both are invisible.</p>
+
+      <h2>The Missing Layer</h2>
+
+      <p>This reframes the enterprise AI governance challenge. The conventional approach treats it as a control problem: how do we manage what employees do with AI? Acceptable use policies, data boundaries, approved tool lists. That's necessary but insufficient, because it addresses Level 1 risks (data leakage, unauthorized use) without building Level 3 capability (designed workflows with governed handoffs).</p>
+
+      <p>What enterprises actually need is protocol design: the rules governing coordination behavior between agents (human and artificial) at various scales. This means designing the handoff points where AI-produced context moves between people. It means defining what a governed context exchange looks like: which artifacts are acceptable to share, how decision spaces are handed off, and what standards govern intermediate production states. It means building the equivalent of Rao and Dixon's manuscript transmittal server, but at organizational scale.</p>
+
+      <div class="callout">
+        <p>ISO containerization offers the structural parallel. The physical interface standard was set in the late 1960s. What followed was two decades of redesigning everything connected to it: port loading procedures, rail connections, trucking networks, customs clearance. The container standard was not the hard part. The intermodal protocol layer was. Enterprise AI is at the container-standard stage: the technology interface is uniform enough to adopt at scale, but the organizational layer governing how AI-produced work flows between people and teams has not been redesigned around it.</p>
+      </div>
+
+      <p>The intensification the HBR article points at is a symptom of that missing layer. People are sharing more context, producing more intermediate artifacts, and expanding their scope because AI makes all of that feel frictionless. What's not frictionless is the organizational absorption of that activity. Without protocols governing how context flows between people and between their agents, the acceleration at the individual level produces friction at the coordination level.</p>
+
+      <p>The companies that navigate this well are those that recognize Level 3 behavior is already happening among their most capable people and build the coordination infrastructure to support it.</p>
+
+      <div class="cta-block">
+        <span class="label">Protocols for Business</span>
+        <h3>The full AI Capability Maturity Model</h3>
+        <p>Use the interactive diagnostic to find out where your organization sits across the five levels — and what to do next.</p>
+        <a href="https://protocolized.dev/ai-maturity-model/" class="btn btn-primary">Explore the model ↗</a>
+        <a href="https://protocolized.summerofprotocols.com/subscribe" target="_blank" class="btn btn-secondary">Subscribe ↗</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ─── Footer ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-icons">
+      <a href="https://protocolized.summerofprotocols.com/" target="_blank" rel="noopener" class="footer-icon-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        Protocolized on Substack
+      </a>
+      <a href="https://github.com/rafathebuilder-ZK/protocols-AI-capability-maturity-model" target="_blank" rel="noopener" class="footer-icon-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        Source on GitHub
+      </a>
+    </div>
+    <p>Protocolized · Protocol Research and Development · The Missing Protocol Layer · v1.1</p>
+  </div>
+</footer>
+
+</body>
+</html>

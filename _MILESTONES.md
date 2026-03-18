@@ -3,10 +3,10 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ---
 
-## Current Status (as of 2026-03-17)
+## Current Status (as of 2026-03-18)
 
-**Active work:** Artifact v1.12 live at https://protocolized.dev/ai-maturity-model/. Phase 5 complete.
-**Immediate next action:** Begin blog post (Phase 3) or litepaper (Phase 4).
+**Active work:** Artifact v1.12 live at https://protocolized.dev/ai-maturity-model/. Blog post v1.1 live at https://protocolized.dev/blog-the-missing-layer/. protocolized.dev domain fully configured.
+**Immediate next action:** Begin litepaper (Phase 4).
 **Blocking items:** None
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -15,6 +15,15 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-18 | Blog post v1.1 — published to protocolized.dev/blog-the-missing-layer
+
+- **What:** Blog post "The Missing Protocol Layer" (v1.1) published as standalone HTML page at https://protocolized.dev/blog-the-missing-layer/.
+- **Changes from v1.0:** Samsung (L1), Klarna (L2), Uber (L3) case study references added; ISO containerization parallel added to The Missing Layer section; eight voice/style changes reverted per author review.
+- **Design:** Matches CMM artifact aesthetic — same fonts, colours, nav, hero with blurred background, footer. Level descriptions rendered as cards. Containerization paragraph as callout block. CTA links to maturity model and subscribe.
+- **protocolized.dev/blog/** redirects to protocolized.summerofprotocols.com (same as root).
+- **CMM artifact updated:** "Read more ↗" button (btn-secondary, centered) added to "Why this model exists" section, linking to blog post.
+- **here.now slugs:** blog post = `witty-garnet-6k4f`; blog redirect = `whimsy-turret-j9jc`.
 
 ### 2026-03-17 | Artifact v1.12 — published to protocolized.dev
 
