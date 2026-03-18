@@ -460,7 +460,7 @@ levels:
           judgment that wasn't captured in the written process.
         catalog_entry: 26
         status: synthesis
-        source_note: "Per Rafa (Protocolized), 'Finding Fault Lines within the Firm' (2026)"
+        source_note: "Per Protocols for Business Special Interest Group, Protocolized, 'Finding Fault Lines within the Firm' (2026)"
 
     progression_requirements:
       - action: "Design one AI-native workflow end-to-end"

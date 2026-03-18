@@ -993,7 +993,7 @@ production_notes:
   verification_required_before_draft:
     - "McKinsey figures VERIFIED from PDF (the-state-of-ai-in-2025-vf.pdf). Correct figures: 88% adoption, 39% EBIT impact, 6% high performers. Do not cite '33%→65%' — that figure is a misattribution from the historical time series."
     - "Gartner 41% shadow figure — confirm primary source and date"
-    - "Confirm Rafa's full author name for Entry 26 before publication"
+    - "Entry 26 author: Protocols for Business Special Interest Group, Protocolized ✓"
     - "Verbatim quote extraction from all [PARAPHRASE] entries in bibliography"
 
   style_guide_flags:

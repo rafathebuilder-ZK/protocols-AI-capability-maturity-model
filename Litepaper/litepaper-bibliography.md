@@ -314,7 +314,7 @@ Rao, Venkatesh, and Patrick Nast. "Theorizing Protocolization I: New Nature." *P
 
 Rao, Venkatesh, Patrick Nast, et al. "Theorizing Protocolization II: Atomic Protocol Questions." *Protocolized*, 2026.
 
-Rafa [surname]. "Finding Fault Lines within the Firm." *Protocolized*, 2026. [full author name to confirm before publication]
+Protocols for Business Special Interest Group, Protocolized. "Finding Fault Lines within the Firm." *Protocolized*, 2026.
 
 Scianna, Mark. "How to Build Your Forward Deployed Engineering Team." *Per Aspera*, September 17, 2025.
 

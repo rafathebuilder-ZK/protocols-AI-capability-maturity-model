@@ -34,7 +34,7 @@
 | 23 | What is Formal Protocol Theory? | Venkatesh Rao (Protocolized) | 2025 | Protocol theory — methodology | Essay PDF |
 | 24 | Constructing the Evil Twin of AI | Venkatesh Rao (Protocolized) | 2025 | Protocol theory — AI/governance | Essay PDF |
 | 25 | Mechanical Currents | Timber Stinson-Schroff (Protocolized) | 2025 | AI adoption / protocol disturbance | Essay PDF |
-| 26 | Finding Fault Lines within the Firm | Rafa (Protocolized) | 2026 | AI adoption / organizational governance | Essay PDF |
+| 26 | Finding Fault Lines within the Firm | Protocols for Business Special Interest Group, Protocolized | 2026 | AI adoption / organizational governance | Essay PDF |
 | 27 | Have Your Factory Call My Factory | Venkatesh Rao (Protocolized) | 2026 | AI adoption / agentic economy | Essay PDF |
 | 28 | Samsung ChatGPT data leak incident | Gizmodo / Bloomberg / Cybersecurity Dive | 2023 | Case study — Level 1 (Shadow) | News reports |
 | 29 | Legal profession: AI hallucination sanctions | VinciWorks / ABA / court records | 2023–2025 | Case study — Level 1 (Shadow) | News / legal records |
@@ -574,7 +574,7 @@
 
 ### 26. Finding Fault Lines within the Firm
 
-**Author:** Rafa (Protocolized)
+**Author:** Protocols for Business Special Interest Group, Protocolized
 **Published:** January 11, 2026
 **Format:** Essay PDF
 **Source file:** `../Resources/Finding Fault Lines within the Firm.pdf`
