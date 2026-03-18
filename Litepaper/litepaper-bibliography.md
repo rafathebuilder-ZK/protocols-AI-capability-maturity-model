@@ -1,6 +1,6 @@
 # Litepaper — Bibliography, Quotes, and Resource Gaps
 
-**Version:** 0.2 (gap-filling pass 1)
+**Version:** 0.4 (quote extraction complete)
 **Date:** 2026-03-18
 **Purpose:** Curated resource list for litepaper drafting. Includes section mapping, citable claims, Chicago-style bibliography, and gap analysis.
 
@@ -107,7 +107,7 @@
 ## Part 2 — Key Citable Claims Per Source
 
 ### Entry 1 — Uber: Leading engineering through an agentic shift
-- "AI is enabling people to become superhumans in terms of their productivity." — Dara Khosrowshahi, CEO ✓ [PARAPHRASE — confirm exact wording from transcript]
+- "AI is enabling people to become superhumans in terms of their productivity and the impact that we can realize for our end users." ✓ (verbatim, uber-agentic-shift-transcript.txt)
 - 84% of Uber developers are active agentic coding users (March 2026) ✓
 - 65–72% of code is AI-generated inside IDE tools ✓
 - Claude Code adoption: 32% of developers in December 2025 → 63% in February 2026 ✓
@@ -117,49 +117,48 @@
 - 11% of PRs opened by agents (March 2026) ✓
 - AI-related costs up 6x since 2024 ✓
 - Internal tools built for the agentic era: Minion, Shepherd, Autocover, Code Inbox, U Review ✓
-- [PARAPHRASE — extract description of four-layer platform architecture]
+- "Uber's agentic systems, split across four layers" — (1) Internal AI platform built on Michelangelo, (2) Internal Uber context (source code, docs, Slack, JIRA), (3) Industry agents (Claude Code, Copilot, Codex, Cursor), (4) Specialized agents (Minion background agent, Autocover test generation, uReview code review). ✓ (verbatim label, How Uber uses AI for development_ inside look.txt)
 
 ### Entry 3 — Why Does AI Development Look Like 1980s Software Planning?
-- [PARAPHRASE — extract definition of "ontological drift"]
-- [PARAPHRASE — extract Conway's Law claim about LLMs imposing waterfall-like communication structure]
-- Key thesis: "LLMs flip the cost structure [of agile vs. waterfall] because ontological drift becomes extremely expensive" ✓ [PARAPHRASE — verify exact claim]
+- "In the LLM era, the cost structure flips. LLMs make documentation, specifications, diagrams, and written artifacts essentially free—but they make ontological drift extremely expensive. When agents, tools, and auto-generated artifacts depend on stable definitions, changing the meaning of a term or schema midstream breaks everything." ✓ (verbatim, Why Does AI Development Look Like 1980s Software Planning_.txt) [This passage contains both the definition of ontological drift and the cost-structure flip thesis]
+- "Organizations compensate by freezing definitions, front-loading clarity, and minimizing mid-cycle reinterpretation. This is a return to Waterfall—not because people suddenly prefer big plans but because the communication structure that Waterfall requires (stable meanings, fixed interfaces, slow-changing schemas) now incurs the lowest transaction costs." ✓ (verbatim, Why Does AI Development Look Like 1980s Software Planning_.txt)
 
 ### Entry 4 — The Hottest Job in Tech
 - OpenAI deploys FDEs to customers spending $10M+/year ✓
 - FDE cost: $200–300K salary; services rule of thumb ≤25% of Year-1 contract value → effective $1M+ floor ✓
 - Workday 2012 IPO: 35% of revenue from on-site professional services ✓
-- [PARAPHRASE — extract the "bigger platform shift than cloud" framing]
+- "The largest reason that the FDE has happened today is because AI will end up being a bigger and more important platform shift than the cloud was. The biggest changes are not even technological, they are operational." ✓ (verbatim, The Hottest Job in Tech - by Evan Armstrong - The Leverage.txt)
 
 ### Entry 5 — How to Build Your Forward Deployed Engineering Team
-- [PARAPHRASE — extract definition of "gravel road" concept]
-- [PARAPHRASE — extract Auftragstaktik description: "HQ sets objectives, field decides tactics"]
-- Platform feedback test: "if revenue-per-FDE is growing and custom work is abstracting into platform features, FDE is working" ✓ [PARAPHRASE — verify]
+- "Build the gravel road: Discover and construct the minimum viable path to the outcome that moves the needle/solves the user's pain point. Fast, a bit ugly, but true — and this will expose patterns (reusable primitives, inputs/outputs, workflows, feature sets, knobs) you may later pave into the platform." ✓ (verbatim, How to Build Your Forward Deployed Engineering Team.txt)
+- "FDE runs on the military concept of Auftragstaktik, where HQ sets the objective and delegates tactical execution almost entirely to the field team." ✓ (verbatim, How to Build Your Forward Deployed Engineering Team.txt)
+- "If it's working, in a healthy loop, revenue per FDE will rise as software replaces the engineers who are bridging the gap between what the product can do and what the customer needs." ✓ (verbatim, How to Build Your Forward Deployed Engineering Team.txt)
 
 ### Entry 7 — Move fast and don't break things [Part 1]
 - XB-1 built by ~50 engineers at ~$190M — order of magnitude better than comparable aerospace programs ✓
 - Boomless Cruise discovered through iteration — not original design objective ✓
-- [PARAPHRASE — extract Jevons's Law framing in Scholl's own words]
+- "But the real magic isn't the time savings—it's sort of a Jevon's Law of engineering: when engineering iteration is quick and cheap, many more designs can be evaluated and a much better design can be discovered." ✓ (verbatim, Move fast and don't break (safety critical) things.txt)
 
 ### Entry 8 — Vertical Integration (Slacker Index)
 - Slacker Index = total lead time ÷ actual working time ✓
 - Turbine blade case: $1M per engine, 6-month lead time → $2M 3D printer → 24-hour production, daily iteration ✓
-- [PARAPHRASE — extract the statement that "problems unsolvable at year-long iteration cycles become tractable at 24-hour cycles"]
+- "It doesn't just shave months off a schedule. It changes the physics of what's possible. Problems that would be existential with a year-long lead time become solvable with a 24-hour iteration cycle." ✓ (verbatim, Move Fast and Don't Break (safety critical) Things Part 2_ Vertical Integration.txt)
 
 ### Entry 13 — BCG AI Maturity Matrix
 - Only 5 of 73 economies qualify as AI Pioneers ✓
 - AI use boosted some companies' revenues by 2.5x vs. competitors ✓
 - Global AI spending projection: $632B by 2028 (Goldman Sachs, May 2024) ✓ [secondary citation]
-- [PARAPHRASE — extract the exposure/readiness mismatch framing]
+- "Exposed Practitioners. This group includes developing and developed economies vulnerable to AI disruption due to more high-exposure sectors and low readiness." ✓ (verbatim, BCG-AI-Maturity-Matrix-2024.pdf) [The mismatch framing: high exposure + insufficient readiness = "Exposed Practitioners" archetype]
 
 ### Entry 14 — Microsoft RAI Maturity Model
 - Built on 80+ hours of interviews and focus groups with 90+ participants ✓
 - 24 empirically derived dimensions organized across three categories ✓
-- "Maturity is uneven and interdependent; a Level 5 tooling score does not compensate for Level 1 leadership" ✓ [PARAPHRASE — verify exact warning language]
-- [PARAPHRASE — extract the claim that RAI maturity requires UX researchers, designers, anthropologists, sociologists, linguists — not just engineers]
+- "a level 5 in tooling does not have the same impact as level 5 in culture and leadership. Therefore, a particular high level is not meaningful when abstracted away from the context of its dimension and interdependency with other dimensions." ✓ (verbatim, Microsoft-Responsible-AI-Maturity-Model-2023.pdf) [Note: exact warning language confirmed; the bibliography paraphrase overstated it — the document does not say "does not compensate," but the interdependence warning is accurate]
+- "Disciplines with sociotechnical expertise such as UX, anthropology, sociology, linguistics, etc. are engaged to address RAI issues." ✓ (verbatim, Microsoft-Responsible-AI-Maturity-Model-2023.pdf) [From the cross-discipline collaboration dimension, Level 3 description]
 
 ### Entry 15 — Accenture Art of AI Maturity
 - 12% of firms are AI Achievers; 63% are AI Experimenters ✓
-- Achievers are 3.5x more likely to see AI-influenced revenue exceed 30% of total revenues ✓
+- "they're 3.5 times more likely than Experimenters to see their AI-influenced revenue surpass 30% of their total revenues." ✓ (verbatim, Accenture-Art-of-AI-Maturity-Report.pdf)
 - Achievers are 25% more likely to scale AI pilots to production ✓
 - 83% of Achievers have CEO and senior leadership sponsorship ✓
 - BBVA: 4,000+ internal custom GPTs deployed ✓
@@ -171,10 +170,10 @@
 - 40–60 minutes/day saved per active ChatGPT Enterprise user ✓
 - 75% of workers report improved speed or quality ✓
 - Frontier organizations send 6x more messages than median enterprises ✓
-- 75% of users can now complete tasks previously impossible for them ✓
+- "75% of workers report being able to complete tasks they previously could not perform, including programming support and code review, spreadsheet analysis and automation, technical tool development and troubleshooting, and custom GPT or agent design." ✓ (verbatim, OpenAI-State-of-Enterprise-AI-2025.pdf)
 
 ### Entry 17 — Menlo Ventures State of GenAI Enterprise 2025
-- Enterprise GenAI market: $37B (2025) — "fastest-scaling software category in history" ✓ [PARAPHRASE — verify exact quote]
+- Enterprise GenAI market: $37B (2025) — "Fastest-scaling software category in history" ✓ (verbatim, Menlo-Ventures-State-of-GenAI-Enterprise-2025-notes.txt)
 - Only 16% of enterprise deployments qualify as "true agents" (27% for startups) ✓
 - Build vs. buy shift: 47% build / 53% buy (2024) → 24% build / 76% buy (2025) ✓
 - 50% of developers use AI coding tools daily; teams report 15%+ velocity gains ✓
@@ -194,20 +193,27 @@
 - Source file: `../Resources/the-state-of-ai-in-2025-vf.pdf` ✓
 
 ### Entry 20 — Rao — Introduction to the Protocol Reader
-- [PARAPHRASE — extract foundational definition of protocol as coordination mechanism]
+- "A protocol is a stratum of codified behavior that allows for the construction or emergence of complex coordinated behaviors at adjacent loci." ✓ (verbatim, Introduction-to-the-Protocol-Reader-Venkatesh-Rao.pdf — attributed to Danny Ryan, cited by Rao)
+- "Though they arrive slowly, protocols typically install themselves in extraordinarily persistent ways, often turning into seemingly immortal and unconscious parts of our built environment. Their relative invisibility is a second major tell." ✓ (verbatim, Introduction-to-the-Protocol-Reader-Venkatesh-Rao.pdf)
+- Framing source for: "Civilization advances by extending the number of important operations which we can perform without thinking of them." (Alfred North Whitehead, cited by Rao in context of protocol invisibility) ✓
 
 ### Entry 23 — Rao — What is Formal Protocol Theory?
-- [PARAPHRASE — extract key claim distinguishing protocol from policy or compliance]
+- No explicit distinction between protocol and policy found in this document. FPT is framed as developing rigorous analytical tools for coordination mechanisms across scales — the precision argument comes from the analytical framework, not a direct policy/protocol contrast.
+- "Session 6 (August 22 — upcoming). Impossibilities and Symmetries. In our upcoming session, we will start with the influential Witsenhausen counterexample and explore a core concern of any field dedicated to formal investigations – impossibilities and symmetries (or equivalently, conserved quantities)." ✓ (verbatim, What is Formal Protocol Theory_.pdf)
+- Note: Use Entry 20 (Protocol Reader) and Entry 24 (Evil Twin) for the protocol definition and protocol/policy contrast in the litepaper — Entry 23 is better suited to the methodology/precision argument.
 
 ### Entry 24 — Rao — Constructing the Evil Twin of AI
-- "Smooth to striated behavioral space" — maturity is the progressive conversion of optionality into governed structure ✓ [PARAPHRASE — verify exact framing]
+- "To borrow a pair of terms from the postmodernists, protocols turn smooth behavior spaces (such as open, unbuilt terrain) into striated behavior spaces (such as a system of roads)." ✓ (verbatim, Constructing the Evil Twin of AI.pdf)
 
-### Entry 26 — Rafa — Finding Fault Lines
-- [PARAPHRASE — extract bottleneck heterogeneity argument: effective level = highest-value, highest-stakes function where governance is weakest]
+### Entry 26 — Protocols for Business SIG — Finding Fault Lines
+- "In geology, fault lines are not identified by close surface inspection. They are discovered when accumulated stress forces the underlying structure to express itself. Our discussions highlighted how protocols behave similarly. Persistent problems and persistent point less to local error or exceptional talent than to the protocols through which pressure concentrates and trade-offs are stabilized." ✓ (verbatim, Finding Fault Lines within the Firm.pdf)
+- "This matters because management subsumed in software behaves differently from practiced management. Protocols, when encoded in software, limit discretion in what is authorized and auditable. In contrast, management practice as a whole consists of what is necessary and effective in context." ✓ (verbatim, Finding Fault Lines within the Firm.pdf)
+- Air Canada chatbot case (verbatim): "The court rejected this argument. It ruled that the chatbot was part of the airline's customer-facing system and that the company was responsible for the commitments it made, regardless of whether those commitments were generated by an AI system." ✓ (verbatim, Finding Fault Lines within the Firm.pdf)
+- Note: Bottleneck heterogeneity argument (effective level = highest-stakes, weakest-governed function) is framed through the "governing clock" concept — slowest constraint sets pace for the entire system. Not stated as a single quotable sentence; use paraphrase with citation.
 
 ### Entry 27 — Rao — Have Your Factory Call My Factory
-- "Neither of them writes code. Neither has touched a line of content text. What they bring is domain knowledge." ✓ [PARAPHRASE — verify]
-- F2F pipeline: "the handoff... is a shared Dropbox folder plus a manuscript transmittal server" — minimal protocol governing autonomous factories ✓
+- [NOT FOUND — paraphrase only; do not cite as direct quote] The claimed quote "Neither of them writes code. Neither has touched a line of content text. What they bring is domain knowledge." does not appear in the source. The actual passage is first-person singular: "So far I haven't touched a line of content text, and haven't even looked at any code. I watch the action entirely at the shell level, like a factory floor supervisor." ✓ (verbatim, Have Your Factory Call My Factory.pdf)
+- "The handoff point between us is a shared Dropbox folder plus a 'manuscript transmittal' server she's set up for metadata." ✓ (verbatim, Have Your Factory Call My Factory.pdf)
 
 ### Entry 28 — Samsung ChatGPT leak
 - Three engineers submitted proprietary source code, equipment specifications, and an internal meeting transcript within one month (April 2023) ✓
