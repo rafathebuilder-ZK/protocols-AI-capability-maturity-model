@@ -3,10 +3,10 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ---
 
-## Current Status (as of 2026-03-18)
+## Current Status (as of 2026-03-19)
 
-**Active work:** Litepaper Phase 4 in progress. Outline (v0.1 YAML) and bibliography (v0.2) complete. Next action: quote extraction pass from local PDFs, then first draft.
-**Blocking items:** None. All critical bibliography gaps filled. McKinsey PDF verified.
+**Active work:** Cross-site nav and hero harmonization complete across all three pages. Next action: irony/humor pass and voice/tightening pass on litepaper per `_VOICE-FEEDBACK.md` (8 priority items listed there).
+**Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
 ---
@@ -14,6 +14,34 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-19 | Hero cleanup + litepaper CTA — all three pages
+
+- **What:** Four targeted fixes across all three pages.
+- **Hero byline removed:** `.hero-byline` block ("Protocolized · March 2026") removed from HTML and CSS on all three pages — redundant with label date.
+- **Substack footer link removed:** "Protocolized on Substack" icon link removed from blog and maturity model footers.
+- **Litepaper CTA block added:** New section between `#how-to-use` and `#notes` with styled CTA block — "Take the assessment" heading, description, primary button → `/ai-maturity-model/`, secondary button → subscribe. Added `.cta-block`, `.btn`, `.btn-primary`, `.btn-secondary` CSS to litepaper.
+- **Mobile button spacing fixed:** Hero pill-links gap increased `10px → 16px` on mobile; `.btn-secondary` gets `margin-left: 0; margin-top: 12px` when stacked on mobile (blog and litepaper).
+- **Tests:** All 119 passing. Published: blog `witty-garnet-6k4f`, litepaper `arctic-ribbon-7nvb`, maturity model `thorny-basin-5xkf`.
+
+### 2026-03-19 | Cross-site nav + hero harmonization — all three pages
+
+- **What:** Unified two-row navigation and harmonized hero banners across all three published pages (blog, litepaper, maturity model).
+- **Nav:** Primary row: Protocolized wordmark + Maturity Model | Litepaper | Blog | Subscribe (current page in accent). Secondary row: page-specific in-page section anchors (lighter, smaller). Hidden on mobile. Blog had IDs added to its h2 section headings.
+- **Hero CSS (all three):** Padding → `100px 0 80px`; blur → `10px`; overlay → `rgba(10,8,28,0.60)`; H1 → `2.4rem`; H1 text-shadow → `0 1px 8px rgba(0,0,0,0.5)`; subtitle → mono `0.95rem` white `72%` max-width `600px`; label → mono `400w` white `55%`.
+- **Hero content:** Labels standardized to content-type + date: "Blog Post · March 2026" / "Litepaper · March 2026" / "Interactive Diagnostic · March 2026". All three use `finding-fault-lines.jpg`. Maturity model H1 → "AI Capability Maturity Assessment"; blog H1 → added `<span>Protocol Layer</span>` accent. Blog got hero CTA pill-links (→ Interactive diagnostic, → Litepaper). Maturity model consolidated from two subtitles to one ("A Practical Guide for Deployment Managers"). Hero byline (Protocolized · March 2026) added to litepaper and maturity model.
+- **Class rename:** `hero-meta` → `hero-byline` across all three (resolved conflict with pre-existing regression test I-1/I-2 in design-tests-v3.py).
+- **Tests:** All 119 tests passing (58P/1W/0F, all, 11/11).
+- **Published:** blog `witty-garnet-6k4f`, litepaper `arctic-ribbon-7nvb`, maturity model `thorny-basin-5xkf` — all authenticated/permanent.
+
+### 2026-03-19 | Litepaper v5 — doomer tone pass complete; HTML published
+
+- **What:** Third full revision pass applied to `litepaper-draft-v5.md`. 20 prose edits across three sequential passes, each approved or modified by author. v4 → v5 change set: §2 subheader, governance intro, failure modes paragraph, risk management sentence, smooth space sentence, shipping container close, ontological drift close (cut third restatement), §1 "empirical picture establishes" (deleted), L1 historical parallel close, L4 failure mode, §5 Air Canada (removed unquantified reputational damage), L5 (deleted "no confirmed case anchors," "trajectory and a warning," "not a transition target"), L5 subheader tagline, L5 failure mode doom list (collapsed to one sentence), §6 opening, §6 closing, §2 theory sentence.
+- **Voice memo:** `Litepaper/_VOICE-FEEDBACK.md` — editorial notes on voice, tightening, Ribbonfarm-style irony, doomer tone reduction. 8 priority items for next pass (irony/humor).
+- **HTML:** All 20 v5 prose changes synced to `html/index.html`. Version string updated to "Version 5 (doomer tone pass)". All three test suites (design-tests.py, design-tests-v2.py, design-tests-v3.py) passing.
+- **Published:** `https://protocolized.dev/litepaper-ai-protocols/` (here.now slug: `arctic-ribbon-7nvb`, authenticated, permanent).
+- **Files:** `litepaper-draft-v5.md` (current working draft), `litepaper-draft-v4.md` (style-reviewed draft, preserved), `html/index.html` (live source).
+- **Next:** Irony/humor pass per `_VOICE-FEEDBACK.md` priority list. Start with Samsung "independently" aside, Air Canada "separate legal entity" moment, Klarna gap, Waterfall sentence elevation.
 
 ### 2026-03-18 | Litepaper pre-draft complete — outline, bibliography, gap-filling
 
