@@ -5,7 +5,7 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-20)
 
-**Active work:** Litepaper v6 alignment pass complete. Blog post v1.2 fully revised and style-guide-reviewed. Next action: sync v6 prose changes to `Litepaper/html/index.html`, then irony/humor pass per `_VOICE-FEEDBACK.md`.
+**Active work:** Litepaper v7 second alignment pass complete. Next action: sync v7 prose changes to `Litepaper/html/index.html`, then irony/humor pass per `_VOICE-FEEDBACK.md`.
 **Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -14,6 +14,20 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-20 | Litepaper v7 — second alignment pass (tightening)
+
+- **What:** Eight targeted edits to `litepaper-draft-v7.md` tightening the v6 additions.
+- **Changes:**
+  - §1: HBR intensification hook added as observable symptom of missing protocol layer
+  - §1: Control-problem reframe strengthened — "necessary but insufficient" → "wrong question entirely"
+  - Level 2: Artifact boundary dissolution reframed as transition pressure forcing L2→L3
+  - Level 2: Connective sentence added before Mann Gulch: "you cannot design an escape fire from headquarters"
+  - Level 3: Waterfall inversion reinforced as correct response at striated-zone boundary
+  - Level 3: F2F coordination connected explicitly to domain expertise paragraph
+  - Level 3: Orientation debt connected to F2F pipeline evaluation
+  - Level 3: "Neither writes code" paragraph framed as inversion of public AI narrative
+- **Files:** `litepaper-draft-v7.md` (new working draft), `litepaper-draft-v6.md` (preserved).
 
 ### 2026-03-20 | Litepaper v6 — blog alignment pass
 
