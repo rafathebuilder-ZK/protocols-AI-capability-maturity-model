@@ -3,9 +3,9 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ---
 
-## Current Status (as of 2026-03-19)
+## Current Status (as of 2026-03-20)
 
-**Active work:** Cross-site nav and hero harmonization complete across all three pages. Next action: irony/humor pass and voice/tightening pass on litepaper per `_VOICE-FEEDBACK.md` (8 priority items listed there).
+**Active work:** Blog post v1.2 published — major content revision with new sections (bricoleurs, soccer analogy, F2F reframe). Next action: irony/humor pass and voice/tightening pass on litepaper per `_VOICE-FEEDBACK.md` (8 priority items listed there).
 **Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -14,6 +14,16 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-20 | Blog post v1.2 — new content revision published
+
+- **What:** Major content revision to `Blog-Post/SIG-update/publish/index.html`. Source: new PDF draft ("The Missing Protocol Layer: Why AI Intensifies Work").
+- **Title/subtitle updated:** Page title and hero subtitle updated to reflect new framing — "Why AI Intensifies Work".
+- **Five levels simplified:** Samsung (L1), Klarna (L2), Uber (L3) case study text removed from level descriptions. Levels now show concise description + historical parallel only.
+- **Section 2 replaced:** "Mismatched Adoption Speeds" → "Who Can Best Orient To New Protocols?" New opening framing (CMM as map for domain experts, not newcomers). Soccer player / orientation debt analogy added at end.
+- **Section 3 replaced:** "The Missing Layer" (ISO container callout + governance conclusion) → "Bricoleurs as Protocol Entrepreneurs" — Mann Gulch / Wag Dodge story, Karl Weick bricoleur concept, enterprise AI governance reframe. Governance conclusion retained in condensed form.
+- **Bug fix:** `scroll-padding-top: 58px → 88px` (was too short for two-row sticky nav).
+- **Published:** blog `witty-garnet-6k4f` (authenticated, permanent).
 
 ### 2026-03-19 | Hero cleanup + litepaper CTA — all three pages
 
