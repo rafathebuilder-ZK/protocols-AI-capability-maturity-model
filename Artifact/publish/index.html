@@ -1310,6 +1310,8 @@
 
       <p>This Capability Maturity Model maps that path across five levels: Shadow, Sanctioned, Designed, Infrastructural, and Planetary — from the first unsanctioned use to the point where AI is invisible civilizational coordination infrastructure.</p>
 
+      <p>The conventional AI governance response — acceptable use policies, data boundaries, approved tool lists — addresses the wrong question. The right question is protocol design: specifying coordination rules at the handoff points where AI output enters organizational accountability.</p>
+
       <p>Building capability systematically means clearing each level's governance requirements before advancing to the next. Each transition requires a different kind of governance. The failure modes at each level are predictable.</p>
 
       <p>Most organizations are at Level 1 or early Level 2. That is the expected starting point, not a failure. The assessment below identifies where your organization sits, which failure modes you are most exposed to, and what the next move looks like.</p>
@@ -1345,7 +1347,7 @@
         <div class="level-dims">
           <div class="dim-item"><span class="dim-name">Governance</span><span class="dim-value-badge">absent</span><span class="dim-desc">No governance exists. No policies, no oversight, no organizational awareness of AI use patterns.</span></div>
           <div class="dim-item"><span class="dim-name">Tooling</span><span class="dim-value-badge">personal</span><span class="dim-desc">Employees use personal accounts (ChatGPT, Claude, Copilot) for work tasks. No enterprise licensing, access controls, or data handling review.</span></div>
-          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">ignored</span><span class="dim-desc">AI outputs are used without review or verification. No distinction exists between AI-generated and human-generated work.</span></div>
+          <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">ignored</span><span class="dim-desc">AI outputs are used without review or verification. No distinction exists between AI-generated and human-generated work. From the enterprise's vantage point, a high-value bilateral AI pipeline and reckless shadow use look identical — both are invisible.</span></div>
           <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">ad hoc</span><span class="dim-desc">Each employee makes independent decisions about which tools to use and how. No shared standard or organizational visibility.</span></div>
           <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">none</span><span class="dim-desc">No mechanism exists to detect, record, or learn from AI errors. Failures disappear into the flow of work.</span></div>
           <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">none</span><span class="dim-desc">AI outputs are not verified before use in consequential contexts. No review step exists at any point in the workflow.</span></div>
@@ -1358,7 +1360,7 @@
           <div class="level-card-name">Sanctioned</div>
         </div>
         <div class="level-card-tagline">The organization has granted AI access. It hasn't designed what to do with it.</div>
-        <div class="level-card-desc">The organization has granted broad AI access and signaled strategic intent. Enterprise licenses are deployed; adoption rates climb. What is missing is the governing protocol: which tasks, with what review process, what quality standard, what escalation path when AI fails. High adoption rates and early productivity gains accumulate alongside governance failures that surface when they become external-facing — in customer complaints, court decisions, or regulatory findings. The characteristic tension is between maximizing adoption speed and building the review infrastructure that makes adoption durable.</div>
+        <div class="level-card-desc">The organization has granted broad AI access and signaled strategic intent. Enterprise licenses are deployed; adoption rates climb. What is missing is the governing protocol: which tasks, with what review process, what quality standard, what escalation path when AI fails. High adoption rates and early productivity gains accumulate alongside governance failures that surface when they become external-facing — in customer complaints, court decisions, or regulatory findings. The characteristic tension is between maximizing adoption speed and building the review infrastructure that makes adoption durable. When employees share AI-generated work, they share contexts — decision spaces, embedded assumptions, implicit workflows — not discrete artifacts. Access governance cannot address this; it cannot specify how to evaluate an embedded decision space.</div>
         <div class="level-historical">
           <span class="level-historical-label">Historical parallel</span>
           <span class="level-historical-tech">Corporate email — Microsoft Exchange / Lotus Notes, early 1990s</span>
@@ -1381,7 +1383,7 @@
           <div class="level-card-name">Designed</div>
         </div>
         <div class="level-card-tagline">AI workflows are designed, not improvised. The business model depends on them.</div>
-        <div class="level-card-desc">At least one core workflow has been deliberately designed around AI — with a named owner, quality metrics, and a defined escalation path for failures. Removing AI from that workflow would require rebuilding it. The governance question has shifted from controlling use to designing protocols that handle failure, versioning, and external dependencies without losing the speed advantage AI provides. Domain expertise is the limiting constraint: the knowledge required to specify what good AI output looks like in a specific context. The characteristic tension is between AI-accelerated internal velocity and external dependencies — regulatory timelines, supplier lead times, partner cycles — that move at human pace.</div>
+        <div class="level-card-desc">At least one core workflow has been deliberately designed around AI — with a named owner, quality metrics, and a defined escalation path for failures. Removing AI from that workflow would require rebuilding it. The governance question has shifted from controlling use to designing protocols that handle failure, versioning, and external dependencies without losing the speed advantage AI provides. Domain expertise is the limiting constraint: the knowledge required to specify what good AI output looks like in a specific context. The characteristic tension is between AI-accelerated internal velocity and external dependencies — regulatory timelines, supplier lead times, partner cycles — that move at human pace. Domain expertise functions as higher-level perception: the ability to read the shape of AI output without inspecting every line — sensing whether the logic holds, the framing fits, something critical is missing. In well-designed Level 3 workflows, AI provides commodity execution; domain knowledge is the scarce resource.</div>
         <div class="level-historical">
           <span class="level-historical-label">Historical parallel</span>
           <span class="level-historical-tech">Git and CI/CD — 2008–2015</span>
@@ -1394,7 +1396,7 @@
           <div class="dim-item"><span class="dim-name">Uncertainty handling</span><span class="dim-value-badge">governed</span><span class="dim-desc">AI outputs in governed workflows are reviewed against defined criteria by named reviewers. Outside governed workflows, handling remains informal.</span></div>
           <div class="dim-item"><span class="dim-name">Coordination</span><span class="dim-value-badge">designed</span><span class="dim-desc">Coordination protocols are explicitly designed for AI-native workflows — handoffs, review cadences, and escalation paths are structured to handle the speed differential between AI production and human review.</span></div>
           <div class="dim-item"><span class="dim-name">Feedback loops</span><span class="dim-value-badge">systematic</span><span class="dim-desc">Quality metrics track workflow performance on a defined cadence. Failures trigger protocol reviews, not just individual corrections.</span></div>
-          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">procedural</span><span class="dim-desc">Verification follows documented procedures in at least one workflow. Reviewers know what they're checking, why they're checking it, and what constitutes a failure.</span></div>
+          <div class="dim-item"><span class="dim-name">Verification</span><span class="dim-value-badge">procedural</span><span class="dim-desc">Verification follows documented procedures in at least one workflow. Reviewers know what they're checking, why they're checking it, and what constitutes a failure. At the individual level this manifests as orientation debt: contexts multiplying faster than any reviewer can evaluate them.</span></div>
         </div>
       </div>
 
@@ -1404,7 +1406,7 @@
           <div class="level-card-name">Infrastructural <span class="projected-badge">Projected</span></div>
         </div>
         <div class="level-card-tagline">AI is sector infrastructure. The question is no longer whether to use it but how to govern it collectively.</div>
-        <div class="level-card-desc">AI capability has become a baseline expectation across the sector. Individual organizational advantage has been competed away; the governance challenge is now collective. The questions are market-structural: how does the industry coordinate AI use, handle shared risks, establish interoperability standards, and prevent concentration of AI capability that produces anti-competitive outcomes. Individual organizational maturity is necessary but not sufficient at this level. The characteristic tension is between industry standardization — which enables coordination — and organizational differentiation through proprietary AI capability.</div>
+        <div class="level-card-desc">AI capability has become a baseline expectation across the sector. Individual organizational advantage has been competed away; the governance challenge is now collective. The questions are market-structural: how does the industry coordinate AI use, handle shared risks, establish interoperability standards, and prevent concentration of AI capability that produces anti-competitive outcomes. Individual organizational maturity is necessary but not sufficient at this level. The characteristic tension is between industry standardization — which enables coordination — and organizational differentiation through proprietary AI capability. AI has shifted from destination intelligence — people going to tools — to intelligence media, where intermediate artifacts circulate between people's bespoke AI setups like industrial intermediates between factories. At Level 4, governing this factory-to-factory coordination at sector scale is the central challenge.</div>
         <div class="level-historical">
           <span class="level-historical-label">Historical parallel</span>
           <span class="level-historical-tech">EDI in retail and manufacturing — late 1980s–1990s</span>
@@ -1456,9 +1458,11 @@
     <h2>New protocols are the key to AI adoption success.</h2>
     <p class="context-intro">Adoption maturity is defined by an organization's ability to govern uncertainty.</p>
 
-    <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces the characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance.</p>
+    <p>Most organizations apply enterprise-software governance logic to AI: policies, compliance controls, tooling checklists. That logic was designed for deterministic processes. AI systems are probabilistic. The mismatch produces characteristic failures — shadow adoption, quality floor collapse, liability exposure, over-reliance. The conventional response treats this as a control problem. The right framing is protocol design.</p>
 
     <p>The unit of maturity in this model is the organization's ability to govern uncertainty productively: to define which AI outputs require human verification, to enforce that oversight, and to learn from failures when they occur.</p>
+
+    <p>Individuals with domain expertise are already discovering new protocols through daily AI use. Organizational standardization lags behind by design: the protocols worth formalizing are those that have proved their value through individual experimentation. The model describes how organizations close that gap.</p>
 
     <p>Levels 1–3 describe organizational states deployment teams can act on directly. Levels 4–5 describe what happens when AI governance becomes an industry and civilizational challenge, beyond what any single organization controls.</p>
 

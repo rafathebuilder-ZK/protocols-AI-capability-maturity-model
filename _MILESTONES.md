@@ -5,7 +5,7 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-20)
 
-**Active work:** Litepaper v7 second alignment pass complete. Next action: sync v7 prose changes to `Litepaper/html/index.html`, then irony/humor pass per `_VOICE-FEEDBACK.md`.
+**Active work:** Full blog alignment pass complete across all three deliverables (litepaper v7, litepaper HTML, YAML v3, artifact HTML). Next action: irony/humor pass on litepaper per `_VOICE-FEEDBACK.md`.
 **Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -14,6 +14,13 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-20 | YAML v3 + Artifact HTML — blog alignment pass
+
+- **What:** Updated YAML model definition to v3.0 and synced insights into the artifact assessment HTML.
+- **YAML v3 changes (ai-cmm-v3.yaml):** 12 additions across model header and all levels — control-problem reframe, timing mismatch field, artifact boundary dissolution (L2 blind_spot), bilateral pipeline invisibility (L2 failure mode FM2-5), bricoleur/FDE transition framing (L2 progression), orientation debt (L3 blind_spot + FM3-5), domain expertise as higher-level perception (FM3-5), execution/domain scarcity inversion (FM3-6), F2F governance requirement (L3 progression), intelligence media shift (L4 blind_spot), organic discovery catalyst and mechanism (L2→3 transition).
+- **Artifact HTML changes (7 edits):** Entry intro (wrong-question reframe); rationale section updated (control problem → protocol design + timing mismatch); L2 card (artifact boundary dissolution); L3 card (higher-level perception + commodity execution); L4 card (intelligence media / F2F); L1 dim (bilateral pipeline invisibility); L3 dim (orientation debt).
+- **Published:** artifact `thorny-basin-5xkf` (authenticated, permanent).
 
 ### 2026-03-20 | Litepaper v7 — second alignment pass (tightening)
 
