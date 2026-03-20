@@ -5,7 +5,7 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Current Status (as of 2026-03-20)
 
-**Active work:** Blog post v1.2 published — major content revision with new sections (bricoleurs, soccer analogy, F2F reframe). Next action: irony/humor pass and voice/tightening pass on litepaper per `_VOICE-FEEDBACK.md` (8 priority items listed there).
+**Active work:** Litepaper v6 alignment pass complete. Blog post v1.2 fully revised and style-guide-reviewed. Next action: sync v6 prose changes to `Litepaper/html/index.html`, then irony/humor pass per `_VOICE-FEEDBACK.md`.
 **Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -14,6 +14,23 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-20 | Litepaper v6 — blog alignment pass
+
+- **What:** Nine targeted additions to `Litepaper/litepaper-draft-v6.md` to align the litepaper's theory and framing with the blog post (v1.2 anchor).
+- **Changes:**
+  - §1: Added control-problem vs. protocol-design reframe (the blog's core argument, now explicit in litepaper intro)
+  - §1: Added "individuals discover, organizations lag" timing-mismatch framing
+  - Level 2: Added artifact boundary dissolution paragraph (cognitive burden of receiving AI-generated context)
+  - Level 2: Added Mann Gulch / Wag Dodge / Karl Weick bricoleur narrative before FDE section
+  - Level 3: Added orientation debt as individual-level correlate of temporal divergence (Level 3 failure mode)
+  - Level 3: Added domain expertise as higher-level perception (mechanism, not just constraint label)
+  - Level 3: Added "neither writes code" / AI as commodity execution inversion
+  - Level 4: Added F2F pattern (factory-to-factory) and destination-intelligence-to-intelligence-media shift
+  - §5: Softened regulatory emphasis — organic discovery named as primary driver; regulation as accelerant
+- **Source:** Blog post v1.2 used as content anchor; comparison produced by structured agent analysis.
+- **Files:** `litepaper-draft-v6.md` (new working draft), `litepaper-draft-v5.md` (preserved).
+- **Next:** Sync v6 prose to `html/index.html`; irony/humor pass per `_VOICE-FEEDBACK.md`.
 
 ### 2026-03-20 | Blog post v1.2 — new content revision published
 
