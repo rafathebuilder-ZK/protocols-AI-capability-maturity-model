@@ -15,7 +15,7 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ## Milestone Log
 
-### 2026-03-24 | Homepage — built and style-reviewed
+### 2026-03-24 | Homepage — built, style-reviewed, and published
 
 - **What:** `homepage/index.html` created as a standalone project landing page aggregating all three published deliverables (assessment, litepaper, blog post).
 - **Structure:** Two-row sticky nav (cross-site primary + in-page secondary) · hero with blurred background image · intro block · deliverables grid (3 cards) · five-level model overview with CTA block · about strip · footer. Matches existing site aesthetic (fonts, colours, hero treatment).
@@ -27,6 +27,7 @@ Append-only record of completed work, key decisions, and current status. Newest 
   - L2 desc: "become external-facing" → "reach customers or regulators"
   - CTA: "concrete next action" → "next action"
 - **Em-dash count after edits:** 1 (hero subtitle only; ceiling is 2–3).
+- **Published:** `https://protocolized.dev/` (here.now slug: `gleaming-sketch-5q8b`, authenticated, permanent). Root domain mount updated — previous redirect replaced with homepage.
 - **File:** `homepage/index.html`.
 
 ### 2026-03-20 | YAML v3 + Artifact HTML — blog alignment pass
