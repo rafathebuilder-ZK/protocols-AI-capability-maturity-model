@@ -3,9 +3,9 @@ Append-only record of completed work, key decisions, and current status. Newest 
 
 ---
 
-## Current Status (as of 2026-03-20)
+## Current Status (as of 2026-03-24)
 
-**Active work:** Full blog alignment pass complete across all three deliverables (litepaper v7, litepaper HTML, YAML v3, artifact HTML). Next action: irony/humor pass on litepaper per `_VOICE-FEEDBACK.md`.
+**Active work:** Homepage (`homepage/index.html`) built and style-reviewed. Next action: irony/humor pass on litepaper per `_VOICE-FEEDBACK.md`.
 **Blocking items:** None.
 **Versioning:** v1.0 is the deployed baseline. Future artifact changes tracked as v1.1, v1.2, etc. (incremental) or v2.0 (major model update). New versions saved as separate files before promoting to deployment.
 
@@ -14,6 +14,20 @@ Append-only record of completed work, key decisions, and current status. Newest 
 ---
 
 ## Milestone Log
+
+### 2026-03-24 | Homepage — built and style-reviewed
+
+- **What:** `homepage/index.html` created as a standalone project landing page aggregating all three published deliverables (assessment, litepaper, blog post).
+- **Structure:** Two-row sticky nav (cross-site primary + in-page secondary) · hero with blurred background image · intro block · deliverables grid (3 cards) · five-level model overview with CTA block · about strip · footer. Matches existing site aesthetic (fonts, colours, hero treatment).
+- **Style guide pass:** Six violations corrected against `_REPORT-STYLE.md`:
+  - Intro ¶1: hedged "rarely" → confident "not"
+  - Intro ¶2: em-dash pair restructured to subject-first sentence
+  - Diagnostic card: em-dash → colon; "concrete" removed; "blindspots" → "blind spots"
+  - Blog card: em-dash → comma
+  - L2 desc: "become external-facing" → "reach customers or regulators"
+  - CTA: "concrete next action" → "next action"
+- **Em-dash count after edits:** 1 (hero subtitle only; ceiling is 2–3).
+- **File:** `homepage/index.html`.
 
 ### 2026-03-20 | YAML v3 + Artifact HTML — blog alignment pass
 
